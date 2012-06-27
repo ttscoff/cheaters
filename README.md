@@ -48,7 +48,7 @@ There's also a contrast icon in the upper right, which you can use to flip betwe
 
 #### Using PDFs
 
-[Cheat Sheets with image](http://brettterpstra.com/wp-content/uploads/2012/03/Cheat-Sheets-Wide-Image.jpg)
+![Cheat Sheets with image](http://brettterpstra.com/wp-content/uploads/2012/03/Cheat-Sheets-Wide-Image.jpg)
 
 If you find a PDF cheat sheet that's ideal for this type of display, you'll need to convert it to an image (gif, jpg or png) first. Make it large, between 800px and 1024px wide. Cheaters will automatically scale it to your browser width, and when your browser width gets small enough that the image would be unreadable, it shows it full size and lets you scroll around within the viewport. See the CSS3 cheat sheet markup for an example of using an image; it's just an image tag in an html file. Easy as pie.
 
