@@ -1,0 +1,243 @@
+
+<div id="multimarkdown">
+
+<h3 id="section-mmd-xrefs">Cross-references</h3>
+
+<p>Cross-references will become your new best friend when writing long documents. They will highly improve the navigability of the generated documents by giving the reader links to jump across sections with a single click.</p>
+
+<h4 id="section-mmd-xrefs-example">Example</h4>
+
+<pre>
+<code>Clicking [here][section-preview] will lead you to the **Preview** section.
+</code></pre>
+
+<h4 id="section-mmd-xrefs-result">Result</h4>
+
+<p>Clicking <a href="#section-preview">here</a> will lead you do the <strong>Preview</strong> section.</p>
+
+<h3 id="section-mmd-footnotes">Footnotes</h3>
+
+<p>Footnotes are a simple, yet effective way of conveying non-crucial information to the reader.</p>
+
+<p>Rather than parenthesizing a side note or place it between em-dashes &#8211; as unimportant as it is, the reader will go through it, just like you did now &#8211; you can defer its reading and expand on your thoughts there.</p>
+
+<h4 id="example">Example</h4>
+
+<pre>
+<code>Clicking this number[^fn-sample_footnote] will lead you to a footnote.
+
+[^fn-sample_footnote]: Handy! Now click the return link to go back.
+</code></pre>
+
+<h4 id="section-mmd-footnotes-result">Result</h4>
+
+<p>Clicking this number<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a> will lead you to a footnote.</p>
+
+<h3 id="section-mmd-attributes">Custom attributes</h3>
+
+<p>MultiMarkdown introduces an unobtrusive way of adding custom attributes to images and links, allowing you to change they way they are displayed.</p>
+
+<blockquote>
+<p><strong>NOTE</strong><br/>
+This is not available for inline links or images.</p>
+</blockquote>
+
+<h4 id="section-mmd-attributes-example">Example</h4>
+
+<pre>
+<code>The original image is 128x128 and contains no shadow.
+![Original icon][img-icon_original]
+
+It will be displayed as 96x96 with a subtle shadow.
+![Styled icon][img-icon_styled]
+
+[img-icon_original]: img/icon128.png &quot;B&quot;
+[img-icon_styled]: img/icon128.png &quot;B&quot; width=&quot;96px&quot; height=&quot;96px&quot;
+class=&quot;shadow&quot;
+</code></pre>
+
+<h3 id="section-mmd-meta">Meta information</h3>
+
+<p>With MultiMarkdown, you can also embed metadata on your documents.</p>
+
+<p>Metadata must be placed at the top of the document &#8211; there can be no white-spaces before &#8211; and it ends with the first empty line. Each entry is composed of key and values, separated by a colon (<code>
+:</code>).</p>
+
+<p>There are plenty of keys supported, some of the most common being <code>
+Title</code>, <code>
+Author</code>, <code>
+Date</code>, <code>
+Copyright</code>, <code>
+Keywords</code> and <code>
+Email</code>. Be sure to check <a href="https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/MultiMarkdown%20User%27s%20Guide.md" title="Fletcher T. Penney's MultiMarkdown user guide">Fletcher&#8217;s guide</a> for a full reference.</p>
+
+<blockquote>
+<p><strong>TIP</strong><br/>
+When adding metadata information to your documents, make sure you always leave two spaces at the end of each metadata line. This will ensure that exporting to plain Markdown will result in a properly formatted piece of text &#8211; as opposed to a single run-on paragraph.</p>
+</blockquote>
+
+<h4 id="section-mmd-meta">Example</h4>
+
+<pre>
+<code>Title:  Document title  
+Author: John Doe  
+        Jane Doe  
+Date:   January 1st, 2012  
+</code></pre>
+
+<h3 id="section-mmd-tables">Tables</h3>
+
+<p>Tables are perfect to display structured data in rows and columns. MultiMarkdown supports the generation of tables by using a couple of simple rules alongside the use of the pipe character &#8211; <code>
+|</code>.</p>
+
+<h4 id="section-mmd-tables-example">Example</h4>
+
+<pre>
+<code>| First Header  | Second Header | Third Header         |
+| :------------ | :-----------: | -------------------: |
+| First row     | Data          | Very long data entry |
+| Second row    | **Cell**      | *Cell*               |
+| Third row     | Cell that spans across two columns  ||
+[Table caption, works as a reference][section-mmd-tables-table1] 
+</code></pre>
+
+<h4 id="section-mmd-tables-result">Result</h4>
+
+<table>
+<caption id="section-mmd-tables-table1">Table caption, works as a reference</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:center;"/>
+<col style="text-align:right;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">First Header</th>
+	<th style="text-align:center;">Second Header</th>
+	<th style="text-align:right;">Third Header</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">First row</td>
+	<td style="text-align:center;">Data</td>
+	<td style="text-align:right;">Very long data entry</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Second row</td>
+	<td style="text-align:center;"><strong>Cell</strong></td>
+	<td style="text-align:right;"><em>Cell</em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Third row</td>
+	<td style="text-align:center;" colspan="2">Cell that spans across two columns</td>
+</tr>
+</tbody>
+</table>
+<h4 id="section-mmd-tables-structure">Structure</h4>
+
+<p>If you are familiar with HTML tables, you&#8217;ll instantly recognize the structure of the table syntax. All tables must begin with one or more <strong>rows</strong> of <strong>headers</strong>, and each <strong>row</strong> may have one or more <strong>columns</strong>.</p>
+
+<p>These are the most important rules you&#8217;ll be dealing with:</p>
+
+<ul>
+<li>There must be at least one <code>
+|</code> per line;</li>
+<li>After the header rows, there must be a line containing only <code>
+|</code>, <code>
+-</code>, <code>
+:</code>, <code>
+.</code>, or spaces;</li>
+<li>Cell content must be on one line only;</li>
+<li>Columns are separated by <code>
+|</code>.</li>
+</ul>
+
+<h4 id="section-mmd-tables-alignment">Alignment</h4>
+
+<p>To align the data cells on the table, you need to introduce a special row right after the headers, that will determine how the following rows &#8211; the data rows &#8211; will be aligned.</p>
+
+<pre>
+<code>| Header One | Header Two | Header Three | Header Four |
+| ---------- | :--------- | :----------: | ----------: |
+| Default    | Left       | Center       | Right       |
+</code></pre>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:center;"/>
+<col style="text-align:right;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Header One</th>
+	<th style="text-align:left;">Header Two</th>
+	<th style="text-align:center;">Header Three</th>
+	<th style="text-align:right;">Header Four</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Default</td>
+	<td style="text-align:left;">Left</td>
+	<td style="text-align:center;">Center</td>
+	<td style="text-align:right;">Right</td>
+</tr>
+</tbody>
+</table>
+<p>The placing of the colon (<code>
+:</code>) is optional and determines the alignment of columns in the data rows. This line is mandatory and must be placed between the headers and the data rows.</p>
+
+<p>Also, the usage of the <code>
+|</code> at the beginning or end of the rows is optional &#8211; as long as at least one <code>
+|</code> is present in each row.</p>
+
+<h4 id="section-mmd-tables-colspanning">Column spanning</h4>
+
+<p>To make a cell span across multiple columns, instead of using a single pipe (<code>
+|</code>) character to delimit that cell, use the number of pipes corresponding to the columns you wish to span.</p>
+
+<pre>
+<code>| Column 1 | Column 2 | Column 3 | Column 4 |
+| -------- | :------: | -------- | -------- |
+| No span  | Span across three columns    |||
+</code></pre>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:center;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Column 1</th>
+	<th style="text-align:center;">Column 2</th>
+	<th style="text-align:left;">Column 3</th>
+	<th style="text-align:left;">Column 4</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">No span</td>
+	<td style="text-align:center;" colspan="3">Span across three columns</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE</strong><br/>
+This is only an introduction to MultiMarkdown&#8217;s tables. For the full reference, please refer to the &#8220;Tables&#8221; section on the <a href="https://github.com/fletcher/MultiMarkdown/blob/master/Documentation/MultiMarkdown%20User%27s%20Guide.md" title="Fletcher T. Penney's MultiMarkdown user guide">MultiMarkdown user guide</a>.</p>
+</blockquote>
+
+</div>
+<hr>
+<p>Taken from the <a href="http://bywordapp.com/markdown/guide.html" target="_top">Byword MultiMarkdown Guide</a></p> 
