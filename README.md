@@ -1,3 +1,5 @@
+You can read this page if you want to, but [this one](http://ttscoff.github.com/cheaters/) is way prettier.
+
 ![Cheat Sheets Header](http://brettterpstra.com/wp-content/uploads/2012/03/Cheat-Sheets-Header.jpg)
 
 [macdrifter]: http://www.macdrifter.com/2012/02/markdown-cheat-sheets-and-marked/
