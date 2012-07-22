@@ -132,7 +132,6 @@ tr.divider td { border-top:dashed 1px #aaa!important;font-family:LeagueGothic;fo
 .wg { text-align:center;width:50px }
 #markdown h3,#jquery h1,#jquery h2,#multimarkdown h3,#html5 h3 { font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:2px;font-family:LeagueGothic;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px;-webkit-border-radius:4px;margin:0;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35);border:none }
 #multimarkdown h4 { font-size: 24px; text-align:center }
-#multimarkdown h3 { font-size: 28px }
 #jquery div { float:left;width:49%; }
 #jquery section { float:left;border:1px solid #ccc;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;margin:5px;padding:10px;width:90%; }
 #jquery h2:before,#jquery h2:after { content:''}
@@ -148,11 +147,21 @@ iframe { position:fixed;z-index:2;left:0;top:0; }
 #closeiframe p { font-size:18px;line-height:1em;text-align:center;padding:0;margin:0; }
 #closeiframe a { display:block;width:100%;padding-top:10px;height:40px;margin:0; }
 img#contrast { cursor:pointer; position:absolute; right:10px; top:5px; }
+
+.half {width:45%;min-width:400px;float:left;clear:right}
+.half.left {margin-right:10px;clear:left}
+@media screen and (max-width: 825px) {
+	.half { width:100%: clear: right }
+	.half.left { margin-right: 0}
+}
 @media screen and (max-width:600px) {
  #html5 article { width:100% }
  #jquery div { width:100% }
+
  #container img { max-width:800px; } }
 @media screen and (max-width:700px) {
+ .half { width:100% }
+ .half.left { margin-right: 0}
  #nav { background:transparent;padding:0 10px 20px;-moz-border-radius-bottomleft:10px;-webkit-border-bottom-left-radius:10px;border-radius-bottomleft:10px;-moz-border-radius-bottomright:10px;-webkit-border-bottom-right-radius:10px;border-radius-bottomright:10px;position:fixed;width:200px;z-index:100;min-height:25px;opacity:.5; }
  #nav:hover { opacity:.95; }
  #nav:hover li { position:relative; }
