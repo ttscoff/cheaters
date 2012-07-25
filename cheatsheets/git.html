@@ -1,0 +1,62 @@
+<div id="html5">
+	<h3>Git</h3>
+	<div>
+		<article id="page2">
+			<div class="inner">
+				<header><h4>Creating a repo</h4></header>
+				<dl>
+					<dt><code>mkdir ~/Hello-World</code></dt>
+					<dd>Creates a directory for your project called "Hello-World" in your user directory</dd>
+					<dt><code>git init</code></dt>
+					<dd>Sets up the necessary Git files</dd>
+					<dt><code>touch README</code></dt>
+					<dd>Creates a file called "README" in your Hello-World directory</dd>
+				</dl>
+			</div>
+		</article>
+		
+		<article id="page3">
+			<div class="inner">
+				<header><h4>Commiting</h4></header>
+				<dl>
+					<dt><code>git add README</code></dt>
+					<dd>Stages your README file, adding it to the list of files to be committed.</dd>
+					<dt><code>git commit -m 'first commit'</code></dt>
+					<dd>Commits your files, adding the message "first commit"</dd>
+				</dl>
+			</div>	
+		</article>
+	</div>
+	
+	<div>
+		<article id="page4">
+			<div class="inner">
+				<header><h4>Push your commit</h4></header>
+				<dl>
+					<dt><code>git remote add origin https://github.com/username/Hello-World.git</code></dt>
+					<dd>Creates a remote named "origin" pointing at your GitHub repo.</dd>
+					<dt><code>git push origin master</code></dt>
+					<dd>Sends your commits in the "master" branch to GitHub.</dd>
+				</dl>
+			</div>
+		</article>
+		
+		<article id="page5">
+			<div class="inner">
+				<header><h4>Forks, Cloning, and Remotes</h4></header>
+				<dl>
+					<dt><code>git clone https://github.com/username/Spoon-Knife.git</code></dt>
+					<dd>Clones your fork of the repo into the current directory in terminal</dd>
+				</dl>
+				<p>When a repo is cloned, it has a default remote called <code>origin</code> that points to your fork on GitHub, not the original repo it was forked from. To keep track of the original repo, you need to add another remote named <code>upstream</code>:</p>
+				<dt><code>cd Spoon-Knife</code></dt>
+				<dd>Changes the active directory in the prompt to the newly cloned "Spoon-Knife" directory</dd>
+				<dt><code>git remote add upstream https://github.com/octocat/Spoon-Knife.git</code></dt>
+				<dd>Assigns the original repo to a remote called "upstream"</dd>
+				<dt><code>git fetch upstream</code></dt>
+				<dd>Pulls in changes not present in your local repository, without modifying your files</dd>
+			</div>	
+		</article>
+		</div>
+		<hr>
+<p>Adapted from the <a href="https://help.github.com/categories/54/articles" target="_top">Github Help Docs</a></p> 

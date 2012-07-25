@@ -1,0 +1,355 @@
+<div id="html5">
+	<h3>Git Reference</h3>
+	<section id="gitref">
+		<article>
+			<div class="inner"><header><h4>Store Your Name and Email for Commit Messages</h4></header>
+
+<p>The following allows you to store your name and email address and have them be
+associated to each commit message.</p>
+
+<p><code>git config --global user.name ``&quot;YourFirstName YourLastName&quot;</code></p>
+
+<p><code>git config --global user.email ``'YourEmail@domain.com'</code></p>
+
+<p><code>git config --list</code></p>
+
+<p><code>cat</code> <code>.gitconfig</code></p>
+</div></article>
+<article><div class="inner"><header><h4>Creating Git Command Aliases</h4></header>
+
+<p><code>git config --global ``alias``.co checkout</code></p>
+
+<p><code>git config --global ``alias``.ci commit</code></p>
+
+<p><code>git config --global ``alias``.lc log ORIG_HEAD.. --stat --no-merges (``if</code>
+<code>you want to list all commits after you fetched but exclude merges)</code></p>
+
+</div></article><article><div class="inner"><header><h4>Initializing an Empty Git Repository</h4></header>
+
+<p>This creates the .git directory which contains all of the Git files,
+directories and hooks. Hooks can be executed after certain events. More on
+hooks maybe later.</p>
+
+<p><code>cd</code> <code>[root of project directory]</code></p>
+
+<p><code>git init (creates a .git directory)</code></p>
+
+</div></article><article><div class="inner"><header><h4>Ignoring Files from being tracked</h4></header>
+
+<p>The patterns of files to exclude should be saved in the .gitignore file. This
+file will be checked into Git and is part of the project. So clones will get
+the .gitignore file.</p>
+
+<p><code>create a .gitignore file in root of project directory with the following
+contents:</code></p>
+
+<p><code>*.log</code></p>
+
+<p><code>The .git/info/exclude file is your personal copy which doesn't get committed
+into Git.</code></p>
+
+</div></article><article><div class="inner"><header><h4>Adds All files and sub-directories</h4></header>
+
+<p>However, this doesn’t commit to local repository yet. You must commit the
+changes. See below.</p>
+
+<p><code>git add .</code></p>
+
+<p><code>git status (tells you ``which</code> <code>files have been added and ready to be
+committed)</code></p>
+
+</div></article><article><div class="inner"><header><h4>Undos an add</h4></header>
+
+<p>A git add FILENAME/DIRNAME will add files/directories to the index.</p>
+
+<p>If for some reason you’d like to undo the git add, do the following:</p>
+
+<p><code>git reset FILENAME``/DIRNAME</code></p>
+
+<p><code>git status (to confirm your files now show under the ``'Untracked files'</code>
+<code>section)</code></p>
+
+</div></article><article><div class="inner"><header><h4>Reverting All of Your Local Changes</h4></header>
+
+<ul>
+<li>Be careful with the following as it will revert all of your local changes to HEAD version.</li>
+</ul>
+
+<p><code>git status (these are the files ``which</code> <code>will be reverted when executing the
+following)</code></p>
+
+<p><code>git checkout -f</code></p>
+
+</div></article><article><div class="inner"><header><h4>Reverting All of Untracked Files and Directories</h4></header>
+
+<ul>
+<li>Be careful with the following as it will revert all of your local changes to HEAD version.</li>
+</ul>
+
+<p><code>git status (these are the files ``which</code> <code>will be reverted when executing the
+following)</code></p>
+
+<p><code>git clean -fd</code></p>
+
+<p><code>git pull</code></p>
+
+</div></article><article><div class="inner"><header><h4>Commit files to Git to Local Repository for First Time</h4></header>
+
+<p>See below to see how to commit files subsequent times.</p>
+
+<p><code>git status (tells you ``which</code> <code>files have been added and ready to be
+committed)</code></p>
+
+<p><code>git commit -m ``&quot;First Commit&quot;</code></p>
+
+</div></article><article><div class="inner"><header><h4>To see which files have been committed to the Local Git Repository</h4></header>
+
+<p><code>git ``ls``-files</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Remove a File that’s already committed</h4></header>
+
+<p><code>git ``rm</code> <code>[filename]</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Amend to last Git Commit</h4></header>
+
+<ul>
+<li>This can only be done after you have committed and prior to pushing changes to remote repository.</li>
+</ul>
+
+<p><code>git commit --amend</code></p>
+
+</div></article><article><div class="inner"><header><h4>Commit files to Git to Local Repository Subsequent Times</h4></header>
+
+<p>git commit -a is the same as doing a git add [file name] followed by git
+commit -m “your commit message”</p>
+
+<p>The git commit -a option will automatically include all files that need to be
+added to the commit.</p>
+
+<p><code>git status (tells you ``which</code> <code>files have been added and ready to be
+committed)</code></p>
+
+<p><code>git commit -a</code></p>
+
+<p><code>Then edit notes ``in</code> <code>the ``file</code> <code>and save it.</code></p>
+
+<p><code>git commit -m ``&quot;your description of what was changed&quot;</code> <code>-a (you can ``do</code>
+<code>this instead of git commit -a. This will prevent the editor from being opened
+though)</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Include a diff of contents in the commit message</h4></header>
+
+<p><code>git commit -``v</code></p>
+
+</div></article><article><div class="inner"><header><h4>To see a log history of Git commits</h4></header>
+
+<p><code>git log</code></p>
+
+</div></article><article><div class="inner"><header><h4>To see a log history of Git commits of a given file</h4></header>
+
+<p><code>git log -- filename</code></p>
+
+</div></article><article><div class="inner"><header><h4>To see change history of given file</h4></header>
+
+<p><code>gitk filename</code></p>
+
+<p><code>OR</code></p>
+
+<p><code>git log -p filename</code></p>
+
+</div></article><article><div class="inner"><header><h4>To open a Commit Viewer for Git</h4></header>
+
+<p>If you receive an error saying “Error reading commits:fatal:unrecognized
+arguments: -all”, it’s because the all flag option requires two hyphens. See
+below:</p>
+
+<p><code>gitk --all</code></p>
+
+</div></article><article><div class="inner"><header><h4>To See a List of Local Branches</h4></header>
+
+<p>The name of the colored branch indicates the branch you are working on
+currently.</p>
+
+<p><code>git branch --color</code></p>
+
+</div></article><article><div class="inner"><header><h4>To See a List of All Branches (including remote ones)</h4></header>
+
+<p><code>git branch -a</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Delete a Local Branch</h4></header>
+
+<p>You can first get a list of branches as described above and then do the
+following:</p>
+
+<p><code>git branch -d [branch_name]</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Delete a Local Branch</h4></header>
+
+<p>Beware to make sure this is really what you want to do!</p>
+
+<p>You can first get a list of remote branches as described above and then
+execute the command below.</p>
+
+<ul>
+<li>Be sure the branch name is preceded with a colon. Notice it below.</li>
+</ul>
+
+<p><code>git push origin :branch_name</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Create a New Branch and Switch to It</h4></header>
+
+<p>It’s important to remember that if you add a file in one branch, the file
+won’t exist in another branch, unless you add it or merge it.</p>
+
+<p><code>git branch [branch name]</code></p>
+
+<p><code>git checkout [branch name]</code></p>
+
+<p><code>git co [branch name] (you can use co ``if</code> <code>you've ``set</code> <code>up the ``alias</code>
+<code>co above)</code></p>
+
+<p><code>git branch --color</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Rename a Branch to one that does NOT exist already</h4></header>
+
+<p><code>git branch -m old_branch new_branch</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Rename a Branch to one that already exists (overwrite existing</h4></header>
+
+<p>Caution: This will overwrite the existing branch!</p>
+
+<p><code>git branch -M old_branch existing_branch_to_overwrite</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Push Local Branch to Remote Repository</h4></header>
+
+<p>When you create a branch in your local repo, it’s not automatically added to
+the remote repo; You need to push it there.</p>
+
+<p><code>git push origin [branch name]</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Push all Local Branches and Tags to Repository</h4></header>
+
+<p><code>git push origin ``'*:*'</code></p>
+
+</div></article><article><div class="inner"><header><h4>To See Remote Branches and Switch to Them</h4></header>
+
+<p><code>git fetch origin</code></p>
+
+<p><code>git checkout --track origin/[branch_name]</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Clone a Repository and its Files/Directories</h4></header>
+
+<p>For example, you may want to clone an existing repository that’s located on
+the same server as where you want to create the new clone. OR you may want to
+create the new clone on your local computer from the source repository which
+is on a shared hosting account.</p>
+
+<p><code>git clone ``/source/repository/path</code> <code>/destination/repository/path</code> <code>(assumes
+the ``source</code> <code>repository is on the same server as where you want to clone)</code></p>
+
+<p><code>OR</code></p>
+
+<p><code>cd</code> <code>[to_a_directory_above_where_you_want_the_project_files_to_go]</code></p>
+
+<p><code>git clone username@yourdomain.com/~``/git/yourproject``.git (to clone a
+remote git repository)</code></p>
+
+</div></article><article><div class="inner"><header><h4>To Sync files of this clone to HEAD of other clone</h4></header>
+
+<p><code>cd</code> <code>this_repository_directory (one directory above .git)</code></p>
+
+<p><code>git pull ``/the/other/clone</code> <code>HEAD</code></p>
+
+</div></article><article><div class="inner"><header><h4>Example of Merging Code in Git</h4></header>
+
+<p>In this example, I’ll show you how to do a merge, after a conflict, between
+code of two branches. This is the case where Git couldn’t auto-merge.</p>
+
+<p><code>git checkout master (switches you to the master branch)</code></p>
+
+<p><code>vi</code> <code>testfile (add the following line ``in</code> <code>testfile and save)</code></p>
+
+<p><code>adfasfasdfadf</code></p>
+
+<p><code>asdf</code></p>
+
+<p><code>a</code></p>
+
+<p><code>sdf</code></p>
+
+<p><code>asdf</code></p>
+
+<p><code>asdfasdf;lkja;kladjsf;klj</code></p>
+
+<p><code>git add testfile (allows it to be tracked by Git)</code></p>
+
+<p><code>git commit -m ``&quot;adding content for master branch&quot;</code> <code>-a</code></p>
+
+<p><code>git branch ``test</code> <code>(create the ``test</code> <code>branch)</code></p>
+
+<p><code>git checkout ``test</code> <code>(switches you to the ``test</code> <code>branch)</code></p>
+
+<p><code>vi</code> <code>testfile (delete all of the existing content and ``make</code> <code>your testfile
+``in</code> <code>the ``test</code> <code>branch ``look</code> <code>like this:)</code></p>
+
+<p><code>;lkajsdf;lkajdsl;kajsdf</code></p>
+
+<p><code>;lkajsdf;ladjsl;kadjsf</code></p>
+
+<p><code>asdf</code></p>
+
+<p><code>asd</code></p>
+
+<p><code>fasd</code></p>
+
+<p><code>fadsf</code></p>
+
+<p><code>git commit -m ``&quot;adding content for test branch&quot;</code> <code>-a</code></p>
+
+<p><code>git merge master (merge contents of this ``test</code> <code>branch with the master
+branch. see below)</code></p>
+
+<p><code>your_username$ git merge master</code></p>
+
+<p><code>Auto-merged testfile</code></p>
+
+<p><code>CONFLICT (content): Merge conflict ``in</code> <code>testfile</code></p>
+
+<p><code>Automatic merge failed; fix conflicts and ``then</code> <code>commit the result.</code></p>
+
+<p><code>vi</code> <code>testfile (edit this ``file``, resolve the conflicts by getting rid of
+the &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:testfileD:testfile, ======= and &gt;&gt;&gt;&gt;&gt;&gt;&gt; master:testfile and
+``make</code> <code>the ``file</code> <code>look</code> <code>like how it should)</code></p>
+
+<p><code>Assume the ``file``'s contents should ``look</code> <code>like this:</code></p>
+
+<p><code>;lkajsdf;lkajdsl;kajsdf</code></p>
+
+<p><code>;lkajsdf;ladjsl;kadjsf</code></p>
+
+<p><code>asdf</code></p>
+
+<p><code>asd</code></p>
+
+<p><code>fasd</code></p>
+
+<p><code>fadsf</code></p>
+
+<p><code>asdfasdf;lkja;kladjsf;klj</code></p>
+
+<p><code>git commit -m ``&quot;adding content for master branch&quot;</code> <code>-a (to commit your
+changes)</code></p>
+</section>
+
+<hr />
+
+<p>From <a href="http://ionrails.com/2009/08/07/git-commands-adding-and-committing-cheatsheet/">I-ON-RAILS</a></p>
+</div>
+<script src="js/masonry.js"></script>
+<script>
+	(function($){
+		$('#gitref').masonry({
+		  itemSelector: 'article'
+		});
+	})(jQuery);
+</script>
