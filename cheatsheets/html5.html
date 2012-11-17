@@ -1,0 +1,128 @@
+
+<div id="html5">
+	<h3>HTML5</h3>
+	<div>
+		<article id="page2">
+			<div class="inner">
+				<header><h4>Sectioning content</h4></header>
+				<dl>
+					<dt><code>article</code></dt>
+					<dd>A composition that forms an independent part of a document, page, application, or site.</dd>
+					<dt><code>aside</code></dt>
+					<dd>Content that is tangentially related to the content around the aside element</dd>
+					<dt><code>nav</code></dt>
+					<dd>A section with navigation links.</dd>
+					<dt><code>section</code></dt>
+					<dd>A generic document or application section.</dd>
+				</dl>
+			</div>
+		</article>
+
+		<article id="page3">
+			<div class="inner">
+				<header><h4>Heading content</h4></header>
+				<dl>
+					<dt>
+					<code>h1</code>,
+					<code>h4</code>,
+					<code>h3</code>,
+					<code>h4</code>,
+					<code>h5</code>,
+					<code>h6</code>
+					</dt>
+					<dt><code>hgroup</code></dt>
+					<dd>Used to group a set of h1–h6 elements when the heading has multiple levels, such as subheadings, alternative titles, or taglines.</dd>
+					<dd><pre><code>&lt;hgroup&gt;
+  &lt;h3&gt;The Diamond Age&lt;/h3&gt;
+  &lt;h4&gt;or A Young Lady's
+Illustrated Primer&lt;/h4&gt;
+&lt;/hgroup&gt;</code></pre></dd>
+				</dl>
+			</div>
+		</article>
+		</div><div>
+		<article id="page4">
+			<div class="inner">
+				<header><h4>Flow content</h4></header>
+				<dl>
+					<dt><code>header</code></dt>
+					<dd>A group of introductory or navigational aids.</dd>
+					<dt><code>footer</code></dt>
+					<dd>A footer for its nearest ancestor sectioning content. Typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.</dd>
+					<dt><code>figure</code></dt>
+					<dd>Content, optionally with a <code>figcaption</code>, that is self-contained and is typically referenced as a single unit from the main flow of the document.</dd>
+				</dl>
+			</div>
+		</article>
+
+		<article id="page5">
+			<div class="inner">
+				<header><h4>Interactive content</h4></header>
+				<dl>
+					<dt><code>audio</code></dt>
+					<dd><pre><code>&lt;audio src=&quot;audio.mp3&quot;
+controls preload=&quot;none&quot;
+autoplay loop&gt;
+&lt;/audio&gt;</code></pre></dd>
+					<dt><code>video</code></dt>
+					<dd><pre><code>&lt;video width=360 height=240
+controls poster=&quot;image.jpg&quot;&gt;
+&lt;source src=&quot;movie.mp4&quot;
+type=&quot;video/mp4&quot;&gt;
+&lt;source src=&quot;movie.ogg&quot;
+type=&quot;video/ogg&quot;&gt;
+&lt;/video&gt;</code></pre></dd>
+				</dl>
+				<p>Use either the <code>src</code> attribute or <code>source</code> elements.</p>
+			</div>
+		</article>
+		</div><div>
+		<article id="page6">
+			<div class="inner">
+				<header><h4>Phrasing content</h4></header>
+				<dl>
+					<dt><code>mark</code></dt>
+					<dd>A run of text in one document marked or highlighted for reference purposes, due to its relevance in another context.</dd>
+					<dt><code>time</code></dt>
+					<dd>A time on a 24 hour clock, or a precise date in the Gregorian calendar.</dd>
+					<dd><pre><code>&lt;time datetime=&quot;2009-09-02&quot;&gt;
+September 2nd, 2009
+&lt;/time&gt;</code></pre></dd>
+					<dd>The Boolean attribute <code>pubdate</code> indicates the publication date of an <code>article</code>.</dd>
+				</dl>
+			</div>
+		</article>
+
+		<article id="page7">
+			<div class="inner">
+				<header><h4>Input types</h4></header>
+				<code>search</code>, <code>tel</code>, <code>email</code>, <code>url</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>week</code>, <code>time</code>
+				<dl>
+					<dt><code>number</code></dt>
+					<dd>A text field or spinner control.</dd>
+					<dd><pre><code>&lt;input type=&quot;number&quot; min=0 max=10&gt;</code></pre></dd>
+					<dt><code>range</code></dt>
+					<dd>A slider control.</dd>
+					<dd><pre><code>&lt;input type=&quot;range&quot; min=0 max=100&gt;</code></pre></dd>
+					<dt><code>color</code></dt>
+					<dd>A colour well.</dd>
+					<dd><pre><code>&lt;input type=&quot;color&quot; value=&quot;#000000&quot;&gt;</code></pre></dd>
+				</dl>
+			</div>
+		</article>
+		</div>
+		<article id="page8">
+			<div class="inner">
+				<header><h4>Metadata content</h4></header>
+				<h5>style</h5>
+				<p>The <code>type</code> attribute is optional.</p>
+				<p>The optional <code>scoped</code> attribute indicates that the styles are intended just for the subtree rooted at the style element's parent element, as opposed to the whole document.</p>
+				<h5>script</h5>
+				<p>The <code>type</code> attribute is optional.</p>
+				<h5>Character encoding</h5>
+				<code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>
+			</div>
+		</article>
+	</div>
+	<hr>
+<p>Adapted from the <a href="http://github.com/natbat/pocketbook" target="_top">natbat's pocketbook</a></p>

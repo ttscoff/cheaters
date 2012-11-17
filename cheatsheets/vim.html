@@ -1,0 +1,623 @@
+
+<table>
+  <caption>How to Exit</caption>
+  <tr>
+    <td>:q[uit]</td>
+    <td>Quit Vim.  This fails when changes have been made.</td>
+  </tr>
+  <tr>
+    <td>:q[uit]!</td>
+    <td>Quit without writing.</td>
+  </tr>
+  <tr>
+    <td>:cq[uit]</td>
+    <td>Quit always, without writing.</td>
+  </tr>
+  <tr>
+    <td>:wq</td>
+    <td>Write the current file and exit.</td>
+  </tr>
+  <tr>
+    <td>:wq!</td>
+    <td>Write the current file and exit always.</td>
+  </tr>
+  <tr>
+    <td>:wq {file}</td>
+    <td>Write to {file}.  Exit if not editing the last</td>
+  </tr>
+  <tr>
+    <td>:wq! {file}</td>
+    <td>Write to {file} and exit always.</td>
+  </tr>
+  <tr>
+    <td>:[range]wq[!]</td>
+    <td>[file]  Same as above, but only write the lines in [range].</td>
+  </tr>
+  <tr>
+    <td>ZZ</td>
+    <td>Write current file, if modified, and exit.</td>
+  </tr>
+  <tr>
+    <td>ZQ</td>
+    <td>Quit current file and exit (same as ":q!").</td>
+  </tr>
+</table>
+
+<table>
+  <caption>Editing a File</caption>
+  <tr>
+    <td>:e[dit]</td>
+    <td>Edit the current file.  This is useful to re-edit the current file, when it has been changed outside of Vim.</td>
+  </tr>
+  <tr>
+    <td>:e[dit]!</td>
+    <td>Edit the current file always.  Discard any changes to the current buffer.  This is useful if you want to start all over again.</td>
+  </tr>
+
+  <tr>
+    <td>:e[dit] {file}</td>
+    <td>Edit {file}.  </td>
+  </tr>
+  <tr>
+    <td>:e[dit]! {file}</td>
+    <td>Edit {file} always.  Discard any changes to the current buffer.</td>
+  </tr>
+  <tr>
+    <td>gf</td>
+    <td>Edit the file whose name is under or after the cursor.  Mnemonic: "goto file".</td>
+  </tr>
+</table>
+
+
+<table>
+<caption>Inserting Text</caption>
+  <tr>
+    <td>a</td>
+    <td>Append text after the cursor [count] times.</td>
+  </tr>
+  <tr>
+    <td>A</td>
+    <td>Append text at the end of the line [count] times.</td>
+  </tr>
+  <tr>
+    <td>i</td>
+    <td>Insert text before the cursor [count] times.</td>
+  </tr>
+  <tr>
+    <td>I</td>
+    <td>Insert text before the first non-blank in the line [count] times.</td>
+  </tr>
+  <tr>
+    <td>gI</td>
+    <td>Insert text in column 1 [count] times.</td>
+  </tr>
+  <tr>
+    <td>o</td>
+    <td>Begin a new line below the cursor and insert text, repeat [count] times.</td>
+  </tr>
+  <tr>
+    <td>O</td>
+    <td>Begin a new line above the cursor and insert text, repeat [count] times.</td>
+  </tr>
+</table>
+
+
+<table>
+  <caption>Inserting a file</caption>
+  <tr>
+    <td>:r[ead] [name]</td>
+    <td>Insert the file [name] below the cursor.</td>
+  </tr>
+  <tr>
+    <td>:r[ead] !{cmd}</td>
+    <td>Execute {cmd} and insert its standard output below the cursor. </td>
+  </tr>
+</table>
+
+<table>
+  <caption>Deleting Text</caption>
+  <tr>
+    <td>&lt;Del&gt; or<br> x</td>
+    <td>Delete [count] characters under and after the cursor</td>
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>Delete [count] characters before the cursor</td>
+  </tr>
+  <tr>
+    <td>d{motion}</td>
+    <td>Delete text that {motion} moves over </td>
+  </tr>
+  <tr>
+    <td>dd</td>
+    <td>Delete [count] lines</td>
+  </tr>
+  <tr>
+    <td>D</td>
+    <td>Delete the characters under the cursor until the end of the line</td>
+  </tr>
+  <tr>
+    <td>{Visual}x  or<br> {Visual}d</td>
+    <td>Delete the highlighted text (for {Visual} see <a href=#select>Selecting Text</a>).</td>
+  </tr>
+  <tr>
+    <td>{Visual}CTRL-H   or<br> {Visual}<BS></td>
+    <td>When in Select mode: Delete the highlighted text</td>
+  </tr>
+  <tr>
+    <td>{Visual}X  or<br> {Visual}D</td>
+    <td>Delete the highlighted lines </td>
+  </tr>
+  <tr>
+    <td>:[range]d[elete]</td>
+    <td>Delete [range] lines (default: current line)</td>
+  </tr>
+  <tr>
+    <td>:[range]d[elete] {count}</td>
+    <td>Delete {count} lines, starting with [range]</td>
+  </tr>
+</table>
+
+<table>
+  <caption>Changing (or Replacing) Text</caption>
+  <tr>
+    <td>r{char}</td>
+    <td>replace the character under the cursor with {char}.</td>
+  </tr>
+  <tr>
+    <td>R</td>
+    <td>Enter Insert mode, replacing characters rather than inserting</td>
+  </tr>
+  <tr>
+    <td>~</td>
+    <td>Switch case of the character under the cursor and move the cursor to the right.  If a [count] is given, do that many characters.</td>
+  </tr>
+  <tr>
+    <td>~{motion}</td>
+    <td>switch case of {motion} text.</td>
+  </tr>
+  <tr>
+    <td>{Visual}~</td>
+    <td>Switch case of highlighted text</td>
+  </tr>
+</table>
+
+<table>
+  <caption>Substituting</caption>
+  <tr>
+    <td>:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]</td>
+    <td>For each line in [range] replace a match of {pattern} with
+    {string}.</td>
+  </tr>
+  <tr>
+    <td>:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]</td>
+    <td>Repeat last :substitute with same search pattern and substitute string, but without the same flags.  You may add extra flags</td>
+  </tr>
+</table>
+<pre>
+The arguments that you can use for the substitute commands:
+[c]  Confirm each substitution.  Vim positions the cursor on the matching
+  string.  You can type:
+      'y'      to substitute this match
+      'n'      to skip this match
+      <Esc>   to skip this match
+      'a'      to substitute this and all remaining matches {not in Vi}
+      'q'      to quit substituting {not in Vi}
+      CTRL-E  to scroll the screen up {not in Vi}
+      CTRL-Y  to scroll the screen down {not in Vi}.
+[e]     When the search pattern fails, do not issue an error message and, in
+  particular, continue in maps as if no error occurred.
+[g]  Replace all occurrences in the line.  Without this argument,
+  replacement occurs only for the first occurrence in each line.
+[i]  Ignore case for the pattern.
+[I]  Don't ignore case for the pattern.
+[p]  Print the line containing the last substitute.
+</pre>
+
+<table>
+  <caption>Copying and Moving Text</caption>
+  <tr>
+    <td>"{a-zA-Z0-9.%#:-"}</td>
+    <td>Use register {a-zA-Z0-9.%#:-"} for next delete, yank or put (use uppercase character to append with delete and yank) ({.%#:} only work with put).</td>
+  </tr>
+  <tr>
+    <td>:reg[isters]</td>
+    <td>Display the contents of all numbered and named registers.</td>
+  </tr>
+  <tr>
+    <td>:reg[isters] {arg}</td>
+    <td>Display the contents of the numbered and named registers that are mentioned in {arg}.  </td>
+  </tr>
+  <tr>
+    <td>:di[splay] [arg]</td>
+    <td>Same as :registers. </td>
+  </tr>
+  <tr>
+    <td>["x]y{motion}</td>
+    <td>Yank {motion} text [into register x].</td>
+  </tr>
+  <tr>
+    <td>["x]yy</td>
+    <td>Yank [count] lines [into register x]</td>
+  </tr>
+  <tr>
+    <td>["x]Y</td>
+    <td>yank [count] lines [into register x] (synonym for yy).</td>
+  </tr>
+  <tr>
+    <td>{Visual}["x]y</td>
+    <td>Yank the highlighted text [into register x] (for {Visual} see <a href=#select>Selecting Text</a>).</td>
+  </tr>
+  <tr>
+    <td>{Visual}["x]Y</td>
+    <td>Yank the highlighted lines [into register x]</td>
+  </tr>
+  <tr>
+    <td>:[range]y[ank] [x]</td>
+    <td>Yank [range] lines [into register x].</td>
+  </tr>
+  <tr>
+    <td>:[range]y[ank] [x] {count}</td>
+    <td>Yank {count} lines, starting with last line number in [range] (default: current line), [into register x].</td>
+  </tr>
+  <tr>
+    <td>["x]p</td>
+    <td>Put the text [from register x] after the cursor [count] times.</td>
+  </tr>
+  <tr>
+    <td>["x]P</td>
+    <td>Put the text [from register x] before the cursor [count] times.</td>
+  </tr>
+  <tr>
+    <td>["x]gp</td>
+    <td>Just like "p", but leave the cursor just after the new text.</td>
+  </tr>
+  <tr>
+    <td>["x]gP</td>
+    <td>Just like "P", but leave the cursor just after the new text.</td>
+  </tr>
+  <tr>
+    <td>:[line]pu[t] [x]</td>
+    <td>Put the text [from register x] after [line] (default current
+    line).</td>
+  </tr>
+  <tr>
+    <td>:[line]pu[t]! [x]</td>
+    <td>Put the text [from register x] before [line] (default current
+    line).</td>
+  </tr>
+</table>
+
+<table>
+  <caption>Undo/Redo/Repeat</caption>
+  <tr>
+    <td>u</td>
+    <td>Undo [count] changes. </td>
+  </tr>
+  <tr>
+    <td>:u[ndo]</td>
+    <td>Undo one change. </td>
+  </tr>
+  <tr>
+    <td>CTRL-R</td>
+    <td>Redo [count] changes which were undone. </td>
+  </tr>
+  <tr>
+    <td>:red[o]</td>
+    <td>Redo one change which was undone. </td>
+  </tr>
+  <tr>
+    <td>U</td>
+    <td>Undo all latest changes on one line.  {Vi: while not moved off of
+    it}</td>
+  </tr>
+  <tr>
+    <td>.</td>
+    <td>Repeat last change, with count replaced with [count].</td>
+  </tr>
+</table>
+
+<table>
+  <caption>Moving Around</caption>
+  <tr>
+  <td>
+<pre>
+Basic motion commands:
+
+        k              <up>
+      h   l      <left>    <right>
+        j             <down>
+</pre>
+</td></tr></table>
+
+<table>
+  <tr>
+    <td>h  or<br> <Left></td>
+    <td>[count] characters to the left (exclusive).</td>
+  </tr>
+  <tr>
+    <td>l or<br> <Right> or<br> <Space></td>
+    <td>[count] characters to the right (exclusive).</td>
+  </tr>
+  <tr>
+    <td>k  or<br> <Up> or<br> CTRL-P</td>
+    <td>[count] lines upward</td>
+  </tr>
+  <tr>
+    <td>j or<br> <Down> or<br> CTRL-J or<br> <NL> or<br> CTRL-N</td>
+    <td>[count] lines downward (linewise).</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>To the first character of the line (exclusive). </td>
+  </tr>
+  <tr>
+    <td>&lt;Home&gt;</td>
+    <td>To the first character of the line (exclusive). </td>
+  </tr>
+  <tr>
+    <td>^</td>
+    <td>To the first non-blank character of the line</td>
+  </tr>
+  <tr>
+    <td>$  or<br> &lt;End&gt;</td>
+    <td>To the end of the line and [count - 1] lines downward</td>
+  </tr>
+  <tr>
+    <td>g0 or<br> g&lt;Home&gt;</td>
+    <td>When lines wrap ('wrap on): To the first character of the screen line (exclusive).  Differs from "0" when a line is wider than the screen.  When lines don't wrap ('wrap' off): To the leftmost character of the current line that is on the screen.  Differs from "0" when the first character of the line is not on the screen.</td>
+  </tr>
+  <tr>
+    <td>g^</td>
+    <td>When lines wrap ('wrap' on): To the first non-blank character of the screen line (exclusive).  Differs from "^" when a line is wider than the screen.  When lines don't wrap ('wrap' off): To the leftmost non-blank character of the current line that is on the screen.  Differs from "^" when the first non-blank character of the line is not on the screen. </td>
+  </tr>
+  <tr>
+    <td>g$ or<br> g&lt;End&gr;</td>
+    <td>When lines wrap ('wrap' on): To the last character of the screen line and [count - 1] screen lines downward (inclusive).  Differs from "$" when a line is wider than the screen.  When lines don't wrap ('wrap' off): To the rightmost character of the current line that is visible on the screen.  Differs from "$" when the last character of the line is not on the screen or when a count is used.</td>
+  </tr>
+  <tr>
+    <td>f{char}</td>
+    <td>To [count]'th occurrence of {char} to the right.  The cursor is placed on {char} (inclusive).</td>
+  </tr>
+  <tr>
+    <td>F{char}</td>
+    <td>To the [count]'th occurrence of {char} to the left.  The cursor is placed on {char} (inclusive).</td>
+  </tr>
+  <tr>
+    <td>t{char}</td>
+    <td>Till before [count]'th occurrence of {char} to the right.  The cursor is placed on the character left of {char} (inclusive).</td>
+  </tr>
+  <tr>
+    <td>T{char}</td>
+    <td>Till after [count]'th occurrence of {char} to the left.  The cursor is placed on the character right of {char} (inclusive).</td>
+  </tr>
+  <tr>
+    <td>;</td>
+    <td>Repeat latest f, t, F or T [count] times.</td>
+  </tr>
+  <tr>
+    <td>,</td>
+    <td>Repeat latest f, t, F or T in opposite direction [count] times.</td>
+  </tr>
+  <tr>
+    <td>-  &lt;minus&gt;</td>
+    <td>[count] lines upward, on the first non-blank character
+    (linewise).</td>
+  </tr>
+  <tr>
+    <td>+ or<br> CTRL-M or<br> &lt;CR&gt;</td>
+    <td>[count] lines downward, on the first non-blank character
+    (linewise).</td>
+  </tr>
+  <tr>
+    <td>_  &lt;underscore&gt;</td>
+    <td>[count] - 1 lines downward, on the first non-blank character (linewise).</td>
+  </tr>
+  <tr>
+    <td>&lt;C-End&gt; or<br> G</td>
+    <td>Goto line [count], default last line, on the first non-blank character.</td>
+  </tr>
+  <tr>
+    <td>&lt;C-Home&gt;  or<br> gg</td>
+    <td>Goto line [count], default first line, on the first non-blank character.</td>
+  </tr>
+  <tr>
+    <td>&lt;S-Right&gt;  or<br> w</td>
+    <td>[count] words forward </td>
+  </tr>
+  <tr>
+    <td>&lt;C-Right&gt;  or<br> W</td>
+    <td>[count] WORDS forward </td>
+  </tr>
+  <tr>
+    <td>e</td>
+    <td>Forward to the end of word [count] </td>
+  </tr>
+  <tr>
+    <td>E</td>
+    <td>Forward to the end of WORD [count] </td>
+  </tr>
+  <tr>
+    <td>&lt;S-Left&gt;  or<br> b</td>
+    <td>[count] words backward </td>
+  </tr>
+  <tr>
+    <td>&lt;C-Left&gt;  or<br> B</td>
+    <td>[count] WORDS backward </td>
+  </tr>
+  <tr>
+    <td>ge</td>
+    <td>Backward to the end of word [count] </td>
+  </tr>
+  <tr>
+    <td>gE</td>
+    <td>Backward to the end of WORD [count]</td>
+  </tr>
+</table>
+
+<table>
+  <caption>Word Movement</caption>
+  <tr>
+    <td>(</td>
+    <td>[count] sentences backward</td>
+  </tr>
+  <tr>
+    <td>)</td>
+    <td>[count] sentences forward </td>
+  </tr>
+  <tr>
+    <td>{</td>
+    <td>[count] paragraphs backward</td>
+  </tr>
+  <tr>
+    <td>}</td>
+    <td>[count] paragraphs forward </td>
+  </tr>
+  <tr>
+    <td>]]</td>
+    <td>[count] sections forward or to the next '{' in the first column.  When used after an operator, then the '}' in the first column.</td>
+  </tr>
+  <tr>
+    <td>][</td>
+    <td>[count] sections forward or to the next '}' in the first column </td>
+  </tr>
+  <tr>
+    <td>[[</td>
+    <td>[count] sections backward or to the previous '{' in the first
+    column</td>
+  </tr>
+  <tr>
+    <td>[]</td>
+    <td>[count] sections backward or to the previous '}' in the first column
+    </td>
+  </tr>
+</table>
+
+<table>
+  <caption>Marks</caption>
+  <tr>
+    <td>m{a-zA-Z}</td>
+    <td>Set mark {a-zA-Z} at cursor position (does not move the cursor, this is not a motion command).</td>
+  </tr>
+  <tr>
+    <td>m'  or<br> m`</td>
+    <td>Set the previous context mark.  This can be jumped to with the "''" or "``" command (does not move the cursor, this is not a motion command).</td>
+  </tr>
+  <tr>
+    <td>:[range]ma[rk] {a-zA-Z}</td>
+    <td>Set mark {a-zA-Z} at last line number in [range], column 0.  Default is cursor line.</td>
+  </tr>
+  <tr>
+    <td>:[range]k{a-zA-Z}</td>
+    <td>Same as :mark, but the space before the mark name can be omitted.</td>
+  </tr>
+  <tr>
+    <td>'{a-z}</td>
+    <td>To the first non-blank character on the line with mark {a-z} (linewise).</td>
+  </tr>
+  <tr>
+    <td>'{A-Z0-9}</td>
+    <td>To the first non-blank character on the line with mark {A-Z0-9} in the correct file</td>
+  </tr>
+  <tr>
+    <td>`{a-z}</td>
+    <td>To the mark {a-z}</td>
+  </tr>
+  <tr>
+    <td>`{A-Z0-9}</td>
+    <td>To the mark {A-Z0-9} in the correct file</td>
+  </tr>
+  <tr>
+    <td>:marks</td>
+    <td>List all the current marks (not a motion command).</td>
+  </tr>
+  <tr>
+    <td>:marks {arg}</td>
+    <td>List the marks that are mentioned in {arg} (not a motion command).  For example:</td>
+  </tr>
+</table>
+
+<table>
+  <caption>Searching</caption>
+  <tr>
+    <td>/{pattern}[/]<CR></td>
+    <td>Search forward for the [count]'th occurrence of {pattern}</td>
+  </tr>
+  <tr>
+    <td>/{pattern}/{offset}<CR></td>
+    <td>Search forward for the [count]'th occurrence of {pattern} and go {offset} lines up or down.</td>
+  </tr>
+  <tr>
+    <td>/&lt;CR&gt;</td>
+    <td>Search forward for the [count]'th latest used pattern</td>
+  </tr>
+  <tr>
+    <td>//{offset}&lt;CR&gt;</td>
+    <td>Search forward for the [count]'th latest used pattern with new.  If {offset} is empty no offset is used.</td>
+  </tr>
+  <tr>
+    <td>?{pattern}[?]&lt;CR&gt;</td>
+    <td>Search backward for the [count]'th previous occurrence of {pattern}
+    </td>
+  </tr>
+  <tr>
+    <td>?{pattern}?{offset}&lt;CR&gt;</td>
+    <td>Search backward for the [count]'th previous occurrence of {pattern} and go {offset} lines up or down </td>
+  </tr>
+  <tr>
+    <td>?&lt;CR&gt;</td>
+    <td>Search backward for the [count]'th latest used pattern </td>
+  </tr>
+  <tr>
+    <td>??{offset}&lt;CR&gt;</td>
+    <td>Search backward for the [count]'th latest used pattern with new {offset}.  If {offset} is empty no offset is used.</td>
+  </tr>
+  <tr>
+    <td>n</td>
+    <td>Repeat the latest "/" or "?" [count] times.</td>
+  </tr>
+  <tr>
+    <td>N</td>
+    <td>Repeat the latest "/" or "?" [count] times in opposite direction.
+    </td>
+  </tr>
+</table>
+
+<table>
+  <caption>Selecting Text (Visual Mode)</caption>
+  <tr><td colspan="2">
+  <p>To select text, enter visual mode with one of the commands below, and use
+  <a href=#motion>motion commands</a> to highlight the text you are interested
+  in.  Then, use some command on the text. </p>
+  <pre>
+  The operators that can be used are:
+    ~  switch case
+    d  delete
+    c  change
+    y  yank
+    >  shift right
+    <  shift left
+    !  filter through external command
+    =  filter through 'equalprg' option command
+    gq  format lines to 'textwidth' length
+  </pre>
+</td></tr>
+  <tr>
+    <td>v</td>
+    <td>start Visual mode per character.</td>
+  </tr>
+  <tr>
+    <td>V</td>
+    <td>start Visual mode linewise.</td>
+  </tr>
+  <tr>
+    <td>&lt;Esc&gt;</td>
+    <td>exit Visual mode without making any changes</td>
+  </tr>
+</table>
+
+<hr>
+<a href='http://www.catb.org/hacker-emblem/'>
+	<img src='http://www.catb.org/hacker-emblem/glider.png'/>
+</a>
+<address> Daniel Gryniewicz / <a href="mailto:dang@fprintf.net">dang@fprintf.net</a> </address>
