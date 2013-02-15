@@ -1,0 +1,388 @@
+<h3 id="bashhistorycheatsheet">Bash History Cheat Sheet</h3>
+
+<table>
+<caption id="emacskeyboardshortcutsummary">Emacs Keyboard Shortcut Summary</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Shortcut</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">C-p</td>
+	<td style="text-align:left;">Fetch the previous command from the history list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">C-n</td>
+	<td style="text-align:left;">Fetch the next command from the history list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">M-&lt;</td>
+	<td style="text-align:left;">Move to the first line in the history.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">M-&gt;</td>
+	<td style="text-align:left;">Move to the end of the input history.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">C-r</td>
+	<td style="text-align:left;">Search backward starting at the current line (incremental)</td>
+</tr>
+<tr>
+	<td style="text-align:left;">C-s</td>
+	<td style="text-align:left;">Search forward starting at the current line (incremental).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">M-p</td>
+	<td style="text-align:left;">Search backward using non-incremental search.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">M-n</td>
+	<td style="text-align:left;">Search forward using non-incremental search</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+<table>
+<caption id="vikeyboardshortcutsummary">Vi Keyboard Shortcut Summary</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Shortcut</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">k</td>
+	<td style="text-align:left;">Fetch the previous command from the history list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">j</td>
+	<td style="text-align:left;">Fetch the next command from the history list.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">/string or CTRL-r</td>
+	<td style="text-align:left;">Search history backward for a command matching string.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">?string or CTRL-s</td>
+	<td style="text-align:left;">Search history forward for a command matching string.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a></td>
+</tr>
+<tr>
+	<td style="text-align:left;">n</td>
+	<td style="text-align:left;">Repeat search in the same direction as previous.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">N</td>
+	<td style="text-align:left;">Repeat search in the opposite direction as previous.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">G</td>
+	<td style="text-align:left;">Move to history line N (for example, 15G).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+<h4 id="historyexpansionsummary">History Expansion Summary</h4>
+
+<table>
+<caption id="eventdesignators">Event Designators</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Designator</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">!</td>
+	<td style="text-align:left;">Start a history substitution.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">!!</td>
+	<td style="text-align:left;">Refer to the last command.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">!n</td>
+	<td style="text-align:left;">Refer to the n-th command line (try `history&#8217; command).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">!-n</td>
+	<td style="text-align:left;">Refer to the current command line minus n.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">!string</td>
+	<td style="text-align:left;">Refer to the most recent command starting with &#8216;string&#8217;.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">!?string?</td>
+	<td style="text-align:left;">Refer to the most recent command containing &#8216;string&#8217;.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">^str1^str2^</td>
+	<td style="text-align:left;">Quick substitution. Repeat the last command, replacing &#8216;str1&#8217; with &#8216;str2&#8217;.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">!#</td>
+	<td style="text-align:left;">Refer to the entire command line typed so far.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+<table>
+<caption id="worddesignators">Word Designators</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Designator</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">0</td>
+	<td style="text-align:left;">The zeroth (first) word in a line (usually command name).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">n</td>
+	<td style="text-align:left;">The n-th word in a line.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">^</td>
+	<td style="text-align:left;">The first argument (the second word) in a line.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">$</td>
+	<td style="text-align:left;">The last argument in a line.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">%</td>
+	<td style="text-align:left;">The word matched by the most recent string search.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">x-y</td>
+	<td style="text-align:left;">A range of words from x to y (-y is synonymous with 0-y).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">*</td>
+	<td style="text-align:left;">All words but the zeroth (synonymous with 1-$).</td>
+</tr>
+<tr>
+	<td style="text-align:left;">x*</td>
+	<td style="text-align:left;">Synonymous with x-$</td>
+</tr>
+<tr>
+	<td style="text-align:left;">x-</td>
+	<td style="text-align:left;">The words from x to the second to last word.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+<table>
+<caption id="modifiers">Modifiers</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Modifier</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">h</td>
+	<td style="text-align:left;">Remove a trailing pathname component, leaving the head.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">t</td>
+	<td style="text-align:left;">Remove all leading pathname component, leaving the tail.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">r</td>
+	<td style="text-align:left;">Remove a trailing suffix of the form .xxx, leaving the basename.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">e</td>
+	<td style="text-align:left;">Remove all but the trailing suffix.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">p</td>
+	<td style="text-align:left;">Print the resulting command but do not execute it.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">q</td>
+	<td style="text-align:left;">Quotes the substituted words, escaping further substitutions.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">x</td>
+	<td style="text-align:left;">Quotes the substituted words, breaking them into words at blanks and newlines.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">s/old/new/</td>
+	<td style="text-align:left;">Substitutes &#8216;new&#8217; for &#8216;old&#8217;.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">&amp;</td>
+	<td style="text-align:left;">Repeats the previous substitution.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">g</td>
+	<td style="text-align:left;">Causes s/old/new/ or &amp; to be applied over the entire event line.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+<table>
+<caption id="historybehaviormodificationviashellvariables">History Behavior Modification via Shell Variables</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Shell Variable</th>
+	<th style="text-align:left;">Description</th>
+	<th style="text-align:left;">Default</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">HISTFILE</td>
+	<td style="text-align:left;">Controls where the history file gets saved. Set to /dev/null not to save the history.</td>
+	<td style="text-align:left;">Default: ~/.bash_history</td>
+</tr>
+<tr>
+	<td style="text-align:left;">HISTFILESIZE</td>
+	<td style="text-align:left;">Controls how many history commands to keep in HISTFILE</td>
+	<td style="text-align:left;">Default: 500</td>
+</tr>
+<tr>
+	<td style="text-align:left;">HISTSIZE</td>
+	<td style="text-align:left;">Controls how many history commands to keep in the history list of current session.</td>
+	<td style="text-align:left;">Default: 500</td>
+</tr>
+<tr>
+	<td style="text-align:left;">HISTIGNORE</td>
+	<td style="text-align:left;" colspan="2">Controls which commands to ignore and not save to the history list. The variable takes a list of colon separated values. Pattern &amp; matches the previous history command.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+<table>
+<caption id="historybehaviormodificationviashoptcommand">History Behavior Modification via shopt Command</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">shopt Option</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">histappend</td>
+	<td style="text-align:left;">Setting the variable appends current session history to HISTFILE. Unsetting overwrites the file each time.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">histreedit</td>
+	<td style="text-align:left;">If set, puts a failed history substitution back on the command line for re-editing.</td>
+</tr>
+<tr>
+	<td style="text-align:left;">histverify</td>
+	<td style="text-align:left;">If set, puts the command to be executed after a substitution on command line as if you had typed it.</td>
+</tr>
+</tbody>
+</table>
+<p><em>shopt options can be set by a <code>shopt -s option' and can be unset by a</code>shopt -u option&#8217;.</em></p>
+
+<hr />
+
+<h4 id="examples">Examples</h4>
+
+<pre><code>$ echo a b c d e    (executes `echo ab c d e`)
+a b c d e
+
+$ echo !!:3-$       (executes `echo c d e`)
+c d e
+
+$ echo !-2:*:q      (executes `echo 'a b c d e'`)
+a b c d e
+
+$ echo !-3:1:2:4:x  (executes `echo 'a' 'b' 'd'`)
+a b d
+
+$ echo !-4:1-3:s/a/foo/:s/b/bar/:s/c/baz/ (executes `echo foo bar baz`)
+foo bar baz
+
+$ tar -xzf package-x.y.z.tgz
+...
+$ cd !-1:$:r        (executes `cd package-x.y.z`)
+package-x.y.z $
+
+$ ls -a /tmp
+file1  file2  file3 ...
+
+$ ^-a^-l^           (executes `ls -l /tmp`)
+-rw-------  1  user  user  file1
+...
+</code></pre>
+
+<hr />
+
+<p>Peteris Krumins (peter@catonmat.net), 2008.02.15 </p>
+
+<p><a href="http://www.catonmat.net">http://www.catonmat.net</a> - good coders code, great reuse </p>
+
+<p>Released under the GNU Free Document License </p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>Note that on most machines Ctrl-s STOPS the terminal output, change it with `stty&#8217; (Ctrl-q to resume). <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
