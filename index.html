@@ -1,44 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Cheat Sheets</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/cheaters.css">
-</head>
-<body class="normal"> <!-- .inverted for high-contrast -->
-	<div id="wrapper">
-		<img src="images/contrast.png" id="contrast">
-		<!-- Comment/Uncomment/Copy/Modify lines below to modify the cheaters menu -->
-		<ul id="nav">
-			<li><a href="cheatsheets/css3.html">CSS3</a></li>
-			<li><a href="cheatsheets/selectors.html">Selectors</a></li>
-			<li><a href="cheatsheets/html5.html">HTML5</a></li>
-			<!-- <li><a href="cheatsheets/emmet.html">Emmet</a></li> -->
-			<!-- <li><a href="cheatsheets/html5tags.html">HTML5</a></li> -->
-			<!-- <li><a href="cheatsheets/webkit.html">Webkit</a></li> -->
-			<li><a href="cheatsheets/jquery.html">jQuery</a></li>
-			<!-- <li><a href="cheatsheets/JSStrings.html">JSStrings</a></li> -->
-			<li><a href="cheatsheets/markdown.html">Markdown</a></li>
-			<li><a href="cheatsheets/mmd.html">MMD</a></li>
-			<!-- <li><a href="cheatsheets/keybindings.html">Bindings</a></li> -->
-			<li><a href="cheatsheets/gmail.html">GMail</a></li>
-			<li><a href="cheatsheets/vim.html">Vim</a></li>
-                        <!-- <li><a href="cheatsheets/screen.html">Screen</a></li> -->
-			<li><a href="cheatsheets/alfred.html">Alfred</a></li>
-			<!-- <li><a href="cheatsheets/git.html">Git</a></li> -->
-			<!-- <li><a href="cheatsheets/git-advanced.html">Git</a></li> -->
-			<li><a href="cheatsheets/towergit.html">Git</a></li>
-			<li><a href="cheatsheets/bashhistory.html">Bash History</a></li>
-			<!-- <li><a href="cheatsheets/jira.html">Jira</a></li> -->
-			<!-- <li><a href="cheatsheets/subl.html">Sublime</a></li> -->
-			<!-- <li><a href="cheatsheets/subl2.html">ST2</a></li> -->
-			<!-- <li><a href="cheatsheets/scapple.html">Scapple</a></li> -->
-		</ul>
-		<div id="container"></div>
-	</div>
-	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" src="js/cheaters.js"></script>
-</body>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Cheaters by ttscoff</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Cheaters</h1>
+          <h2>Customizable cheat sheet system for OS X</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/ttscoff/cheaters/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/ttscoff/cheaters/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/ttscoff/cheaters" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Header.jpg" alt="Cheat Sheets Header"></p>
+
+<p>First and foremost, this is a total ripoff of an idea by Gabe Weatherhead <a href="http://www.macdrifter.com/2012/02/markdown-cheat-sheets-and-marked/">over at Macdrifter</a>. I just expanded on the idea a little bit.</p>
+
+<p>Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps. Most of the time I create <a href="http://smilesoftware.com/TextExpander/">TextExpander</a> snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.</p>
+
+<p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-wide.jpg" alt="Cheat Sheets wide"></p>
+
+<h3>Using Cheaters</h3>
+
+<p>The most useful way to use Cheaters is with an Automator Application.</p>
+
+<p><img src="http://brettterpstra.com/uploads/2012/03/Cheaters-Automator.jpg" alt="Cheaters Automator Application setup"></p>
+
+<ol>
+<li>Download the Zip file above and put it anywhere on your computer (I keep mine in Dropbox so that my cheat sheets are available on other machines). </li>
+<li>Open Automator in your Applications folder. </li>
+<li>Create a new project with the type "Application." You can also use a Workflow, which can be launched easily from the command line, but I'm using an Application for now because it's easiest to launch with a hotkey program.</li>
+<li>Drag two actions from the library on the left into the blank area on the right: <strong>Get Specified URLs</strong> and <strong>Website Popup</strong>, in that order. You can find them quickly by selecting "Library" on the left and using the filter to locate them.</li>
+<li>Double click the default URL in the <strong>Get Specified URLs</strong> action and set it to the file path to your Cheaters folder. This will be in the format <code>file:///Users/yourusername/path/to/Cheaters/index.html</code>.</li>
+<li>Set a size in the <strong>Website Popup</strong> action. I'm using a custom size of 700x800, which works well on my setup with two large monitors. The popup is resizable after opening, so it's not critical. Cheaters has a responsive design that will mutate into a single column with a dropdown menu at smaller sizes, so if you have a small screen, use the iPhone preset.</li>
+<li>Save the application to your /Applications folder (or ~/Applications).</li>
+</ol><p>You can add a hotkey or other launch method using Launchbar, Keyboard Maestro, Alfred, Apptivator, etc. Lots of choices. When the application launches, it automatically becomes a floating HUD, and you can dismiss it by focusing it and using Escape or ⌘Q.</p>
+
+<p>You can also use Cheaters in a web browser, just put it on your disk and point your browser to the <code>file:///...</code> location.</p>
+
+<h3>Customizing</h3>
+
+<p>If you know a little HTML, adding and editing sheets is easy. Take a look at the existing documents in the included <strong>cheatsheets</strong> folder. The markup varies but a lot of cases are already handled by the CSS. I stole most of the included cheat sheets from existing web sources (credits at the bottom of each). Some of them I just ripped the HTML out of directly, some I <a href="http://markdownrules.com/">converted</a> <a href="http://brettterpstra.com/introducing-gather-a-cocoa-markdownifier/">to Markdown</a> and then to HTML to get cleaner output. The HTML in the cheat sheets does not need a head, body or containing div, just the markup that goes inside the container in the index.html file.</p>
+
+<h4>The menu</h4>
+
+<p>The index file for Cheaters loads each cheat sheet dynamically into its own markup (using jQuery). To add a new sheet to the menu (or remove/rearrange existing sheets), just edit the unordered list in the #nav ul. The order of the list is the order of the menu items, and the first one in the list is loaded by default. If you only ever want one cheat sheet, just make it the only one in the list. New cheat sheets should be stored as HTML files in the <strong>cheatsheets</strong> folder, and referenced from the links in the #nav list with the relative path <code>cheatsheets/filename.html</code>.</p>
+
+<h4>The look</h4>
+
+<p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-narrow-high-contrast.jpg" alt="Narrow, high contrast"></p>
+
+<p>If you run into markup that isn't handled by the CSS, just wrap it in a div with a unique ID and add specific styles in the main CSS file to override or augment default styles. You can, of course, completely replace that stylesheet if you want an entirely different look. I promise not to be offended.</p>
+
+<p>There's also a contrast icon in the upper right, which you can use to flip between light-on-dark and dark-on-light. You can make this change permanent by editing the body class in index.html. Adding a class of "inverted" will set it to be light-on-dark by default; without that class it's dark-on-light automatically.</p>
+
+<h4>Using PDFs</h4>
+
+<p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Wide-Image.jpg" alt="Cheat Sheets with image"></p>
+
+<p>If you find a PDF cheat sheet that's ideal for this type of display, you'll need to convert it to an image (gif, jpg or png) first. Make it large, between 800px and 1024px wide. Cheaters will automatically scale it to your browser width, and when your browser width gets small enough that the image would be unreadable, it shows it full size and lets you scroll around within the viewport. See the CSS3 cheat sheet markup for an example of using an image; it's just an image tag in an html file. Easy as pie.</p>
+
+<p>If you create some great cheat sheets, fork this and send a pull request. Just <a href="http://brettterpstra.com/contact">let me know</a> if you need a hand!</p>
+        </section>
+
+        <footer>
+          Cheaters is maintained by <a href="https://github.com/ttscoff">ttscoff</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+                  <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-34296025-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+      </div>
+    </div>
+  </body>
 </html>
