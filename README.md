@@ -1,6 +1,6 @@
 You can read this page if you want to, but [this one](http://ttscoff.github.com/cheaters/) is way prettier.
 
-![Cheat Sheets Header](http://brettterpstra.com/wp-content/uploads/2012/03/Cheat-Sheets-Header.jpg)
+![Cheat Sheets Header](http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Header.jpg)
 
 [macdrifter]: http://www.macdrifter.com/2012/02/markdown-cheat-sheets-and-marked/
 [gather]: http://brettterpstra.com/introducing-gather-a-cocoa-markdownifier/
@@ -12,13 +12,13 @@ First and foremost, this is a total ripoff of an idea by Gabe Weatherhead [over 
 Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps. Most of the time I create [TextExpander][te] snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.
 
 
-![Cheat Sheets wide](http://brettterpstra.com/wp-content/uploads/2012/03/Cheat-Sheets-wide.jpg)
+![Cheat Sheets wide](http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-wide.jpg)
 
 ### Using Cheaters
 
 The most useful way to use Cheaters is with an Automator Application.
 
-![Cheaters Automator Application setup](http://brettterpstra.com/wp-content/uploads/2012/03/Cheaters-Automator.jpg)
+![Cheaters Automator Application setup](http://brettterpstra.com/uploads/2012/03/Cheaters-Automator.jpg)
 
 1. Download the Zip file above and put it anywhere on your computer (I keep mine in Dropbox so that my cheat sheets are available on other machines). 
 2. Open Automator in your Applications folder. 
@@ -42,7 +42,7 @@ The index file for Cheaters loads each cheat sheet dynamically into its own mark
 
 #### The look
 
-![Narrow, high contrast](http://brettterpstra.com/wp-content/uploads/2012/03/Cheat-Sheets-narrow-high-contrast.jpg)
+![Narrow, high contrast](http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-narrow-high-contrast.jpg)
 
 If you run into markup that isn't handled by the CSS, just wrap it in a div with a unique ID and add specific styles in the main CSS file to override or augment default styles. You can, of course, completely replace that stylesheet if you want an entirely different look. I promise not to be offended.
 
@@ -50,7 +50,7 @@ There's also a contrast icon in the upper right, which you can use to flip betwe
 
 #### Using PDFs
 
-![Cheat Sheets with image](http://brettterpstra.com/wp-content/uploads/2012/03/Cheat-Sheets-Wide-Image.jpg)
+![Cheat Sheets with image](http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Wide-Image.jpg)
 
 If you find a PDF cheat sheet that's ideal for this type of display, you'll need to convert it to an image (gif, jpg or png) first. Make it large, between 800px and 1024px wide. Cheaters will automatically scale it to your browser width, and when your browser width gets small enough that the image would be unreadable, it shows it full size and lets you scroll around within the viewport. See the CSS3 cheat sheet markup for an example of using an image; it's just an image tag in an html file. Easy as pie.
 
