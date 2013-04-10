@@ -5,22 +5,23 @@
  Upstanding Citizen by Brett Terpstra
  Modified for Cheaters by Brett Terpstra, 2012 <http://brettterpstra.com>
  Non-standard fonts used:
-  * OSPDIN
+  * ArmataRegular
   * League Gothic
   * Fjord
   * Inconsolata
  Download @font-face kits from <http://www.fontsquirrel.com/fontface> and place woff versions in a "fonts" directory relative to the document path.
 */
-@font-face { font-family:'OSPDIN';src:url('fonts/OSP-DIN-webfont.woff') format('truetype');font-weight:normal;font-style:normal }
+@font-face { font-family:'ArmataRegular';src:url('fonts/Armata-Regular-webfont.woff') format('woff');font-weight:normal;font-style:normal }
 @font-face { font-family:'LeagueGothic';src:url('fonts/League_Gothic-webfont.woff') format('woff');font-weight:normal;font-style:normal }
 @font-face { font-family:'fjord';src:url('fonts/FjordOne-Regular-webfont.woff') format('woff');font-weight:normal;font-style:normal }
 @font-face { font-family:'Inconsolata';src:url('fonts/Inconsolata-webfont.woff') format('woff');font-weight:normal;font-style:normal }
-body { -webkit-font-smoothing:antialiased;font:normal .8764em/1.5em Arial,Verdana,sans-serif;margin:0 }
-html>body { font-size:14px }
-li { font-size:110% }
+body { -webkit-font-smoothing:antialiased;font:normal .8764em/1.5em ArmataRegular, Helvetica, Arial,Verdana,sans-serif;margin:0;-webkit-transition:background .3s ease-out; }
+html>body { font-size:16px }
+li { font-size:110%; margin: 8px 0; }
 li li { font-size:100% }
 li p { font-size:100%;margin:.5em 0 }
-h1,h2,h3,h4,h5,h6 { font-family:LeagueGothic,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal }
+h1,h2,h3,h4,h5,h6 { font-family:ArmataRegular,"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal }
+h4,h5,h6 { font-weight:700 }
 h1 { color:#000;font-size:4.2857em;line-height:1em;margin:.6563em 0 }
 h2 { color:#111;font-size:2.7143em;line-height:1.2em;margin:.875em 0 }
 h1,h2,h3 { text-align:center;padding:.3em 0 }
@@ -28,13 +29,14 @@ h2,h3 { border-top:solid 1px #ddd;border-bottom:solid 1px #ddd }
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a { color:#003057 }
 h2:before { content:"\2015 ";font-weight:normal;color:#aaa }
 h2:after { content:" \2015";font-weight:normal;color:#aaa }
-h3 { color:#111;font-size:2.5em;line-height:1.2em;margin:.9em 0 }
-h4 { color:#111;font-size:2.25em;line-height:1.2em;margin:.3em 0 }
-h5 { color:#111;font-size:2em;line-height:1.2em;margin:.3em 0 }
-h6 { font-size:1.75em;line-height:1.2em;margin:.3em 0 }
-body,p,div { color:#222;font-family:fjord,"Georgia",serif;word-wrap:break-word }
-a { -webkit-transition:color .2s ease-in-out;color:#004e8c;text-decoration:none }
-a:hover { color:#3593d9 }
+h3 { color:#111;font-size: 1.5em;line-height: 1.2em;margin: .9em 0;font-weight: 700; }
+h4 { color:#111;font-size:1.5em;line-height:1.2em;margin:.3em 0 }
+h5 { color:#111;font-size:1.2em;line-height:1.2em;margin:.3em 0 }
+h6 { font-size: 1em;line-height: 1em;margin: 1.3em 0; }
+body,p,div { color:#222;font-family:ArmataRegular,"Georgia",serif;word-wrap:break-word }
+a, span, li { -webkit-transition:color .2s ease-in-out;text-decoration:none;font-weight: bold;font-size: 16px;color: rgb(51, 51, 51); }
+li>span { color: #777; }
+a:hover { color:#3593d9;}
 .footnote { color:#0d6ea1;font-size:.8em;vertical-align:super }
 #wrapper img { max-width:100%;height:auto }
 dd { margin-bottom:1em }
@@ -43,16 +45,16 @@ ul ul,ul ol { margin-bottom:.4em }
 ul ul { list-style:disc }
 ul ul ul { list-style:square }
 ul ul ul ul { list-style:circle }
-caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr { border-spacing:0;font-family:LeagueGothic,Helvetica,Arial,sans-serif;font-weight:400;font-size:24px }
-caption { display:table-caption;font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:2px;font-family:LeagueGothic;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px;-webkit-border-radius:4px;margin:4px 0;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35) }
+caption,col,colgroup,table,tbody,td,tfoot,th,thead,tr { border-spacing:0;font-family:ArmataRegular,Helvetica,Arial,sans-serif;font-weight:400;font-size:24px }
+caption { display:table-caption;font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:1px;font-family:ArmataRegular;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px;-webkit-border-radius:4px;margin:4px 0;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35) }
 col { display:table-column }
 colgroup { display:table-column-group }
 tbody { display:table-row-group }
 tfoot { display:table-footer-group }
-table { margin-bottom:2em;padding:0;font-size:14px;border-collapse:collapse;-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.35);width:98%;margin:0 auto 2em auto }
+table { margin-bottom:2em;padding:0;font-size:16px;border-collapse:collapse;-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.35);width:98%;margin:0 auto 2em auto }
 table th,table td { padding:10px 10px 9px;line-height:18px;text-align:left }
-table th,tr.divider { padding-top:9px;font-family:LeagueGothic;font-size:18px;font-weight:normal!important;text-transform:uppercase;vertical-align:middle }
-table td { vertical-align:top;border-top:1px solid #ddd;font-family:fjord,georgia,serif;font-size:14px!important }
+table th,tr.divider { padding-top:9px;font-family:ArmataRegular;font-size:16px;font-weight:normal!important;text-transform:uppercase;vertical-align:middle }
+table td { vertical-align:top;border-top:1px solid #ddd;font-size:15px!important }
 table tbody th { border-top:1px solid #ddd;vertical-align:top }
 table { border:1px solid #ddd;border-collapse:separate;*border-collapse:collapse;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px }
 table th+th,table td+td,table th+td { border-left:1px solid #ddd }
@@ -78,8 +80,8 @@ table tr:nth-child(even),table td:nth-child(even) { background:rgba(0,0,0,0.06) 
 img,pre,blockquote,table,figure { page-break-inside:avoid }
 .footnotes { page-break-before:always }
 .footnotes hr { display:none }
-#wrapper { background:#fff;color:#303030;font-size:85%;padding:10px!important;position:relative;text-indent:0 } }
-pre,code,tt { color:#666;font-family:Inconsolata,Menlo,Monaco,monospace;font-size:14px;font-weight:bold !important;text-align:left;margin:2em 0;font-weight:normal }
+#wrapper { background:#fff;color:#303030;padding:10px!important;position:relative;text-indent:0 } }
+pre,code,tt { color:#666;font-family:Inconsolata,Menlo,Monaco,monospace;font-size:16px;font-weight:bold !important;text-align:left;margin:2em 0;font-weight:normal }
 tt { display:block;margin:1.5em 0;line-height:1.5 }
 span.amp { font-family:Baskerville,Palatino,"Book Antiqua",serif;font-style:italic }
 code { background:#fff;border:1px solid #ddd;padding:2px;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;color:#222 }
@@ -118,19 +120,21 @@ article,article .inner { margin:0;padding:0; }
 .inner pre { font-size:0.9em;overflow:auto;border-top:3px double #C7C7C7;border-bottom:3px double #C7C7C7;padding:0.5em 0;letter-spacing:-1px; }
 article { display:block;overflow:hidden;position:relative;font-size:100% }
 .inner { margin:10px;width:95%; }
-.inner h4 { font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:2px;font-family:LeagueGothic;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px 0;-webkit-border-radius:4px;margin:0 0 4px;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35);text-align:center; }
+.inner h4 { font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:1px;font-family:LeagueGothic;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px 0;-webkit-border-radius:4px;margin:0 0 4px;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35);text-align:center; }
 #nav { margin:0 0 10px 0;padding:5px 0 0;width:98%;background:rgba(255,255,255,.75); }
 #nav li { display:block;float:left;margin:0 0 2px 0; }
-#nav a { display:block;padding:2px 5px;color:#333;border:1px solid #aaa;margin-right:2px;-webkit-border-radius:5px;-webkit-transition:all .2s ease-in-out;background:rgba(255,255,255,.5); }
+#nav a { display:block;padding:2px 5px;color:#333;border:1px solid #aaa;margin-right:2px;-webkit-border-radius:5px;-webkit-transition:all .2s ease-in-out;background:rgba(255,255,255,.5);font-family: fjord;
+font-weight: 300;
+font-size: 12px; }
 #nav a:hover { background:#eee; }
 #container { float:left;clear:both;margin:10px 0;width:100%; }
 .active a,#nav li.active a:hover { background:#333!important;color:white!important; }
 table { width:100%; }
-tr td:first-child { font-family:Helvetica,sans-serif;font-weight:bold }
+tr td:first-child { font-family:ArmataRegular,Helvetica,sans-serif;font-weight:bold }
 tr.divider { background:#fff; }
-tr.divider td { border-top:dashed 1px #aaa!important;font-family:LeagueGothic;font-weight:normal;background:#ccc;font-size:1em !important;text-transform:none;text-align:left!important; }
+tr.divider td { border-top:dashed 1px #aaa!important;font-family:ArmataRegular;font-weight:normal;background:#ccc;font-size:1em !important;text-transform:none;text-align:left!important; }
 .wg { text-align:center;width:50px }
-#markdown h3,#jquery h1,#jquery h2,#multimarkdown h3,#html5 h3 { font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:2px;font-family:LeagueGothic;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px;-webkit-border-radius:4px;margin:0;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35);border:none }
+#markdown h3,#jquery h1,#jquery h2,#multimarkdown h3,#html5 h3 { font-weight:400;font-size:18px;text-transform:uppercase;letter-spacing:1px;font-family:ArmataRegular;word-spacing:.2em;background:rgba(0,0,0,.75);color:#EEE;padding:4px;-webkit-border-radius:4px;margin:0;-webkit-box-shadow:2px 2px 2px rgba(0,0,0,.35);border:none }
 #multimarkdown h4 { font-size: 24px; text-align:center }
 #jquery div { float:left;width:49%; }
 #jquery section { float:left;border:1px solid #ccc;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;margin:5px;padding:10px;width:90%; }
