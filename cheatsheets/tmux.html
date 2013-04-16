@@ -23,10 +23,172 @@
 
 <tbody>
 <tr>
-	<td style="text-align:left;">Something</td>
-	<td style="text-align:left;">Do more stuffs</td>
+	<td style="text-align:left;">tmux</td>
+	<td style="text-align:left;">start tmux</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tmux new -s <em>sessionname</em></td>
+	<td style="text-align:left;">start tmux with a new session called <em>sessionname</em></td>
+</tr>
+<tr>
+	<td style="text-align:left;">tmux ls</td>
+	<td style="text-align:left;">get a list of all running sessions</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tmux new -s <em>sessionname</em> -d</td>
+	<td style="text-align:left;">Create a new detached session</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tmux attach -t <em>sessionname</em></td>
+	<td style="text-align:left;">Attach to a session by name</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tmux kill-session -t <em>sessionname</em></td>
+	<td style="text-align:left;">Kill a session by name</td>
+</tr>
+<tr>
+	<td style="text-align:left;">tmux new -s <em>name</em> -n <em>command</em></td>
+	<td style="text-align:left;">Run <em>command</em> in a new window in a new session</td>
 </tr>
 </tbody>
 </table>
+
+
+<table>
+<caption id="insidetmux">Inside tmux</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Command</th>
+	<th style="text-align:left;">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>prefix</code><a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a> d</td>
+	<td style="text-align:left;">Detach from a session</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> n</td>
+	<td style="text-align:left;">Next window in this session</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> p</td>
+	<td style="text-align:left;">Previous window in this session</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> ,</td>
+	<td style="text-align:left;">Rename current window</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> #</td>
+	<td style="text-align:left;">Switch to window <code>#</code></td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> f</td>
+	<td style="text-align:left;">Find a window by name</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> w</td>
+	<td style="text-align:left;">Display a menu to choose a window</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> &amp;</td>
+	<td style="text-align:left;">Prompt to kill the window</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> %</td>
+	<td style="text-align:left;">Divide window vertically into panes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> &quot;</td>
+	<td style="text-align:left;">Divide window horizontally into panes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> o</td>
+	<td style="text-align:left;">Cycle through panes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> <em>arrow keys</em></td>
+	<td style="text-align:left;">Cycle through panes</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> <em>spacebar</em></td>
+	<td style="text-align:left;">Cycle through pane layouts</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> x</td>
+	<td style="text-align:left;">Prompt to kill the pane (or window for last pane)</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> :</td>
+	<td style="text-align:left;">Enter Command Mode</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>prefix</code> ?</td>
+	<td style="text-align:left;">List all keybindings</td>
+</tr>
+</tbody>
+</table>
+
+
+<table>
+<caption id="recommendedconfigurationchanges">Recommended Configuration Changes</caption>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Command</th>
+	<th style="text-align:left;">Default</th>
+	<th style="text-align:left;">Recommended</th>
+	<th style="text-align:left;">command<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Prefix</td>
+	<td style="text-align:left;"><code>ctrl-b</code></td>
+	<td style="text-align:left;"><code>ctrl-a</code></td>
+	<td style="text-align:left;"><code>set -g prefix C-a</code><a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a></td>
+</tr>
+<tr>
+	<td style="text-align:left;">Escape Time</td>
+	<td style="text-align:left;">500</td>
+	<td style="text-align:left;">1</td>
+	<td style="text-align:left;"><code>set -s escape-time 1</code></td>
+</tr>
+</tbody>
+</table>
+<p>Many hints are from <em><a href="http://pragprog.com/book/bhtmux/tmux">tmux: Productive Mouse-Free Development</a></em> by Brian P. Hogan.</p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>By default <code>prefix</code> is mapped to <code>ctrl-b</code>. If you haven&#8217;t remapped your <code>Caps Lock</code> key to <code>ctrl</code> yet, now would be a good time to do so! <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p>This is the line you add to your <code>.tmux.conf</code> file <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:3">
+<p>You should probably also add a line to unbind the defaults if you bind new keys for things. Just add a line saying <code>unbind C-b</code> to unbind the default <code>prefix</code> key. <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
 
 </body></html>
