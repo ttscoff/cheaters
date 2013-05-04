@@ -179,3 +179,13 @@ img#contrast { cursor:pointer; position:absolute; right:10px; top:5px; }
  #nav li.active { z-index:201; }
  #nav li.active a,#nav:hover li.active a { color:#333!important;background:#eee!important; }
 }
+.demo {
+	clear: both;
+	font-size: .9em;
+	float: left;
+	margin: 10px 0 0;
+	background: rgba(228, 249, 255, 1);
+	padding: 2px 8px;
+	border-radius: 8px;
+	width: 100%;
+}
