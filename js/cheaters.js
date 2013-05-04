@@ -1,5 +1,22 @@
 (function($){
-	var active = localStorage.getItem('cheatSheet-active');
+	var active = null,
+	hash = document.location.hash;
+	if (hash !== "") {
+		hash = hash.replace(/^#/,'').toLowerCase();
+		if (/^\d+$/.test(hash)) {
+			active = hash;
+		} else {
+			var re = new RegExp(hash);
+			$('#nav a').each(function(i,e) {
+				if (re.test($(e).text().toLowerCase())) {
+					if (active === null) { active = i; }
+				}
+			});
+		}
+	} else {
+		active = localStorage.getItem('cheatSheet-active');
+	}
+
 	if (active !== null) {
 		$($('#nav li').get(active)).addClass('active');
 		$('#container').load( $($('#nav a').get(active)).attr('href') );
@@ -14,6 +31,7 @@
 		$this.closest('li').addClass('active');
 		$('#container').load($this.attr('href'));
 		localStorage.setItem('cheatSheet-active',$(this).closest('li').prevAll().length);
+		document.location.hash = $(this).text().toLowerCase();
 		return false;
 	});
 	$('#contrast').click(function(e){
