@@ -2,13 +2,13 @@
 	var active = null,
 	hash = document.location.hash;
 	if (hash !== "") {
-		hash = hash.replace(/^#/,'').toLowerCase();
+		hash = hash.replace(/^#/,'').replace(/\s+/g,'').toLowerCase();
 		if (/^\d+$/.test(hash)) {
 			active = hash;
 		} else {
-			var re = new RegExp(hash);
+			var re = new RegExp("^"+hash);
 			$('#nav a').each(function(i,e) {
-				if (re.test($(e).text().toLowerCase())) {
+				if (re.test($(e).text().replace(/\s+/g,'').toLowerCase())) {
 					if (active === null) { active = i; }
 				}
 			});
