@@ -31,11 +31,13 @@
         <hr>
 
         <section id="main_content">
-          <p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Header.jpg" alt="Cheat Sheets Header"></p>
+          <p>Support Cheaters by contributing to my <a href="https://www.gittip.com/ttscoff/">GitTip fund</a> or <a href="http://brettterpstra.com/donate/">making a donation</a>.</p>
+
+<p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Header.jpg" alt="Cheat Sheets Header"></p>
 
 <p>First and foremost, this is a total ripoff of an idea by Gabe Weatherhead <a href="http://www.macdrifter.com/2012/02/markdown-cheat-sheets-and-marked/">over at Macdrifter</a>. I just expanded on the idea a little bit.</p>
 
-<p>Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps (<a href="http://ttscoff.github.io/cheaters/cheat.html">demo</a>). Most of the time I create <a href="http://smilesoftware.com/TextExpander/">TextExpander</a> snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.</p>
+<p>Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps (<a href="http://ttscoff.github.io/cheaters/cheat.html">demo the web version</a>). Most of the time I create <a href="http://smilesoftware.com/TextExpander/">TextExpander</a> snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.</p>
 
 <p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-wide.jpg" alt="Cheat Sheets wide"></p>
 
@@ -56,6 +58,14 @@
 </ol><p>You can add a hotkey or other launch method using Launchbar, Keyboard Maestro, Alfred, Apptivator, etc. Lots of choices. When the application launches, it automatically becomes a floating HUD, and you can dismiss it by focusing it and using Escape or ⌘Q.</p>
 
 <p>You can also use Cheaters in a web browser, just put it on your disk and point your browser to the <code>file:///...</code> location.</p>
+
+<h3>Deep linking</h3>
+
+<p>As of a recent update, Cheaters can now handle linking directly to a specific cheat sheet using url hashes. You can use a zero-index number to link to a page if you know the order (index.html#3 to link to the fourth item), but because the order is configurable and subject to change, it also supports name matching. For example, if you want to link the Siri cheat sheet directly, you can use <code>[your_url_or_path]/index.html#siri</code>.</p>
+
+<p>The hash-matching is case-insensitive and will go to the first menu item whose text matches the hash (in whole or in part, whitespace is ignored). This means that if you have a menu item for "CSS 3 Selectors" followed by "CSS Animation," <code>#css</code> will go to "CSS 3 Selectors." To target "CSS Animation," you'd want a url like <code>#cssanim</code> or the full <code>#cssanimation</code>.</p>
+
+<p>This is primarily geared toward building more complex workflows using tools like Alfred 2.</p>
 
 <h3>Customizing</h3>
 
