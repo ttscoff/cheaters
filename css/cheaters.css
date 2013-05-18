@@ -101,7 +101,7 @@ td::selection,th::selection,caption::selection { background-color:rgba(180,237,9
 .inverted ul {color: rgba(200,200,200,.3) }
 .inverted li { list-style-type: disc }
 .inverted hr { border-color:rgba(51,63,64,.5)!important }
-.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt { color:#eee!important }
+.inverted p,.inverted td,.inverted li,.inverted h1,.inverted h2,.inverted h3,.inverted h4,.inverted h5,.inverted h6,.inverted th,.inverted .math,.inverted caption,.inverted dd,.inverted dt, .inverted span { color:#eee!important }
 .inverted h2,.inverted h3 { border-color:rgba(200,200,200,.3) }
 .inverted pre { background:#444;border:1px solid rgba(200,200,200,.3);padding:10px;color:#fff}
 .inverted code { background:#444;border:1px solid rgba(200,200,200,.3);padding:4px;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;color:#eee;text-indent:0 }
