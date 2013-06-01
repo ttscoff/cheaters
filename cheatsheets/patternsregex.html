@@ -1,0 +1,350 @@
+<table>
+	<tr>
+		<th colspan="2">Anchors</th>
+	</tr>
+	<tr>
+		<th>^</th>
+		<td>Matches at the start of string or start of line if multi-line mode is enabled. Many regex implementations have multi-line mode enabled by default.</td>
+	</tr>
+	<tr>
+		<th>$</th>
+		<td>Matches at the end of string or end of line if multi-line mode is enabled. Many regex implementations have multi-line mode enabled by default.</td>
+	</tr>
+	<tr>
+		<th>\A</th>
+		<td>Matches at the start of the search string.</td>
+	</tr>
+	<tr>
+		<th>\Z</th>
+		<td>Matches at the end of the search string, or before a newline at the end of the string.</td>
+	</tr>
+	<tr>
+		<th>\z</th>
+		<td>Matches at the end of the search string.</td>
+	</tr>
+	<tr>
+		<th>\b</th>
+		<td>Matches at word boundaries.</td>
+	</tr>
+	<tr>
+		<th>\B</th>
+		<td>Matches anywhere but word boundaries.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Character Classes<br /><span>Can be used in ranges</span></th>
+	</tr>
+	<tr>
+		<th>.</th>
+		<td>Matches any character except newline. Will also match newline if single-line mode is enabled.</td>
+	</tr>
+	<tr>
+		<th>\s</th>
+		<td>Matches white space characters.</td>
+	</tr>
+	<tr>
+		<th>\S</th>
+		<td>Matches anything but white space characters.</td>
+	</tr>
+	<tr>
+		<th>\d</th>
+		<td>Matches digits. Equivalent to <span class="code">[0-9]</span>.</td>
+	</tr>
+	<tr>
+		<th>\D</th>
+		<td>Matches anything but digits. Equivalent to <span class="code">[^0-9]</span>.</td>
+	</tr>
+	<tr>
+		<th>\w</th>
+		<td>Matches letters, digits and underscores. Equivalent to <span class="code">[A-Za-z0-9_]</span>.</td>
+	</tr>
+	<tr>
+		<th>\W</th>
+		<td>Matches anything but letters, digits and underscores. Equivalent to <span class="code">[^A-Za-z0-9_]</span>.</td>
+	</tr>
+	<tr>
+		<th>\xff</th>
+		<td>Matches ASCII hexadecimal character <span class="code">ff</span>.</td>
+	</tr>
+	<tr>
+		<th>\x{ffff}</th>
+		<td>Matches UTF-8 hexadecimal character <span class="code">ffff</span>.</td>
+	</tr>
+	<tr>
+		<th>\cA</th>
+		<td>Matches ASCII control character <span class="code">^A</span>. Control characters are case insensitive.</td>
+	</tr>
+	<tr>
+		<th>\132</th>
+		<td>Matches ASCII octal character <span class="code">132</span>.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Groups</th>
+	</tr>
+	</tr>
+	<tr>
+		<th>(foo|bar)</th>
+		<td>Matches pattern <span class="code">foo</span> or <span class="code">bar</span>.</td>
+	</tr>
+	<tr>
+		<th>(foo)</th>
+		<td>Define a group (or <i>subpattern</i>) consisting of pattern <span class="code">foo</span>. Matches within the group can be referenced in a replacement using a backreference.</td>
+	</tr>
+	<tr>
+		<th>(?&lt;foo&gt;bar)</th>
+		<td>Define a named group named "foo" consisting of pattern <span class="code">bar</span>. Matches within the group can be referenced in a replacement using the backreference $foo.</td>
+	</tr>
+	<tr>
+		<th>(?:foo)</th>
+		<td>Define a passive group consisting of pattern <span class="code">foo</span>. Passive groups cannot be referenced in a replacement using a backreference.</td>
+	</tr>
+	<tr>
+		<th>(?&gt;foo+)bar</th>
+		<td>Define an atomic group consisting of pattern <span class="code">foo+</span>. Once <span class="code">foo+</span> has been matched, the regex engine will not try to find other variable length matches of <span class="code">foo+</span> in order to find a match followed by a match of <span class="code">bar</span>. Atomic groups may be used for perforamce reasons.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Bracket Expressions</th>
+	</tr>
+	<tr>
+		<th>[adf]</th>
+		<td>Matches characters <span class="code">a</span> or <span class="code">d</span> or <span class="code">f</span>.</td>
+	</tr>
+	<tr>
+		<th>[^adf]</th>
+		<td>Matches anything but characters <span class="code">a</span>, <span class="code">d</span> and <span class="code">f</span>.</td>
+	</tr>
+	<tr>
+		<th>[a-f]</th>
+		<td>Match any lowercase letter between <span class="code">a</span> and <span class="code">f</span> inclusive.</td>
+	</tr>
+	<tr>
+		<th>[A-F]</th>
+		<td>Match any uppercase letter between <span class="code">A</span> and <span class="code">F</span> inclusive.</td>
+	</tr>
+	<tr>
+		<th>[0-9]</th>
+		<td>Match any digit between 0 and 9 inclusive. Does not support using numbers larger than 9, such as <span class="code">[10-20]</span>.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Quantifiers</th>
+	</tr>
+	<tr>
+		<th>*</th>
+		<td>0 or more. Matches will be as large as possible.</td>
+	</tr>
+	<tr>
+		<th>*?</th>
+		<td>0 or more, lazy. Matches will be as small as possible.</td>
+	</tr>
+	<tr>
+		<th>+</th>
+		<td>1 or more. Matches will be as large as possible.</td>
+	</tr>
+	<tr>
+		<th>+?</th>
+		<td>1 or more, lazy. Matches will be as small as possible.</td>
+	</tr>
+	<tr>
+		<th>?</th>
+		<td>0 or 1. Matches will be as large as possible.</td>
+	</tr>
+	<tr>
+		<th>??</th>
+		<td>0 or 1, lazy. Matches will be as small as possible.</td>
+	</tr>
+	<tr>
+		<th>{2}</th>
+		<td>2 exactly.</td>
+	</tr>
+	<tr>
+		<th>{2,}</th>
+		<td>2 or more. Matches will be as large as possible.</td>
+	</tr>
+	<tr>
+		<th>{2,}?</th>
+		<td>2 or more, lazy. Matches will be as small as possible.</td>
+	</tr>
+	<tr>
+		<th>{2,4}</th>
+		<td>2, 3 or 4. Matches will be as large as possible.</td>
+	</tr>
+	<tr>
+		<th>{2,4}?</th>
+		<td>2, 3 or 4, lazy. Matches will be as small as possible.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Special Characters</th>
+	</tr>
+	<tr>
+		<th>\</th>
+		<td>Escape character. Any metacharacter to be interpreted literally must be escaped. For example, \? matches literal <span class="code">?</span>. \\ matches literal <span class="code">\</span>.</td>
+	</tr>
+	<tr>
+		<th>\n</th>
+		<td>Matches newline.</td>
+	</tr>
+	<tr>
+		<th>\t</th>
+		<td>Matches tab.</td>
+	</tr>
+	<tr>
+		<th>\r</th>
+		<td>Matches carriage return.</td>
+	</tr>
+	<tr>
+		<th>\v</th>
+		<td>Matches form feed/page break.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Assertions</th>
+	</tr>
+	<tr>
+		<th>foo(?=bar)</th>
+		<td>Lookahead assertion. The pattern <span class="code">foo</span> will only match if followed by a match of pattern <span class="code">bar</span>.</td>
+	</tr>
+	<tr>
+		<th>foo(?!bar)</th>
+		<td>Negative lookahead assertion. The pattern <span class="code">foo</span> will only match if not followed by a match of pattern <span class="code">bar</span>.</td>
+	</tr>
+	<tr>
+		<th>(?&lt;=foo)bar</th>
+		<td>Lookbehind assertion. The pattern <span class="code">bar</span> will only match if preceded by a match of pattern <span class="code">foo</span>.</td>
+	</tr>
+	<tr>
+		<th>(?&lt;!foo)bar</th>
+		<td>Negative lookbehind assertion. The pattern <span class="code">bar</span> will only match if not preceded by a match of pattern <span class="code">foo</span>.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">POSIX Character Classes<br /><span>Must be used in bracket expressions, e.g. <span class="code">[a-z[:upper:]]</span></span></th>
+	</tr>
+	<tr>
+		<th>[:upper:]</th>
+		<td>Matches uppercase letters. Equivalent to <span class="code">A-Z</span>.</td>
+	</tr>
+	<tr>
+		<th>[:lower:]</th>
+		<td>Matches lowercase letters. Equivalent to <span class="code">a-z</span>.</td>
+	</tr>
+	<tr>
+		<th>[:alpha:]</th>
+		<td>Matches letters. Equivalent to <span class="code">A-Za-z</span>.</td>
+	</tr>
+	<tr>
+		<th>[:alnum:]</th>
+		<td>Matches letters and digits. Equivalent to <span class="code">A-Za-z0-9</span>.</td>
+	</tr>
+	<tr>
+		<th>[:ascii:]</th>
+		<td>Matches ASCII characters. Equivalent to <span class="code">\x00-\x7f</span>.</td>
+	</tr>
+	<tr>
+		<th>[:word:]</th>
+		<td>Matches letters, digits and underscores. Equivalent to <span class="code">\w</span>.</td>
+	</tr>
+	<tr>
+		<th>[:digit:]</th>
+		<td>Matches digits. Equivalent to <span class="code">0-9</span>.</td>
+	</tr>
+	<tr>
+		<th>[:xdigit:]</th>
+		<td>Matches characters that can be used in hexadecimal codes. Equivalent to <span class="code">A-Fa-f0-9</span>.</td>
+	</tr>
+	<tr>
+		<th>[:punct:]</th>
+		<td>Matches punctuation.</td>
+	</tr>
+	<tr>
+		<th>[:blank:]</th>
+		<td>Matches space and tab. Equivalent to <span class="code">[ \t]</span>.</td>
+	</tr>
+	<tr>
+		<th>[:space:]</th>
+		<td>Matches space, tab and newline. Equivalent to <span class="code">\s</span>.</td>
+	</tr>
+	<tr>
+		<th>[:cntrl:]</th>
+		<td>Matches control characters. Equivalent to <span class="code">[\x00-\x1F\x7F]</span>.</td>
+	</tr>
+	<tr>
+		<th>[:graph:]</th>
+		<td>Matches printed characters. Equivalent to <span class="code">[\x21-\x7E]</span>.</td>
+	</tr>
+	<tr>
+		<th>[:print:]</th>
+		<td>Matches printed characters and spaces. Equivalent to <span class="code">[\x21-\x7E ]</span>.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Backreferences<br /><span>Used in replacements</span></th>
+	</tr>
+	<tr>
+		<th>$3</th>
+		<td>Matched string within the third non-passive group.</td>
+	</tr>
+	<tr>
+		<th>$0 <span>or</span> $&amp;</th>
+		<td>Entire matched string.</td>
+	</tr>
+	<tr>
+		<th>$foo</th>
+		<td>Matched string within the group named "foo".</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Case Modifiers<br /><span>Used in replacements</span></th>
+	</tr>
+	<tr>
+		<th>\u</th>
+		<td>Make the next character in the replacement uppercase.</td>
+	</tr>
+	<tr>
+		<th>\l</th>
+		<td>Make the next character in the replacement lowercase.</td>
+	</tr>
+	<tr>
+		<th>\U</th>
+		<td>Make the remaining characters in the replacement uppercase.</td>
+	</tr>
+	<tr>
+		<th>\L</th>
+		<td>Make the remaining characters in the replacement lowercase.</td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<th colspan="2">Modifiers<br /><span>May be grouped together, e.g. <span class="code">(?ixm)</span></span></th>
+	</tr>
+	<tr>
+		<th>(?i)</th>
+		<td>Case insensitive mode. Make the remainder of the pattern or subpattern case insensitive.</td>
+	</tr>
+	<tr>
+		<th>(?m)</th>
+		<td>Multi-line mode. Make <span class="code">$</span> and <span class="code">^</span> in the remainder of the pattern or subpattern match before/after newline.</td>
+	</tr>
+	<tr>
+		<th>(?s)</th>
+		<td>Single-line mode. Make the <span class="code">.</span> (dot) in the remainder of the pattern or subpattern match newline.</td>
+	</tr>
+	<tr>
+		<th>(?x)</th>
+		<td>Free spacing mode. Ignore white space in the remainder of the pattern or subpattern.</td>
+	</tr>
+</table>
+<hr>
+<p>Taken from the <a href="http://krillapps.com/patterns/">Patterns App Reference Sheet</a></p>
