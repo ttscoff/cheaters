@@ -1,0 +1,114 @@
+<div id="towergithtml">
+    <article id="main">
+        <h1>GIT CHEAT SHEET</h1>
+            <div>
+                <section>
+                    <h2>Create</h2>
+                    <p>Clone an existing repository</p>
+                    <pre><code>$ git clone ssh://user@domain.com/repo.git</code></pre>
+                    <p>Create a new local repository</p>
+                    <pre><code>$ git init</code></pre>
+                </section>
+                <section>
+                    <h2>Local Changes</h2>
+                    <p>Changed files in your working directory</p>
+                    <pre><code>$ git status</code></pre>
+                    <p>Changes to tracked files</p>
+                    <pre><code>$ git diff</code></pre>
+                    <p>Add all current changes to the next commit</p>
+                    <pre><code>$ git add .</code></pre>
+                    <p>Add some changes in &lt;file&gt; to the next commit</p>
+                    <pre><code>$ git add -p &lt;file&gt;</code></pre>
+                    <p>Commit all local changes in tracked files</p>
+                    <pre><code>$ git commit -a</code></pre>
+                    <p>Commit previously staged changes</p>
+                    <pre><code>$ git commit</code></pre>
+                    <p>Change the last commit<br />
+                    <em>Don't amend published commits!</em></p>
+                    <pre><code>$ git commit --amend</code></pre>
+                </section>
+                <section>
+                    <h2>Commit History</h2>
+                    <p>Show all commits, starting with newest</p>
+                    <pre><code>$ git log</code></pre>
+                    <p>Show changes over time for a specific file</p>
+                    <pre><code>$ git log -p &lt;file&gt;</code></pre>
+                    <p>Who changed what and when in &lt;file&gt;</p>
+                    <pre><code>$ git blame &lt;file&gt;</code></pre>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <h2>Branches &amp; Tags</h2>
+                    <p>List all existing branches</p>
+                    <pre><code>$ git branch</code></pre>
+                    <p>Switch HEAD branch</p>
+                    <pre><code>$ git checkout &lt;branch&gt;</code></pre>
+                    <p>Create a new branch based on your current HEAD</p>
+                    <pre><code>$ git branch &lt;new-branch&gt;</code></pre>
+                    <p>Create a new tracking branch based on a remote branch</p>
+                    <pre><code>$ git branch --track &lt;new-branch&gt; &lt;remote-branch&gt;</code></pre>
+                    <p>Delete a local branch</p>
+                    <pre><code>$ git branch -d &lt;branch&gt;</code></pre>
+                    <p>Mark the current commit with a tag</p>
+                    <pre><code>$ git tag &lt;tag-name&gt;</code></pre>
+                </section>
+                <section>
+                    <h2>Update &amp; Publish</h2>
+                    <p>List all currently configured remotes</p>
+                    <pre><code>$ git remote -v</code></pre>
+                    <p>Show information about a remote</p>
+                    <pre><code>$ git remote show &lt;remote&gt;</code></pre>
+                    <p>Add new remote repository, named &lt;remote&gt;</p>
+                    <pre><code>$ git remote add &lt;remote&gt; &lt;url&gt;</code></pre>
+                    <p>Download all changes from &lt;remote&gt;, but don't integrate into HEAD</p>
+                    <pre><code>$ git fetch &lt;remote&gt;</code></pre>
+                    <p>Download changes and directly merge/integrate into HEAD</p>
+                    <pre><code>$ git pull &lt;remote&gt; &lt;branch&gt;</code></pre>
+                    <p>Publish local changes on a remote</p>
+                    <pre><code>$ git push &lt;remote&gt; &lt;branch&gt;</code></pre>
+                    <p>Delete a branch on the remote</p>
+                    <pre><code>$ git push &lt;remote&gt; :&lt;branch&gt;</code></pre>
+                    <p>Publish your tags</p>
+                    <pre><code>$ git push --tags</code></pre>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <h2>Merge &amp; Rebase</h2>
+                    <p>Merge &lt;branch&gt; into your current HEAD</p>
+                    <pre><code>$ git merge &lt;branch&gt;</code></pre>
+                    <p>Rebase your current HEAD onto &lt;branch&gt;<br />
+                    <em>Don't rebase published commits!</em></p>
+                    <pre><code>$ git rebase &lt;branch&gt;</code></pre>
+                    <p>Abort a rebase</p>
+                    <pre><code>$ git rebase --abort</code></pre>
+                    <p>Continue a rebase after resolving conﬂicts</p>
+                    <pre><code>$ git rebase --continue</code></pre>
+                    <p>Use your configured merge tool to solve conflicts</p>
+                    <pre><code>$ git mergetool</code></pre>
+                    <p>Use your editor to manually solve conflicts and (after resolving) mark file as resolved</p>
+                    <pre><code>$ git add &lt;resolved-file&gt;</code></pre>
+                    <pre><code>$ git rm &lt;resolved-file&gt;</code></pre>
+                </section>
+                <section>
+                    <h2>Undo</h2>
+                    <p>Discard all local changes in your working directory</p>
+                    <pre><code>$ git reset --hard HEAD</code></pre>
+                    <p>Discard local changes in a specific file</p>
+                    <pre><code>$ git checkout HEAD &lt;file&gt;</code></pre>
+                    <p>Revert a commit (by producing a new commit with contrary changes)</p>
+                    <pre><code>$ git revert &lt;commit&gt;</code></pre>
+                    <p>Reset your HEAD pointer to a previous commit<br />
+                    &hellip;and discard all changes since then</p>
+                    <pre><code>$ git reset --hard &lt;commit&gt;</code></pre>
+                    <p>&hellip;and preserve all changes as unstaged changes</p>
+                    <pre><code>$ git reset &lt;commit&gt;</code></pre>
+                    <p>&hellip;and preserve uncommitted local changes</p>
+                    <pre><code>$ git reset --keep &lt;commit&gt;</code></pre>
+                </section>
+            </div>
+    </article>
+</div>
+<hr>
+<p>Taken from the <a href="http://blog.fournova.com/2011/06/git-cheat-sheet/">FourNova Tower Git Cheat Sheet</a></p>
