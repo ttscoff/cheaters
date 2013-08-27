@@ -11,9 +11,10 @@
 | tmux new -s *name* -n *command*	| Run *command* in a new window in a new session	|  
 [Command Line]
 
-| Command	| Description	|  
-|  ------	| ------	|  
+| Command   | Description   |  
+|  ------   | ------    |  
 | `prefix`[^1] **d**	| Detach from a session	|  
+| `prefix` **c**    | Create a new window |
 | `prefix` **n** 	| Next window in this session	|  
 | `prefix` **p**	| Previous window in this session	|  
 | `prefix` **,**	| Rename current window	|  
