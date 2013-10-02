@@ -65,12 +65,3 @@ If you find a PDF cheat sheet that's ideal for this type of display, you'll need
 
 If you create some great cheat sheets, fork this and send a pull request. Just [let me know](http://brettterpstra.com/contact) if you need a hand!
 
-- [ ] testing checkboxes
-- [x] completed checkbox
-- [  ] double space
-- [] no space
-
----
-
-1. [ ] do they work in numbered lists?
-2. [x] dunno
