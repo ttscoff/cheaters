@@ -151,6 +151,7 @@ tr.divider td { border-top:dashed 1px #aaa!important;font-family:ArmataRegular;f
 #scannercodes article { width:48%;float:left;margin:4px; }
 #scannercodes h5 { font-size:18px;border-bottom:1px dashed #ccc;font-weight:normal;margin-top:8px; }
 .inverted #html5 h5 { border-bottom: 1px dashed #444 }
+td.scannercode { background-color: #69f; white-space: nowrap; }
 #scannercodes .inner { border:1px solid #ccc;padding:5px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;margin-top:0; }
 #scannercodes #firecodes { width:100%; }
 #scannercodes p { font-size:.97em; }
