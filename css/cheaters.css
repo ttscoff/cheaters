@@ -147,6 +147,13 @@ tr.divider td { border-top:dashed 1px #aaa!important;font-family:ArmataRegular;f
 #html5 .inner { border:1px solid #ccc;padding:5px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;margin-top:0; }
 #html5 #page8 { width:100%; }
 #html5 p { font-size:.97em; }
+#scannercodes div { float:left;clear:both; }
+#scannercodes article { width:48%;float:left;margin:4px; }
+#scannercodes h5 { font-size:18px;border-bottom:1px dashed #ccc;font-weight:normal;margin-top:8px; }
+.inverted #html5 h5 { border-bottom: 1px dashed #444 }
+#scannercodes .inner { border:1px solid #ccc;padding:5px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;margin-top:0; }
+#scannercodes #firecodes { width:100%; }
+#scannercodes p { font-size:.97em; }
 iframe { position:fixed;z-index:2;left:0;top:0; }
 #closeiframe { position:fixed;height:40px;left:0;right:0;bottom:0;background:#ccc;color:#333; }
 #closeiframe p { font-size:18px;line-height:1em;text-align:center;padding:0;margin:0; }
