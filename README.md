@@ -1,4 +1,4 @@
-You can read this page if you want to, but [this one](http://ttscoff.github.com/cheaters/) is way prettier.
+Support Cheaters by contributing to my [GitTip fund](https://www.gittip.com/ttscoff/) or [making a donation](http://brettterpstra.com/donate/).
 
 ![Cheat Sheets Header](http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Header.jpg)
 
@@ -6,10 +6,11 @@ You can read this page if you want to, but [this one](http://ttscoff.github.com/
 [gather]: http://brettterpstra.com/introducing-gather-a-cocoa-markdownifier/
 [te]: http://smilesoftware.com/TextExpander/
 [marky]: http://markdownrules.com/
+[demo]: http://ttscoff.github.io/cheaters/cheat.html
 
 First and foremost, this is a total ripoff of an idea by Gabe Weatherhead [over at Macdrifter][macdrifter]. I just expanded on the idea a little bit.
 
-Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps. Most of the time I create [TextExpander][te] snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.
+Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps ([demo the web version][demo]). Most of the time I create [TextExpander][te] snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.
 
 
 ![Cheat Sheets wide](http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-wide.jpg)
@@ -31,6 +32,14 @@ The most useful way to use Cheaters is with an Automator Application.
 You can add a hotkey or other launch method using Launchbar, Keyboard Maestro, Alfred, Apptivator, etc. Lots of choices. When the application launches, it automatically becomes a floating HUD, and you can dismiss it by focusing it and using Escape or ⌘Q.
 
 You can also use Cheaters in a web browser, just put it on your disk and point your browser to the `file:///...` location.
+
+### Deep linking
+
+As of a recent update, Cheaters can now handle linking directly to a specific cheat sheet using url hashes. You can use a zero-index number to link to a page if you know the order (index.html#3 to link to the fourth item), but because the order is configurable and subject to change, it also supports name matching. For example, if you want to link the Siri cheat sheet directly, you can use `[your_url_or_path]/index.html#siri`.
+
+The hash-matching is case-insensitive and will go to the first menu item whose text matches the hash (in whole or in part, whitespace is ignored). This means that if you have a menu item for "CSS 3 Selectors" followed by "CSS Animation," `#css` will go to "CSS 3 Selectors." To target "CSS Animation," you'd want a url like `#cssanim` or the full `#cssanimation`.
+
+This is primarily geared toward building more complex workflows using tools like Alfred 2.
 
 ### Customizing
 
@@ -55,3 +64,4 @@ There's also a contrast icon in the upper right, which you can use to flip betwe
 If you find a PDF cheat sheet that's ideal for this type of display, you'll need to convert it to an image (gif, jpg or png) first. Make it large, between 800px and 1024px wide. Cheaters will automatically scale it to your browser width, and when your browser width gets small enough that the image would be unreadable, it shows it full size and lets you scroll around within the viewport. See the CSS3 cheat sheet markup for an example of using an image; it's just an image tag in an html file. Easy as pie.
 
 If you create some great cheat sheets, fork this and send a pull request. Just [let me know](http://brettterpstra.com/contact) if you need a hand!
+
