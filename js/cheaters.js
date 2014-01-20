@@ -2,10 +2,12 @@ var Cheaters = (function () {
 	function switchActive(t,first) {
 		if (/^\?/.test(t)) {
 			return false;
+		} else if (/^\s*$/.test(t)) {
+			return true;
 		}
 		var active = null, re = new RegExp("^"+t.split('').join('.*?'), "img");
-
-		if (menuText.match(re).length === 1 || first === true) {
+		var test = menuText.match(re);
+		if ((test && test.length === 1) || first === true) {
 			$('#nav a').each(function(i,e) {
 				if (re.test($(e).text().replace(/\s+/g,'').toLowerCase())) {
 					if (active === null) { active = i; }
@@ -17,7 +19,7 @@ var Cheaters = (function () {
 			$('#nav li').removeClass('active');
 			$($('#nav li').get(active)).addClass('active');
 			$('#container').load( $($('#nav a').get(active)).attr('href'), function() {
-				$(window).scrollTop(0);
+				$(document).scrollTop(0);
 			} );
 			// localStorage.setItem('cheatSheet-active',$('#nav li.active').prevAll().length);
 			$.cookie('cheatSheet-active', $('#nav li.active').prevAll().length, { expires: 365, path: '/' });
@@ -40,12 +42,13 @@ var Cheaters = (function () {
 	$('#nav a').each(function(i,n) {
 		window.menuText += $(n).text() + "\n";
 	});
-	Mousetrap.bind('g', function(ev) {
+	Mousetrap.bind('t', function(ev) {
 		ev.preventDefault();
 		$('#goto').remove();
 		$('<input id="goto" type="text">').insertAfter('#nav').val('');
 		$('#goto').unbind('keyup').keyup(function(ev){
 			if (ev.keyCode === 27) {
+				ev.preventDefault();
 				$('#goto').remove();
 				return false;
 			} else if (ev.keyCode == 13) {
@@ -80,9 +83,71 @@ var Cheaters = (function () {
 		$('#goto').focus().val('');
 		return false;
 	});
-	Mousetrap.bind('esc', function() {
+	Mousetrap.bind('esc', function(ev) {
+		ev.preventDefault();
 		$('#goto').remove();
+		return false;
+	}, 'keyup');
+	Mousetrap.bind('g g', function(ev) {
+		$(document).scrollTop(0);
 	});
+	Mousetrap.bind('G', function(ev) {
+		$(document).scrollTop($(document).height());
+	});
+	Mousetrap.bind('g g', function(ev) {
+		$(document).scrollTop(0);
+	});
+	Mousetrap.bind('G', function(ev) {
+		$(document).scrollTop($(document).height());
+	});
+	Mousetrap.bind(['k','shift+k','u','ctrl+u'], function(ev) {
+		var inc = (ev.shiftKey || ev.ctrlKey) ? 400 : 100;
+		$('body,html').stop().animate({
+			scrollTop: $(document).scrollTop() - inc
+		}, 100);
+	});
+
+	Mousetrap.bind(['j','shift+j','d','ctrl+d'], function(ev) {
+		var inc = (ev.shiftKey || ev.ctrlKey) ? 400 : 100;
+		$('body,html').stop().animate({
+			scrollTop: $(document).scrollTop() + inc
+		}, 100);
+	});
+
+	Mousetrap.bind('.', function() {
+		if ($('#typeahead').is(':focus')) return true;
+			var loc = window.pageYOffset, headers = $('h1,h2,h3,h4,h5,h6,caption');
+
+			headers = $.makeArray(headers);
+			$.each(headers, function(i, a) {
+			if ($(a).offset().top > loc) {
+				$('html,body').animate({
+					scrollTop: $(a).offset().top
+				}, 'fast');
+				// headers.removeClass('active');
+				// $(a).addClass('active');
+				return false;
+			}
+		});
+	});
+	Mousetrap.bind(',', function() {
+		if ($('#typeahead').is(':focus')) return true;
+		var loc = window.pageYOffset;
+		var headers = $('h1,h2,h3,h4,h5,h6,caption');
+		headers = $.makeArray(headers);
+		headers.reverse();
+		$.each(headers, function(i, a) {
+			if ($(a).offset().top < loc) {
+				$('html,body').animate({
+					scrollTop: $(a).offset().top
+				}, 'fast');
+				// headers.removeClass('active');
+				// $(a).addClass('active');
+				return false;
+			}
+		});
+	});
+
 	var active = null,
 	hash = document.location.hash;
 	if (hash !== "") {

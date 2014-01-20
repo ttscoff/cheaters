@@ -77,6 +77,9 @@ dt,th { font-weight:400 }
 dt { font-weight:600 }
 table tr:nth-child(odd),table th:nth-child(odd),table td:nth-child(odd) { background:rgba(255,255,255,0.06) }
 table tr:nth-child(even),table td:nth-child(even) { background:rgba(0,0,0,0.06) }
+#container .active {
+	background: #000;
+}
 @media print { body { overflow:auto }
 img,pre,blockquote,table,figure { page-break-inside:avoid }
 .footnotes { page-break-before:always }

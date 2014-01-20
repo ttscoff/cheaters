@@ -15,6 +15,10 @@ Cheaters is a collection of HTML-based cheat sheets meant for display in an Auto
 
 ![Cheat Sheets wide](http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-wide.jpg)
 
+### Update
+
+You can use the instructions below if you're a cheapskate, but for $5 you can use [Fluid](http://fluidapp.com/) and create a menu bar app that's much more full-featured and usable than the Automator action. Seriously. Do it.
+
 ### Using Cheaters
 
 The most useful way to use Cheaters is with an Automator Application.
