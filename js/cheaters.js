@@ -35,6 +35,7 @@ var Cheaters = (function () {
 	if ($.cookie('cheatSheet-inverted') === "1") {
 		$('body').addClass('inverted');
 	}
+
 	window.menuText = "";
 	$('#nav a').each(function(i,n) {
 		window.menuText += $(n).text() + "\n";
