@@ -7,10 +7,9 @@ var Cheaters = (function () {
 		} else if (/^\s*$/.test(t)) {
 			return true;
 		}
-
 		var active = null;
 
-		if (!/^\d+$/.test(t)) {
+		if (t && !/^\d+$/.test(t)) {
 			var re = new RegExp(t.split('').join('.*?'), "img"), test = Cheaters.menuText.match(re);
 			console.log(re, test);
 			if ((test && test.length === 1) || first === true) {
@@ -216,9 +215,15 @@ var Cheaters = (function () {
 			}
 		} else {
 			// active = localStorage.getItem('cheatSheet-active');
-			active = parseInt($.cookie('cheatSheet-active'),10);
+			var lastActive = $.cookie('cheatSheet-active');
+			if (!lastActive === null) {
+				active = parseInt(lastActive,10);
+			} else {
+				active = 0;
+			}
 		}
-		return active === null ? 0 : active;
+
+		return active;
 	}
 
 	function publicInit() {
