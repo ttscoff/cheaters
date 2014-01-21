@@ -1,5 +1,5 @@
 var Cheaters = (function () {
-	var publicMenuText;
+	var publicMenuText, publicActiveItem, currentHeader = 0;
 
 	function switchActive(t,first) {
 		if (/^\?/.test(t)) {
@@ -33,24 +33,29 @@ var Cheaters = (function () {
 				$(document).scrollTop(0);
 			} );
 			// localStorage.setItem('cheatSheet-active',$('#nav li.active').prevAll().length);
-			$.cookie('cheatSheet-active', $('#nav li.active').prevAll().length, { expires: 365, path: '/' });
+			Cheaters.activeItem = active;
+			$('#menu select').val(active + 1);
+			$.cookie('cheatSheet-active', active, { expires: 365, path: '/' });
+			currentHeader = 0;
 			return true;
 		}
+
 		return false;
 	}
 
 	function initClickHandlers() {
 		$('#nav').on('click', 'a',function(e){
 			e.preventDefault();
-			var $this = $(this);
-			$('.active').removeClass('active');
-			$this.closest('li').addClass('active');
-			$('#container').load($this.attr('href'));
-			// localStorage.setItem('cheatSheet-active',$(this).closest('li').prevAll().length);
-			$.cookie('cheatSheet-active',$(this).closest('li').prevAll().length, { expires: 365, path: '/' });
+			var active = $(this).closest('li').prevAll().length + 1;
+			switchActive(active);
 			// document.location.hash = $(this).text().toLowerCase();
 			return false;
 		});
+		// $('#menu select').on('change',function(e) {
+		// 	e.preventDefault();
+		// 	console.log($(this).val());
+		// 	switchActive($(this).val());
+		// })
 		$('#contrast').click(function(e){
 			e.preventDefault();
 			$body = $('body').first();
@@ -64,29 +69,6 @@ var Cheaters = (function () {
 				$.cookie('cheatSheet-inverted', 1, { expires: 365, path: '/' });
 			}
 			return false;
-		});
-		$('#jquery').on('click','a',function(e){
-			var $this = $(this);
-			var href = $this.attr('href');
-			if (/^http/.test(href) && $this.attr('target') != "_top") {
-				e.preventDefault();
-				$('<iframe>').attr('src',href).css({
-					zIndex: 9998,
-					height:$(window).height()-40,
-					width:$(window).width(),
-					display:'none'
-				}).appendTo('body').fadeIn('slow',function(){
-					$('<div id="closeiframe">').html('<p><a href="#">Click to close<a></p>').appendTo('body');
-					$('#closeiframe a').click(function(){
-						$('iframe,#closeiframe').fadeOut('fast',function(){
-							$(this).remove();
-						});
-					});
-				});
-				// $('body').click(function(){ $('iframe').remove(); });
-				return false;
-			}
-			return true;
 		});
 	}
 
@@ -132,23 +114,29 @@ var Cheaters = (function () {
 			$('#goto').focus().val('');
 			return false;
 		});
+
 		Mousetrap.bind('esc', function(ev) {
 			ev.preventDefault();
 			$('#goto').remove();
 			return false;
 		}, 'keyup');
+
 		Mousetrap.bind('g g', function(ev) {
 			$(document).scrollTop(0);
 		});
+
 		Mousetrap.bind('G', function(ev) {
 			$(document).scrollTop($(document).height());
 		});
+
 		Mousetrap.bind('g g', function(ev) {
 			$(document).scrollTop(0);
 		});
+
 		Mousetrap.bind('G', function(ev) {
 			$(document).scrollTop($(document).height());
 		});
+
 		Mousetrap.bind(['k','shift+k','u','ctrl+u'], function(ev) {
 			var inc = (ev.shiftKey || ev.ctrlKey) ? 400 : 100;
 			$('body,html').stop().animate({
@@ -163,39 +151,62 @@ var Cheaters = (function () {
 			}, 100);
 		});
 
-		Mousetrap.bind('.', function() {
-			if ($('#typeahead').is(':focus')) return true;
-				var loc = window.pageYOffset, headers = $('h1,h2,h3,h4,h5,h6,caption');
+		Mousetrap.bind(['.',','], function(ev) {
+			var loc = window.pageYOffset,
+				headers = $('h1,h2,h3,h4,h5,h6,caption'),
+				menuHeight = $('#menu').height(),
+				target;
 
-				headers = $.makeArray(headers);
-				$.each(headers, function(i, a) {
-				if ($(a).offset().top > loc) {
-					$('html,body').animate({
-						scrollTop: $(a).offset().top
-					}, 'fast');
-					// headers.removeClass('active');
-					// $(a).addClass('active');
-					return false;
-				}
-			});
-		});
-		Mousetrap.bind(',', function() {
-			if ($('#typeahead').is(':focus')) return true;
-			var loc = window.pageYOffset;
-			var headers = $('h1,h2,h3,h4,h5,h6,caption');
 			headers = $.makeArray(headers);
-			headers.reverse();
-			$.each(headers, function(i, a) {
-				if ($(a).offset().top < loc) {
-					$('html,body').animate({
-						scrollTop: $(a).offset().top
-					}, 'fast');
-					// headers.removeClass('active');
-					// $(a).addClass('active');
-					return false;
-				}
+
+			if (ev.which === 46) {
+				target = currentHeader === headers.length - 1 ? headers.length - 1 : currentHeader + 1;
+			} else {
+				target = currentHeader === 0 ? 0 : currentHeader - 1;
+			}
+			currentHeader = target;
+
+			$('.active', '#container').removeClass('active');
+			$('html,body').stop().animate({
+				scrollTop: $(headers[target]).offset().top - menuHeight
+			}, 'fast', function() {
+				$(headers[target]).addClass('active');
 			});
+
+			// $.each(headers, function(i, a) {
+
+			// 	if ((ev.which === 46 && $(a).offset().top - menuHeight > loc) ||
+			// 		(ev.which === 44 && $(a).offset().top - menuHeight < loc)) {
+
+			// 		$('html,body').animate({
+			// 			scrollTop: $(a).offset().top - menuHeight
+			// 		}, 'fast');
+
+			// 		currentHeader = i;
+			// 		return false;
+			// 	}
+			// });
 		});
+
+		Mousetrap.bind('command+shift+]', function() {
+			if (Cheaters.activeItem === $('#nav li').length - 1) {
+				Cheaters.activeItem = 1;
+			} else {
+				Cheaters.activeItem += 2;
+			}
+			switchActive(Cheaters.activeItem);
+		});
+
+		Mousetrap.bind('command+shift+[', function() {
+			if (Cheaters.activeItem === 0) {
+				Cheaters.activeItem = $('#nav li').length;
+			}
+			switchActive(Cheaters.activeItem);
+		});
+
+		Mousetrap.bind('command+i', function() {
+			$('#contrast').click();
+		})
 	}
 
 	function findStartPage() {
@@ -228,13 +239,16 @@ var Cheaters = (function () {
 	}
 
 	function publicInit() {
-		switchActive(findStartPage() + 1);
+		var active = findStartPage() + 1;
+		switchActive(active);
+		publicActiveItem = active;
 		initKeybindings();
 		initClickHandlers();
 	}
 
 	return {
 		menuText: publicMenuText,
+		activeItem: publicActiveItem,
 
 		switchTo: switchActive,
 		init: publicInit
@@ -248,6 +262,11 @@ var Cheaters = (function () {
 
 	$('#nav a').each(function(i,n) {
 		Cheaters.menuText += $(n).text() + "\n";
+	});
+
+	$("nav#menu").menutron({
+		maxScreenWidth: 480,
+		menuTitle: 'Cheatsheets:'
 	});
 
 	Cheaters.init();
