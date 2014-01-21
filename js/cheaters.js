@@ -33,7 +33,7 @@ var Cheaters = (function () {
 				$(document).scrollTop(0);
 			} );
 			// localStorage.setItem('cheatSheet-active',$('#nav li.active').prevAll().length);
-			$.cookie('cheatSheet-active', active, { expires: 365, path: '/' });
+			$.cookie('cheatSheet-active', $('#nav li.active').prevAll().length, { expires: 365, path: '/' });
 			return true;
 		}
 		return false;
@@ -48,7 +48,7 @@ var Cheaters = (function () {
 			$('#container').load($this.attr('href'));
 			// localStorage.setItem('cheatSheet-active',$(this).closest('li').prevAll().length);
 			$.cookie('cheatSheet-active',$(this).closest('li').prevAll().length, { expires: 365, path: '/' });
-			document.location.hash = $(this).text().toLowerCase();
+			// document.location.hash = $(this).text().toLowerCase();
 			return false;
 		});
 		$('#contrast').click(function(e){
@@ -216,7 +216,8 @@ var Cheaters = (function () {
 		} else {
 			// active = localStorage.getItem('cheatSheet-active');
 			var lastActive = $.cookie('cheatSheet-active');
-			if (!lastActive === null) {
+
+			if (lastActive !== undefined) {
 				active = parseInt(lastActive,10);
 			} else {
 				active = 0;
