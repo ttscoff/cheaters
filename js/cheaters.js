@@ -11,11 +11,11 @@ var Cheaters = (function () {
 
 		if (t && !/^\d+$/.test(t)) {
 			var re = new RegExp(t.split('').join('.*?'), "img"), test = Cheaters.menuText.match(re);
-			console.log(re, test);
+
 			if ((test && test.length === 1) || first === true) {
 				$('#nav a').each(function(i,e) {
 					var linktext = $(e).text().replace(/\s+/g,'').toLowerCase();
-					console.log(linktext);
+
 					if (re.test(linktext)) {
 						if (active === null) { active = i; }
 					}
