@@ -1,627 +1,628 @@
+<h3>Vim</h3>
 <table border="1" width="100%">
-<caption>Basics</caption>
-<tr>
-<td class="tab_bold">:e filename</td>
-<td>Open <em>filename</em> for edition</td>
+	<caption>Basics</caption>
+	<tr>
+		<td class="tab_bold">:e filename</td>
+		<td>Open <em>filename</em> for edition</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">:w</td>
+		<td>Save file</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">:q</td>
+		<td>Exit Vim</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">:q!</td>
+		<td>Quit without saving</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">:&#120;</td>
+		<td>Write file (if changes has been made) and exit</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">:sav filename</td>
+		<td>Saves file as <em>filename</em></td>
+	</tr>
+	<tr>
+		<td class="tab_bold">.</td>
+		<td>Repeats the last change made in normal mode</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">5.</td>
+		<td>Repeats 5 times the last change made in normal mode</td>
+	</tr>
+</table>
+<table border="1" width="100%">
+	<caption>Moving in the file</caption>
+	<tr>
+		<td class="tab_bold">k or Up Arrow</td>
+		<td>move the cursor up one line</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">j or Down Arrow</td>
+		<td>move the cursor down one line</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">e</td>
+		<td>move the cursor to the end of the word</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">b</td>
+		<td>move the cursor to the begining of the word</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">0</td>
+		<td>move the cursor to the begining of the line</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">G</td>
+		<td>move the cursor to the end of the file</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">gg</td>
+		<td>move the cursor to the begining of the file</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">L</td>
+		<td>move the cursor to the bottom of the screen</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">:59</td>
+		<td>move cursor to line <em>59</em>. Replace <em>59</em> by the desired line number.</td>
+	</tr>
+	<td class="tab_bold">20|</td>
+	<td>move cursor to column <em>20</em>.</td>
 </tr>
 <tr>
-<td class="tab_bold">:w</td>
-<td>Save file</td>
+	<td class="tab_bold">%</td>
+	<td>Move cursor to matching parenthesis</td>
 </tr>
 <tr>
-<td class="tab_bold">:q</td>
-<td>Exit Vim</td>
+	<td class="tab_bold">[[</td>
+	<td>Jump to function start</td>
 </tr>
 <tr>
-<td class="tab_bold">:q!</td>
-<td>Quit without saving</td>
-</tr>
-<tr>
-<td class="tab_bold">:&#120;</td>
-<td>Write file (if changes has been made) and exit</td>
-</tr>
-<tr>
-<td class="tab_bold">:sav filename</td>
-<td>Saves file as <em>filename</em></td>
-</tr>
-<tr>
-<td class="tab_bold">.</td>
-<td>Repeats the last change made in normal mode</td>
-</tr>
-<tr>
-<td class="tab_bold">5.</td>
-<td>Repeats 5 times the last change made in normal mode</td>
+	<td class="tab_bold">[{</td>
+	<td>Jump to block start</td>
 </tr>
 </table>
 <table border="1" width="100%">
-<caption>Moving in the file</caption>
-<tr>
-<td class="tab_bold">k or Up Arrow</td>
-<td>move the cursor up one line</td>
-</tr>
-<tr>
-<td class="tab_bold">j or Down Arrow</td>
-<td>move the cursor down one line</td>
-</tr>
-<tr>
-<td class="tab_bold">e</td>
-<td>move the cursor to the end of the word</td>
-</tr>
-<tr>
-<td class="tab_bold">b</td>
-<td>move the cursor to the begining of the word</td>
-</tr>
-<tr>
-<td class="tab_bold">0</td>
-<td>move the cursor to the begining of the line</td>
-</tr>
-<tr>
-<td class="tab_bold">G</td>
-<td>move the cursor to the end of the file</td>
-</tr>
-<tr>
-<td class="tab_bold">gg</td>
-<td>move the cursor to the begining of the file</td>
-</tr>
-<tr>
-<td class="tab_bold">L</td>
-<td>move the cursor to the bottom of the screen</td>
-</tr>
-<tr>
-<td class="tab_bold">:59</td>
-<td>move cursor to line <em>59</em>. Replace <em>59</em> by the desired line number.</td>
-</tr>
-<td class="tab_bold">20|</td>
-<td>move cursor to column <em>20</em>.</td>
-</tr>
-<tr>
-<td class="tab_bold">%</td>
-<td>Move cursor to matching parenthesis</td>
-</tr>
-<tr>
-<td class="tab_bold">[[</td>
-<td>Jump to function start</td>
-</tr>
-<tr>
-<td class="tab_bold">[{</td>
-<td>Jump to block start</td>
-</tr>
+	<caption>Cut, copy &#038; paste</caption>
+	<tr>
+		<td class="tab_bold">y</td>
+		<td>Copy the selected text to clipboard</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">p</td>
+		<td>Paste clipboard contents</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">dd</td>
+		<td>Cut current line</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">yy</td>
+		<td>Copy current line</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">y$</td>
+		<td>Copy to end of line</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">D</td>
+		<td>Cut to end of line</td>
+	</tr>
 </table>
 <table border="1" width="100%">
-<caption>Cut, copy &#038; paste</caption>
-<tr>
-<td class="tab_bold">y</td>
-<td>Copy the selected text to clipboard</td>
-</tr>
-<tr>
-<td class="tab_bold">p</td>
-<td>Paste clipboard contents</td>
-</tr>
-<tr>
-<td class="tab_bold">dd</td>
-<td>Cut current line</td>
-</tr>
-<tr>
-<td class="tab_bold">yy</td>
-<td>Copy current line</td>
-</tr>
-<tr>
-<td class="tab_bold">y$</td>
-<td>Copy to end of line</td>
-</tr>
-<tr>
-<td class="tab_bold">D</td>
-<td>Cut to end of line</td>
-</tr>
-</table>
-<table border="1" width="100%">
-<caption>Search</caption>
-<tr>
-<td class="tab_bold">/word</td>
-<td>Search <em>word</em> from top to bottom</td>
-</tr>
-<tr>
-<td class="tab_bold">?word</td>
-<td>Search <em>word</em> from bottom to top</td>
-</tr>
-<tr>
-<td class="tab_bold">*</td>
-<td>Search the word under cursor</td>
-</tr>
-<tr>
-<td class="tab_bold">/\cstring</td>
-<td>Search <em>STRING</em> or <em>string</em>, case insensitive</td>
-</tr>
-<tr>
-<td class="tab_bold">/jo[ha]n</td>
-<td>Search <em>john</em> or <em>joan</em></td>
-</tr>
-<tr>
-<td class="tab_bold">/\&lt; the</td>
-<td>Search the, theatre or <em>then</em></td>
-</tr>
-<tr>
-<td class="tab_bold">/the\&gt;</td>
-<td>Search <em>the</em> or <em>breathe</em></td>
-</tr>
-<tr>
-<td class="tab_bold">/\&lt; the\&gt;</td>
-<td>Search <em>the</em></td>
-</tr>
-<tr>
-<td class="tab_bold">/\&lt; </em>¦.\&gt;</td>
-<td>Search all words of 4 letters</td>
-</tr>
-<tr>
-<td class="tab_bold">/\/</td>
-<td>Search <em>fred</em> but not <em>alfred</em> or <em>frederick</em></td>
-</tr>
-<tr>
-<td class="tab_bold">/fred\|joe</td>
-<td>Search <em>fred</em> or <em>joe</em></td>
-</tr>
-<tr>
-<td class="tab_bold">/\&lt;\d\d\d\d\&gt;</td>
-<td>Search exactly 4 digits</td>
-</tr>
-<tr>
-<td class="tab_bold">/^\n\{3}</td>
-<td>Find 3 empty lines</td>
-</tr>
-<tr>
-<td class="tab_bold">:bufdo /searchstr/</td>
-<td>Search in all open files</td>
-</tr>
-<tr>
-<td class="tab_bold">bufdo %s/something/somethingelse/g</td>
-<td>Search <em>something</em> in all the open buffers and replace it with <em>somethingelse</em></td>
-</tr>
+	<caption>Search</caption>
+	<tr>
+		<td class="tab_bold">/word</td>
+		<td>Search <em>word</em> from top to bottom</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">?word</td>
+		<td>Search <em>word</em> from bottom to top</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">*</td>
+		<td>Search the word under cursor</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/\cstring</td>
+		<td>Search <em>STRING</em> or <em>string</em>, case insensitive</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/jo[ha]n</td>
+		<td>Search <em>john</em> or <em>joan</em></td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/\&lt; the</td>
+		<td>Search the, theatre or <em>then</em></td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/the\&gt;</td>
+		<td>Search <em>the</em> or <em>breathe</em></td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/\&lt; the\&gt;</td>
+		<td>Search <em>the</em></td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/\&lt; </em>¦.\&gt;</td>
+		<td>Search all words of 4 letters</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/\/</td>
+		<td>Search <em>fred</em> but not <em>alfred</em> or <em>frederick</em></td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/fred\|joe</td>
+		<td>Search <em>fred</em> or <em>joe</em></td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/\&lt;\d\d\d\d\&gt;</td>
+		<td>Search exactly 4 digits</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">/^\n\{3}</td>
+		<td>Find 3 empty lines</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">:bufdo /searchstr/</td>
+		<td>Search in all open files</td>
+	</tr>
+	<tr>
+		<td class="tab_bold">bufdo %s/something/somethingelse/g</td>
+		<td>Search <em>something</em> in all the open buffers and replace it with <em>somethingelse</em></td>
+	</tr>
 </tbody>
 </table>
 <table border="1" width="100%">
-<caption>Replace</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:%s/old/new/g</td>
-<td>Replace all occurences of <em>old</em> by <em>new</em> in file</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/onward/forward/gi</td>
-<td>Replace onward by forward, case unsensitive</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/old/new/gc</td>
-<td>Replace all occurences with confirmation</td>
-</tr>
-<tr>
-<td class="tab_bold">:2,35s/old/new/g</td>
-<td>Replace all occurences between lines 2 and 35</td>
-</tr>
-<tr>
-<td class="tab_bold">:5,$s/old/new/g</td>
-<td>Replace all occurences from line 5 to EOF</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/^/hello/g</td>
-<td>Replace the begining of each line by <em>hello</em></td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/$/Harry/g</td>
-<td>Replace the end of each line by <em>Harry</em></td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/onward/forward/gi</td>
-<td>Replace <em>onward</em> by <em>forward</em>, case unsensitive</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/ *$//g</td>
-<td>Delete all white spaces</td>
-</tr>
-<tr>
-<td class="tab_bold">:g/string/d</td>
-<td>Delete all lines containing <em>string</em></td>
-</tr>
-<tr>
-<td class="tab_bold">:v/string/d</td>
-<td>Delete all lines containing which didn&#8217;t contain <em>string</em></td>
-</tr>
-<tr>
-<td class="tab_bold">:s/Bill/Steve/</td>
-<td>Replace the first occurence of <em>Bill</em> by <em>Steve</em> in current line</td>
-</tr>
-<tr>
-<td class="tab_bold">:s/Bill/Steve/g</td>
-<td>Replace <em>Bill</em> by <em>Steve</em> in current line</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/Bill/Steve/g</td>
-<td>Replace <em>Bill</em> by <em>Steve</em> in all the file</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/^M//g</td>
-<td>Delete DOS carriage returns (^M)</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/\r/\r/g</td>
-<td>Transform DOS carriage returns in returns</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s#&lt;[^&gt;]\+&gt;##g</td>
-<td>Delete HTML tags but keeps text</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/^\(.*\)\n\1$/\1/</td>
-<td>Delete lines which appears twice</td>
-</tr>
-<tr>
-<td class="tab_bold">Ctrl+a</td>
-<td>Increment number under the cursor</td>
-</tr>
-<tr>
-<td class="tab_bold">Ctrl+x</td>
-<td>Decrement number under cursor</td>
-</tr>
-<tr>
-<td class="tab_bold">ggVGg?</td>
-<td>Change text to Rot13</td>
-</tr>
-</tbody>
+	<caption>Replace</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:%s/old/new/g</td>
+			<td>Replace all occurences of <em>old</em> by <em>new</em> in file</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/onward/forward/gi</td>
+			<td>Replace onward by forward, case unsensitive</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/old/new/gc</td>
+			<td>Replace all occurences with confirmation</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:2,35s/old/new/g</td>
+			<td>Replace all occurences between lines 2 and 35</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:5,$s/old/new/g</td>
+			<td>Replace all occurences from line 5 to EOF</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/^/hello/g</td>
+			<td>Replace the begining of each line by <em>hello</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/$/Harry/g</td>
+			<td>Replace the end of each line by <em>Harry</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/onward/forward/gi</td>
+			<td>Replace <em>onward</em> by <em>forward</em>, case unsensitive</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/ *$//g</td>
+			<td>Delete all white spaces</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:g/string/d</td>
+			<td>Delete all lines containing <em>string</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:v/string/d</td>
+			<td>Delete all lines containing which didn&#8217;t contain <em>string</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:s/Bill/Steve/</td>
+			<td>Replace the first occurence of <em>Bill</em> by <em>Steve</em> in current line</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:s/Bill/Steve/g</td>
+			<td>Replace <em>Bill</em> by <em>Steve</em> in current line</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/Bill/Steve/g</td>
+			<td>Replace <em>Bill</em> by <em>Steve</em> in all the file</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/^M//g</td>
+			<td>Delete DOS carriage returns (^M)</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/\r/\r/g</td>
+			<td>Transform DOS carriage returns in returns</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s#&lt;[^&gt;]\+&gt;##g</td>
+			<td>Delete HTML tags but keeps text</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/^\(.*\)\n\1$/\1/</td>
+			<td>Delete lines which appears twice</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">Ctrl+a</td>
+			<td>Increment number under the cursor</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">Ctrl+x</td>
+			<td>Decrement number under cursor</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ggVGg?</td>
+			<td>Change text to Rot13</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="casse">Case</caption>
-<tbody>
-<tr>
-<td class="tab_bold">Vu</td>
-<td>Lowercase line</td>
-</tr>
-<tr>
-<td class="tab_bold">VU</td>
-<td>Uppercase line</td>
-</tr>
-<tr>
-<td class="tab_bold">g~~</td>
-<td>Invert case</td>
-</tr>
-<tr>
-<td class="tab_bold">vEU</td>
-<td>Switch word to uppercase</td>
-</tr>
-<tr>
-<td class="tab_bold">vE~</td>
-<td>Modify word case</td>
-</tr>
-<tr>
-<td class="tab_bold">ggguG</td>
-<td>Set all text to lowercase</td>
-</tr>
-<tr>
-<td class="tab_bold">gggUG</td>
-<td>Set all text to uppercase</td>
-</tr>
-<tr>
-<td class="tab_bold">:set ignorecase</td>
-<td>Ignore case in searches</td>
-</tr>
-<tr>
-<td class="tab_bold">:set smartcase</td>
-<td>Ignore case in searches excepted if an uppercase letter is used</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/\&lt;./\u&amp;/g</td>
-<td>Sets first letter of each word to uppercase</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/\&lt;./\l&amp;/g</td>
-<td>Sets first letter of each word to lowercase</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/.*/\u&amp;</td>
-<td>Sets first letter of each line to uppercase</td>
-</tr>
-<tr>
-<td class="tab_bold">:%s/.*/\l&amp;</td>
-<td>Sets first letter of each line to lowercase</td>
-</tr>
-</tbody>
+	<caption id="casse">Case</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">Vu</td>
+			<td>Lowercase line</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">VU</td>
+			<td>Uppercase line</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">g~~</td>
+			<td>Invert case</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">vEU</td>
+			<td>Switch word to uppercase</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">vE~</td>
+			<td>Modify word case</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ggguG</td>
+			<td>Set all text to lowercase</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">gggUG</td>
+			<td>Set all text to uppercase</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:set ignorecase</td>
+			<td>Ignore case in searches</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:set smartcase</td>
+			<td>Ignore case in searches excepted if an uppercase letter is used</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/\&lt;./\u&amp;/g</td>
+			<td>Sets first letter of each word to uppercase</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/\&lt;./\l&amp;/g</td>
+			<td>Sets first letter of each word to lowercase</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/.*/\u&amp;</td>
+			<td>Sets first letter of each line to uppercase</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:%s/.*/\l&amp;</td>
+			<td>Sets first letter of each line to lowercase</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption>Read/Write files</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:1,10 w outfile</td>
-<td>Saves lines 1 to 10 in <em>outfile</em></td>
-</tr>
-<tr>
-<td class="tab_bold">:1,10 w &gt;&gt; outfile</td>
-<td>Appends lines 1 to 10 to <em>outfile</em></td>
-</tr>
-<tr>
-<td class="tab_bold">:r infile</td>
-<td>Insert the content of <em>infile</em></td>
-</tr>
-<tr>
-<td class="tab_bold">:23r infile</td>
-<td>Insert the content of <em>infile</em> under line 23</td>
-</tr>
-</tbody>
+	<caption>Read/Write files</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:1,10 w outfile</td>
+			<td>Saves lines 1 to 10 in <em>outfile</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:1,10 w &gt;&gt; outfile</td>
+			<td>Appends lines 1 to 10 to <em>outfile</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:r infile</td>
+			<td>Insert the content of <em>infile</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:23r infile</td>
+			<td>Insert the content of <em>infile</em> under line 23</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="explorateur">File explorer</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:e .</td>
-<td>Open integrated file explorer</td>
-</tr>
-<tr>
-<td class="tab_bold">:Sex</td>
-<td>Split window and open integrated file explorer</td>
-</tr>
-<tr>
-<td class="tab_bold">:Sex!</td>
-<td>Same as <em>:Sex</em> but split window vertically</td>
-</tr>
-<tr>
-<td class="tab_bold">:browse e</td>
-<td>Graphical file explorer</td>
-</tr>
-<tr>
-<td class="tab_bold">:ls</td>
-<td>List buffers</td>
-</tr>
-<tr>
-<td class="tab_bold">:cd ..</td>
-<td>Move to parent directory</td>
-</tr>
-<tr>
-<td class="tab_bold">:args</td>
-<td>List files</td>
-</tr>
-<tr>
-<td class="tab_bold">:args *.php</td>
-<td>Open file list</td>
-</tr>
-<tr>
-<td class="tab_bold">:grep expression *.php</td>
-<td>Returns a list of .php files contening <em>expression</em></td>
-</tr>
-<tr>
-<td class="tab_bold">gf</td>
-<td>Open file name under cursor</td>
-</tr>
-</tbody>
+	<caption id="explorateur">File explorer</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:e .</td>
+			<td>Open integrated file explorer</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:Sex</td>
+			<td>Split window and open integrated file explorer</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:Sex!</td>
+			<td>Same as <em>:Sex</em> but split window vertically</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:browse e</td>
+			<td>Graphical file explorer</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:ls</td>
+			<td>List buffers</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:cd ..</td>
+			<td>Move to parent directory</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:args</td>
+			<td>List files</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:args *.php</td>
+			<td>Open file list</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:grep expression *.php</td>
+			<td>Returns a list of .php files contening <em>expression</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">gf</td>
+			<td>Open file name under cursor</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="unix">Interact with Unix</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:!pwd</td>
-<td>Execute the <em>pwd</em> unix command, then returns to Vi</td>
-</tr>
-<tr>
-<td class="tab_bold">!!pwd</td>
-<td>Execute the <em>pwd</em> unix command and insert output in file</td>
-</tr>
-<tr>
-<td class="tab_bold">:sh</td>
-<td>Temporary returns to Unix</td>
-</tr>
-<tr>
-<td class="tab_bold">$exit</td>
-<td>Retourns to Vi</td>
-</tr>
-</tbody>
+	<caption id="unix">Interact with Unix</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:!pwd</td>
+			<td>Execute the <em>pwd</em> unix command, then returns to Vi</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">!!pwd</td>
+			<td>Execute the <em>pwd</em> unix command and insert output in file</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:sh</td>
+			<td>Temporary returns to Unix</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">$exit</td>
+			<td>Retourns to Vi</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="alignement">Alignment</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:%!fmt</td>
-<td>Align all lines</td>
-</tr>
-<tr>
-<td class="tab_bold">!}fmt</td>
-<td>Align all lines at the current position</td>
-</tr>
-<tr>
-<td class="tab_bold">5!!fmt</td>
-<td>Align the next 5 lines</td>
-</tr>
-</tbody>
+	<caption id="alignement">Alignment</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:%!fmt</td>
+			<td>Align all lines</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">!}fmt</td>
+			<td>Align all lines at the current position</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">5!!fmt</td>
+			<td>Align the next 5 lines</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="onglets">Tabs/Windows</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:tabnew</td>
-<td>Creates a new tab</td>
-</tr>
-<tr>
-<td class="tab_bold">gt</td>
-<td>Show next tab</td>
-</tr>
-<tr>
-<td class="tab_bold">:tabfirst</td>
-<td>Show first tab</td>
-</tr>
-<tr>
-<td class="tab_bold">:tablast</td>
-<td>Show last tab</td>
-</tr>
-<tr>
-<td class="tab_bold">:tabm n(position)</td>
-<td>Rearrange tabs</td>
-</tr>
-<tr>
-<td class="tab_bold">:tabdo %s/foo/bar/g</td>
-<td>Execute a command in all tabs</td>
-</tr>
-<tr>
-<td class="tab_bold">:tab ball</td>
-<td>Puts all open files in tabs</td>
-</tr>
-<tr>
-<td class="tab_bold">:new abc.txt</td>
-<td>Edit <em>abc.txt</em> in new window</td>
-</tr>
-</tbody>
+	<caption id="onglets">Tabs/Windows</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:tabnew</td>
+			<td>Creates a new tab</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">gt</td>
+			<td>Show next tab</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:tabfirst</td>
+			<td>Show first tab</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:tablast</td>
+			<td>Show last tab</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:tabm n(position)</td>
+			<td>Rearrange tabs</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:tabdo %s/foo/bar/g</td>
+			<td>Execute a command in all tabs</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:tab ball</td>
+			<td>Puts all open files in tabs</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:new abc.txt</td>
+			<td>Edit <em>abc.txt</em> in new window</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="partage">Window spliting</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:e filename</td>
-<td>Edit <em>filename</em> in current window</td>
-</tr>
-<tr>
-<td class="tab_bold">:split filename</td>
-<td>Split the window and open <em>filename</em></td>
-</tr>
-<tr>
-<td class="tab_bold">ctrl-w up arrow</td>
-<td>Puts cursor in top window</td>
-</tr>
-<tr>
-<td class="tab_bold">ctrl-w ctrl-w</td>
-<td>Puts cursor in next window</td>
-</tr>
-<tr>
-<td class="tab_bold">ctrl-w_</td>
-<td>Maximize current window vertically</td>
-</tr>
-<tr>
-<td class="tab_bold">ctrl-w|</td>
-<td>Maximize current window horizontally</td>
-</tr>
-<tr>
-<td class="tab_bold">ctrl-w=</td>
-<td>Gives the same size to all windows</td>
-</tr>
-<tr>
-<td class="tab_bold">10 ctrl-w+</td>
-<td>Add 10 lines to current window</td>
-</tr>
-<tr>
-<td class="tab_bold">:vsplit file</td>
-<td>Split window vertically</td>
-</tr>
-<tr>
-<td class="tab_bold">:sview file</td>
-<td>Same as <strong>:split</strong> in readonly mode</td>
-</tr>
-<tr>
-<td class="tab_bold">:hide</td>
-<td>Close current window</td>
-</tr>
-<tr>
-<td class="tab_bold">:&#173;nly</td>
-<td>Close all windows, excepted current</td>
-</tr>
-<tr>
-<td class="tab_bold">:b 2</td>
-<td>Open #2 in this window</td>
-</tr>
-</tbody>
+	<caption id="partage">Window spliting</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:e filename</td>
+			<td>Edit <em>filename</em> in current window</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:split filename</td>
+			<td>Split the window and open <em>filename</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ctrl-w up arrow</td>
+			<td>Puts cursor in top window</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ctrl-w ctrl-w</td>
+			<td>Puts cursor in next window</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ctrl-w_</td>
+			<td>Maximize current window vertically</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ctrl-w|</td>
+			<td>Maximize current window horizontally</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ctrl-w=</td>
+			<td>Gives the same size to all windows</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">10 ctrl-w+</td>
+			<td>Add 10 lines to current window</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:vsplit file</td>
+			<td>Split window vertically</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:sview file</td>
+			<td>Same as <strong>:split</strong> in readonly mode</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:hide</td>
+			<td>Close current window</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:&#173;nly</td>
+			<td>Close all windows, excepted current</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:b 2</td>
+			<td>Open #2 in this window</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="completion">Auto-completion</caption>
-<tbody>
-<tr>
-<td class="tab_bold">Ctrl+n Ctrl+p (in insert mode)</td>
-<td>Complete word</td>
-</tr>
-<tr>
-<td class="tab_bold">Ctrl+x Ctrl+l</td>
-<td>Complete line</td>
-</tr>
-<tr>
-<td class="tab_bold">:set dictionary=dict</td>
-<td>Define <em>dict</em> as a dictionnary</td>
-</tr>
-<tr>
-<td class="tab_bold">Ctrl+x Ctrl+k</td>
-<td>Complete with dictionnary</td>
-</tr>
-</tbody>
+	<caption id="completion">Auto-completion</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">Ctrl+n Ctrl+p (in insert mode)</td>
+			<td>Complete word</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">Ctrl+x Ctrl+l</td>
+			<td>Complete line</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:set dictionary=dict</td>
+			<td>Define <em>dict</em> as a dictionnary</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">Ctrl+x Ctrl+k</td>
+			<td>Complete with dictionnary</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="marqueurs">Marks</caption>
-<tbody>
-<tr>
-<td class="tab_bold">m {a-z}</td>
-<td>Marks current position as <em>{a-z}</em></td>
-</tr>
-<tr>
-<td class="tab_bold"></em>&#39; {a-z}</td>
-<td>Move to position <em>{a-z}</em></td>
-</tr>
-<tr>
-<td class="tab_bold"></em>&#39;&#39;</td>
-<td>Move to previous position</td>
-</tr>
-</tbody>
+	<caption id="marqueurs">Marks</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">m {a-z}</td>
+			<td>Marks current position as <em>{a-z}</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold"></em>&#39; {a-z}</td>
+			<td>Move to position <em>{a-z}</em></td>
+		</tr>
+		<tr>
+			<td class="tab_bold"></em>&#39;&#39;</td>
+			<td>Move to previous position</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="abbr">Abbreviations</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:ab mail mail@provider.org</td>
-<td>Define <em>mail</em> as abbreviation of <em>mail@provider.org</em></td>
-</tr>
-</tbody>
+	<caption id="abbr">Abbreviations</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:ab mail mail@provider.org</td>
+			<td>Define <em>mail</em> as abbreviation of <em>mail@provider.org</em></td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="indentation">Text indent</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:set autoindent</td>
-<td>Turn on auto-indent</td>
-</tr>
-<tr>
-<td class="tab_bold">:set smartindent</td>
-<td>Turn on intelligent auto-indent</td>
-</tr>
-<tr>
-<td class="tab_bold">:set shiftwidth=4</td>
-<td>Defines 4 spaces as indent size</td>
-</tr>
-<tr>
-<td class="tab_bold">ctrl-t, ctrl-d</td>
-<td>Indent/un-indent in insert mode</td>
-</tr>
-<tr>
-<td class="tab_bold">&gt;&gt;</td>
-<td>Indent</td>
-</tr>
-<tr>
-<td class="tab_bold">&lt;&lt;</td>
-<td>Un-indent</td>
-</tr>
-<tr>
-<td class="tab_bold">=%</td>
-<td>Indent the code between parenthesis</td>
-</tr>
-<tr>
-<td class="tab_bold">1GVG=</td>
-<td>Indent the whole file</td>
-</tr>
-</tbody>
+	<caption id="indentation">Text indent</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:set autoindent</td>
+			<td>Turn on auto-indent</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:set smartindent</td>
+			<td>Turn on intelligent auto-indent</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:set shiftwidth=4</td>
+			<td>Defines 4 spaces as indent size</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">ctrl-t, ctrl-d</td>
+			<td>Indent/un-indent in insert mode</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">&gt;&gt;</td>
+			<td>Indent</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">&lt;&lt;</td>
+			<td>Un-indent</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">=%</td>
+			<td>Indent the code between parenthesis</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">1GVG=</td>
+			<td>Indent the whole file</td>
+		</tr>
+	</tbody>
 </table>
 <table border="1" width="100%">
-<caption id="coloration">Syntax highlighting</caption>
-<tbody>
-<tr>
-<td class="tab_bold">:syntax on</td>
-<td>Turn on syntax highlighting</td>
-</tr>
-<tr>
-<td class="tab_bold">:syntax off</td>
-<td>Turn off syntax highlighting</td>
-</tr>
-<tr>
-<td class="tab_bold">:set syntax=perl</td>
-<td>Force syntax highlighting</td>
-</tr>
-</tbody>
+	<caption id="coloration">Syntax highlighting</caption>
+	<tbody>
+		<tr>
+			<td class="tab_bold">:syntax on</td>
+			<td>Turn on syntax highlighting</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:syntax off</td>
+			<td>Turn off syntax highlighting</td>
+		</tr>
+		<tr>
+			<td class="tab_bold">:set syntax=perl</td>
+			<td>Force syntax highlighting</td>
+		</tr>
+	</tbody>
 </table>
 <hr>
 <p>From <a href="http://www.catswhocode.com/blog/130-essential-vim-commands">Cats who code</a>.</p>
