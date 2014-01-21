@@ -6,7 +6,7 @@ Support Cheaters by contributing to my [GitTip fund](https://www.gittip.com/ttsc
 [gather]: http://brettterpstra.com/introducing-gather-a-cocoa-markdownifier/
 [te]: http://smilesoftware.com/TextExpander/
 [marky]: http://markdownrules.com/
-[demo]: http://ttscoff.github.io/cheaters/cheat.html
+[demo]: http://ttscoff.github.io/cheaters/cheaters/cheat.html
 
 First and foremost, this is a total ripoff of an idea by Gabe Weatherhead [over at Macdrifter][macdrifter]. I just expanded on the idea a little bit.
 
