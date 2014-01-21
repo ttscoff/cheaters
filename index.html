@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Cheaters by ttscoff</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cheaters : Customizable cheat sheet system for OS X" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Cheaters</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Cheaters</h1>
-          <h2>Customizable cheat sheet system for OS X</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ttscoff/cheaters">View on GitHub</a>
+
+          <h1 id="project_title">Cheaters</h1>
+          <h2 id="project_tagline">Customizable cheat sheet system for OS X</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ttscoff/cheaters/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ttscoff/cheaters/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/ttscoff/cheaters/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/ttscoff/cheaters/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/ttscoff/cheaters" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <p>Support Cheaters by contributing to my <a href="https://www.gittip.com/ttscoff/">GitTip fund</a> or <a href="http://brettterpstra.com/donate/">making a donation</a>.</p>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Support Cheaters by contributing to my <a href="https://www.gittip.com/ttscoff/">GitTip fund</a> or <a href="http://brettterpstra.com/donate/">making a donation</a>.</p>
 
 <p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Header.jpg" alt="Cheat Sheets Header"></p>
 
 <p>First and foremost, this is a total ripoff of an idea by Gabe Weatherhead <a href="http://www.macdrifter.com/2012/02/markdown-cheat-sheets-and-marked/">over at Macdrifter</a>. I just expanded on the idea a little bit.</p>
 
-<p>Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps (<a href="http://ttscoff.github.io/cheaters/cheat.html">demo the web version</a>). Most of the time I create <a href="http://smilesoftware.com/TextExpander/">TextExpander</a> snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.</p>
+<p>Cheaters is a collection of HTML-based cheat sheets meant for display in an Automator-based popup browser which can float on your screen while you work in other apps (<a href="http://ttscoff.github.io/cheaters/cheaters/cheat.html">demo the web version</a>). Most of the time I create <a href="http://smilesoftware.com/TextExpander/">TextExpander</a> snippets for commonly-forgotten formats, but having an overall reference can be handy. I've included a collection of hastily made sheets as examples for you to create your own. Sheets are easy to create with minimal markup and are, for the most part, automatically styled and made to fit in with Cheaters overall aesthetic.</p>
 
 <p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-wide.jpg" alt="Cheat Sheets wide"></p>
 
-<h3>Using Cheaters</h3>
+<h3>
+<a name="update" class="anchor" href="#update"><span class="octicon octicon-link"></span></a>Update</h3>
+
+<p>You can use the instructions below if you're a cheapskate, but for $5 you can use <a href="http://fluidapp.com/">Fluid</a> and create a menu bar app that's much more full-featured and usable than the Automator action. Seriously. Do it.</p>
+
+<h3>
+<a name="using-cheaters" class="anchor" href="#using-cheaters"><span class="octicon octicon-link"></span></a>Using Cheaters</h3>
 
 <p>The most useful way to use Cheaters is with an Automator Application.</p>
 
@@ -59,7 +65,8 @@
 
 <p>You can also use Cheaters in a web browser, just put it on your disk and point your browser to the <code>file:///...</code> location.</p>
 
-<h3>Deep linking</h3>
+<h3>
+<a name="deep-linking" class="anchor" href="#deep-linking"><span class="octicon octicon-link"></span></a>Deep linking</h3>
 
 <p>As of a recent update, Cheaters can now handle linking directly to a specific cheat sheet using url hashes. You can use a zero-index number to link to a page if you know the order (index.html#3 to link to the fourth item), but because the order is configurable and subject to change, it also supports name matching. For example, if you want to link the Siri cheat sheet directly, you can use <code>[your_url_or_path]/index.html#siri</code>.</p>
 
@@ -67,15 +74,18 @@
 
 <p>This is primarily geared toward building more complex workflows using tools like Alfred 2.</p>
 
-<h3>Customizing</h3>
+<h3>
+<a name="customizing" class="anchor" href="#customizing"><span class="octicon octicon-link"></span></a>Customizing</h3>
 
 <p>If you know a little HTML, adding and editing sheets is easy. Take a look at the existing documents in the included <strong>cheatsheets</strong> folder. The markup varies but a lot of cases are already handled by the CSS. I stole most of the included cheat sheets from existing web sources (credits at the bottom of each). Some of them I just ripped the HTML out of directly, some I <a href="http://markdownrules.com/">converted</a> <a href="http://brettterpstra.com/introducing-gather-a-cocoa-markdownifier/">to Markdown</a> and then to HTML to get cleaner output. The HTML in the cheat sheets does not need a head, body or containing div, just the markup that goes inside the container in the index.html file.</p>
 
-<h4>The menu</h4>
+<h4>
+<a name="the-menu" class="anchor" href="#the-menu"><span class="octicon octicon-link"></span></a>The menu</h4>
 
 <p>The index file for Cheaters loads each cheat sheet dynamically into its own markup (using jQuery). To add a new sheet to the menu (or remove/rearrange existing sheets), just edit the unordered list in the #nav ul. The order of the list is the order of the menu items, and the first one in the list is loaded by default. If you only ever want one cheat sheet, just make it the only one in the list. New cheat sheets should be stored as HTML files in the <strong>cheatsheets</strong> folder, and referenced from the links in the #nav list with the relative path <code>cheatsheets/filename.html</code>.</p>
 
-<h4>The look</h4>
+<h4>
+<a name="the-look" class="anchor" href="#the-look"><span class="octicon octicon-link"></span></a>The look</h4>
 
 <p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-narrow-high-contrast.jpg" alt="Narrow, high contrast"></p>
 
@@ -83,21 +93,26 @@
 
 <p>There's also a contrast icon in the upper right, which you can use to flip between light-on-dark and dark-on-light. You can make this change permanent by editing the body class in index.html. Adding a class of "inverted" will set it to be light-on-dark by default; without that class it's dark-on-light automatically.</p>
 
-<h4>Using PDFs</h4>
+<h4>
+<a name="using-pdfs" class="anchor" href="#using-pdfs"><span class="octicon octicon-link"></span></a>Using PDFs</h4>
 
 <p><img src="http://brettterpstra.com/uploads/2012/03/Cheat-Sheets-Wide-Image.jpg" alt="Cheat Sheets with image"></p>
 
 <p>If you find a PDF cheat sheet that's ideal for this type of display, you'll need to convert it to an image (gif, jpg or png) first. Make it large, between 800px and 1024px wide. Cheaters will automatically scale it to your browser width, and when your browser width gets small enough that the image would be unreadable, it shows it full size and lets you scroll around within the viewport. See the CSS3 cheat sheet markup for an example of using an image; it's just an image tag in an html file. Easy as pie.</p>
 
 <p>If you create some great cheat sheets, fork this and send a pull request. Just <a href="http://brettterpstra.com/contact">let me know</a> if you need a hand!</p>
-        </section>
+      </section>
+    </div>
 
-        <footer>
-          Cheaters is maintained by <a href="https://github.com/ttscoff">ttscoff</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cheaters maintained by <a href="https://github.com/ttscoff">ttscoff</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
 
-                  <script type="text/javascript">
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -108,7 +123,6 @@
             } catch(err) {}
           </script>
 
-      </div>
-    </div>
+
   </body>
 </html>
