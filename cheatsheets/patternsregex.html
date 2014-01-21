@@ -1,7 +1,10 @@
+<h3>Regular Expressions</h3>
 <table>
-	<tr>
-		<th colspan="2">Anchors</th>
-	</tr>
+	<caption> Anchors </caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
 		<th>^</th>
 		<td>Matches at the start of string or start of line if multi-line mode is enabled. Many regex implementations have multi-line mode enabled by default.</td>
@@ -32,9 +35,11 @@
 	</tr>
 </table>
 <table>
-	<tr>
-		<th colspan="2">Character Classes<br /><span>Can be used in ranges</span></th>
-	</tr>
+	<caption>Character Classes <span>Can be used in ranges</span></caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
 		<th>.</th>
 		<td>Matches any character except newline. Will also match newline if single-line mode is enabled.</td>
@@ -81,9 +86,11 @@
 	</tr>
 </table>
 <table>
-	<tr>
-		<th colspan="2">Groups</th>
-	</tr>
+	<caption>Groups</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	</tr>
 	<tr>
 		<th>(foo|bar)</th>
@@ -107,9 +114,11 @@
 	</tr>
 </table>
 <table>
-	<tr>
-		<th colspan="2">Bracket Expressions</th>
-	</tr>
+	<caption>Bracket Expressions</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
 		<th>[adf]</th>
 		<td>Matches characters <span class="code">a</span> or <span class="code">d</span> or <span class="code">f</span>.</td>
@@ -132,9 +141,11 @@
 	</tr>
 </table>
 <table>
-	<tr>
-		<th colspan="2">Quantifiers</th>
-	</tr>
+	<caption>Quantifiers</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
 		<th>*</th>
 		<td>0 or more. Matches will be as large as possible.</td>
@@ -181,9 +192,11 @@
 	</tr>
 </table>
 <table>
-	<tr>
-		<th colspan="2">Special Characters</th>
-	</tr>
+	<caption>Special Characters</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
 		<th>\</th>
 		<td>Escape character. Any metacharacter to be interpreted literally must be escaped. For example, \? matches literal <span class="code">?</span>. \\ matches literal <span class="code">\</span>.</td>
@@ -206,9 +219,11 @@
 	</tr>
 </table>
 <table>
-	<tr>
-		<th colspan="2">Assertions</th>
-	</tr>
+	<caption>Assertions</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
 		<th>foo(?=bar)</th>
 		<td>Lookahead assertion. The pattern <span class="code">foo</span> will only match if followed by a match of pattern <span class="code">bar</span>.</td>
@@ -227,8 +242,13 @@
 	</tr>
 </table>
 <table>
+	<caption>POSIX Character Classes</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
-		<th colspan="2">POSIX Character Classes<br /><span>Must be used in bracket expressions, e.g. <span class="code">[a-z[:upper:]]</span></span></th>
+		<th colspan="2">Must be used in bracket expressions</th>
 	</tr>
 	<tr>
 		<th>[:upper:]</th>
@@ -288,8 +308,13 @@
 	</tr>
 </table>
 <table>
+	<caption>Backreferences</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
-		<th colspan="2">Backreferences<br /><span>Used in replacements</span></th>
+		<th colspan="2">Used in replacements</th>
 	</tr>
 	<tr>
 		<th>$3</th>
@@ -305,8 +330,13 @@
 	</tr>
 </table>
 <table>
+	<caption>Case Modifiers</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
-		<th colspan="2">Case Modifiers<br /><span>Used in replacements</span></th>
+		<th colspan="2">Used in replacements</th>
 	</tr>
 	<tr>
 		<th>\u</th>
@@ -326,8 +356,13 @@
 	</tr>
 </table>
 <table>
+	<caption>Modifiers</caption>
+	<colgroup>
+	<col style="text-align:center;"/>
+	<col style="text-align:left;"/>
+	</colgroup>
 	<tr>
-		<th colspan="2">Modifiers<br /><span>May be grouped together, e.g. <span class="code">(?ixm)</span></span></th>
+		<th colspan="2">May be grouped together</th>
 	</tr>
 	<tr>
 		<th>(?i)</th>
