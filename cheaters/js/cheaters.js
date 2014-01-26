@@ -32,8 +32,13 @@ var Cheaters = (function () {
 			var href = $($('#nav a').get(active)).attr('href');
 			$('#container').load( href, function() {
 				if (/\.md$/.test(href)) {
+					var mdText = $('#container').text()
+						.replace(/xCMD/g,'⌘')
+						.replace(/xOPT/g,'⌥')
+						.replace(/xSHIFT/g,'⇧')
+						.replace(/xCTRL/g,'^');
 					$('#container').html(
-						marked($('#container').text(), {
+						marked(mdText, {
 							smartLists: true,
 							breaks: true,
 							tables: true,
