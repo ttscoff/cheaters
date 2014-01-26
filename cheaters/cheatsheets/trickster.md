@@ -1,7 +1,8 @@
 ### Trickster Keyboard Shortcuts
 
-**Global Hotkey**:
-	⌃Z
+**Global Hotkey**: ⌃Z
+
+### Global
 
 | Shortcut	| Action	|  
 |  :-----:	| :------	|  
@@ -17,8 +18,9 @@
 | ⌘R	| Sort by date (recent on top)	|  
 |  ⌃P	| Previous item (same as↑ )	|  
 | ⌃N	| Next item (same as↓ )	|  
-[Main Window]
 
+
+### In Recent File List
 
 | Shortcut	| Action	|  
 |  :------:	| ------	|  
@@ -31,7 +33,7 @@
 | ⌦ or ⌫	| Remove selected from list	|  
 | ⌘⌦ or ⌫	| Move selected to trash	|  
 | ⌥⌦ or ⌥⌫	| Remove all files that are in the folder as the selected. They'll show up again.	| 
-[In Recent File List] 
+
 
 | Shortcut	| Action	|  
 |  :------:	| ------	|  

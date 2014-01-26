@@ -29,7 +29,18 @@ var Cheaters = (function () {
 		if (active !== null) {
 			$('#nav li').removeClass('active');
 			$($('#nav li').get(active)).addClass('active');
-			$('#container').load( $($('#nav a').get(active)).attr('href'), function() {
+			var href = $($('#nav a').get(active)).attr('href');
+			$('#container').load( href, function() {
+				if (/\.md$/.test(href)) {
+					$('#container').html(
+						marked($('#container').text(), {
+							smartLists: true,
+							breaks: true,
+							tables: true,
+							gfm: true
+						})
+					);
+				}
 				$(document).scrollTop(0);
 			} );
 			// localStorage.setItem('cheatSheet-active',$('#nav li.active').prevAll().length);
