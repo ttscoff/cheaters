@@ -1,7 +1,7 @@
 ### Keyboard Shortcuts
 
 
-###### Text shortcuts
+### Text shortcuts
 
 Command|Description
 --|--
