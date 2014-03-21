@@ -16,25 +16,21 @@
   src: url("fonts/Armata-Regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'LeagueGothic';
   src: url("fonts/League_Gothic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'fjord';
   src: url("fonts/FjordOne-Regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Inconsolata';
   src: url("fonts/Inconsolata-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-
 body {
   -webkit-font-smoothing: antialiased;
   font: normal .8764em/1.5em ArmataRegular, Helvetica, Arial,Verdana,sans-serif;
@@ -144,6 +140,20 @@ a:hover {
   color: #0d6ea1;
   font-size: .8em;
   vertical-align: super; }
+
+#message {
+  padding: 0;
+  position: absolute;
+  left: 10px;
+  top: 40px; }
+  #message p {
+    padding: 0;
+    margin: 0;
+    color: #777777 !important;
+    font-size: 14px; }
+    #message p kbd {
+      font-family: menlo, monaco, monospace;
+      font-size: 16px; }
 
 #wrapper img {
   max-width: 100%;
@@ -792,7 +802,11 @@ input#goto {
       -moz-appearance: none;
       appearance: none;
       cursor: pointer;
-      font-size: 16px; }
+      font-size: 16px; } }
+  @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 0) {
+    #menu select {
+      padding-right: 18px; } }
+@media only screen and (max-width: 480px) {
     #menu label {
       position: relative; }
     #menu label:after {
@@ -819,6 +833,3 @@ input#goto {
       position: absolute;
       pointer-events: none;
       display: block; } }
-  @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 0) {
-    #menu select {
-      padding-right: 18px; } }

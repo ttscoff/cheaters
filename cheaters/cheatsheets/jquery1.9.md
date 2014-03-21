@@ -1,6 +1,9 @@
-# jQuery 1.9
+### jQuery 1.9
+
 ## Selectors ##
+
 ### Basics ###
+
 * *
 * .class
 * element

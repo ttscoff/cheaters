@@ -179,6 +179,23 @@ a:hover {
   vertical-align: super;
 }
 
+#message {
+  padding:0;
+  position: absolute;
+  left: 10px;
+  top: 40px;
+  p {
+    kbd {
+      font-family: menlo, monaco, monospace;
+      font-size: 16px;
+    }
+    padding: 0;
+    margin: 0;
+    color: #777!important;
+    font-size: 14px;
+  }
+}
+
 #wrapper img {
   max-width: 100%;
   height: auto;
