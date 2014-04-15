@@ -58,7 +58,7 @@
 <li>Open Automator in your Applications folder. </li>
 <li>Create a new project with the type "Application." You can also use a Workflow, which can be launched easily from the command line, but I'm using an Application for now because it's easiest to launch with a hotkey program.</li>
 <li>Drag two actions from the library on the left into the blank area on the right: <strong>Get Specified URLs</strong> and <strong>Website Popup</strong>, in that order. You can find them quickly by selecting "Library" on the left and using the filter to locate them.</li>
-<li>Double click the default URL in the <strong>Get Specified URLs</strong> action and set it to the file path to your Cheaters folder. This will be in the format <code>file:///Users/yourusername/path/to/Cheaters/index.html</code>.</li>
+<li>Double click the default URL in the <strong>Get Specified URLs</strong> action and set it to the file path to your Cheaters folder. This will be in the format <code>file:///Users/yourusername/path/to/Cheaters/cheaters/cheat.html</code>.</li>
 <li>Set a size in the <strong>Website Popup</strong> action. I'm using a custom size of 700x800, which works well on my setup with two large monitors. The popup is resizable after opening, so it's not critical. Cheaters has a responsive design that will mutate into a single column with a dropdown menu at smaller sizes, so if you have a small screen, use the iPhone preset.</li>
 <li>Save the application to your /Applications folder (or ~/Applications).</li>
 </ol><p>You can add a hotkey or other launch method using Launchbar, Keyboard Maestro, Alfred, Apptivator, etc. Lots of choices. When the application launches, it automatically becomes a floating HUD, and you can dismiss it by focusing it and using Escape or ⌘Q.</p>
