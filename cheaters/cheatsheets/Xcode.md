@@ -20,11 +20,11 @@
 | xCMD xOPT → | Go forward in main editor|
 | xCMD xOPT + Click | Open target in the assistant editor |
 | xOPT xCMD + Click | Open target in assistant editor|
-| xCMD Enter | Close the assistant editor|
+| xCMD ⏎| Close the assistant editor|
 | xCTRL 1 | Open Related Files menu|
 | xCTRL 2 | History drop down |
 | xCTRL 6 | Open the Jump Bar|
-| xCMD xSHIFT Enter | Max the editor|
+| xCMD xSHIFT ⏎ | Max the editor|
 | xCMD J | Move focus to a new area |
 | xCMD xOPT xSHIFT + Click | Open target in a new focus area |
 
@@ -64,6 +64,6 @@
 <!-- 
 | xCMD xOPT < | Move content from the assistant editor to the main |
 | xOPT S| Behaviors|
-| xOPT xSHIFT Enter |  |
+| xOPT xSHIFT ⏎ |  |
 
  -->
