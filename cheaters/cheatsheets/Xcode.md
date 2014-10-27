@@ -39,15 +39,15 @@
 ### Build
 | Command | Description |
 |--|--|
+| xCMD B | Build |
+| xCMD R | Run |
 | xCMD xSHIFT K | Clean |
 | xCMD xOPT xSHIFT K | Clean build folder |
-
-### Debugging
-
-|Command|Description|
-|--|--|
-|xCMD \ | Add or Remove a breakpoint|
-| xCMD ' | Jump to the next error|
+| xCMD \ | Add or Remove a breakpoint|
+| xCMD ' | Jump to the next issue|
+| xCMD xSHIFT ' | Jump to previous next issue|
+| xCMD xCTRL ' | Fix the next issue|
+| xCMD xCTRL xSHIFT ' | Fix the previous issue|
 
 ### Schemes
 | Command|Description |
