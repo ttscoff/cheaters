@@ -35,7 +35,7 @@
 | xOPT xCMD [ | Move line up |
 | xOPT xCMD ] | Move line down |
 | xCTRL xCMD E | Edit all in scope |
-| xCTRL I | Re-indent line (works really well with the delimiter) |
+| xCTRL I | Re-indent line | <!-- works really well with the delimiter -->
 
 ### Fold
 | Command | Description |
