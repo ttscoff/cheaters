@@ -31,10 +31,21 @@
 ### Edit
 |Command|Description|
 |--|--|
+| xCTRL SPACE | Show completion list |
 | xOPT xCMD [ | Move line up|
 | xOPT xCMD ] | Move line down|
 | xCTRL xCMD E | Edit all in Scope|
 | xCTRL I | Re-indent line (works really well with the deliminter) |
+
+### Fold
+| Command | Description |
+|--|--|
+| xCMD xOPT | Fold |
+| xCMD xOPT | Unfold |
+| xCMD xOPT xSHIFT | Fold methods & functions |
+| xCMD xOPT xSHIFT | Unfold methods & functions |
+| xCMD xCTRL xSHIFT | Fold comments |
+| xCMD xCTRL xSHIFT | Unfold comments |
 
 ### Build
 | Command | Description |
