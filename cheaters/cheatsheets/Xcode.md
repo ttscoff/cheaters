@@ -17,14 +17,14 @@
 | --|--|
 | xCMD xSHIFT O | Quick open |
 | xCMD xOPT ← | Go back in main editor |
-| xCMD xOPT → | Go forward in main editor|
+| xCMD xOPT → | Go forward in main editor |
 | xCMD xOPT + Click | Open target in the assistant editor |
-| xOPT xCMD + Click | Open target in assistant editor|
-| xCMD ⏎| Close the assistant editor|
-| xCTRL 1 | Open Related Files menu|
+| xOPT xCMD + Click | Open target in assistant editor |
+| xCMD ⏎ | Close the assistant editor |
+| xCTRL 1 | Open Related Files menu |
 | xCTRL 2 | History drop down |
-| xCTRL 6 | Open the Jump Bar|
-| xCMD xSHIFT ⏎ | Max the editor|
+| xCTRL 6 | Open the Jump Bar |
+| xCMD xSHIFT ⏎ | Maximize the editor |
 | xCMD J | Move focus to a new area |
 | xCMD xOPT xSHIFT + Click | Open target in a new focus area |
 
@@ -32,10 +32,10 @@
 |Command|Description|
 |--|--|
 | xCTRL SPACE | Show completion list |
-| xOPT xCMD [ | Move line up|
-| xOPT xCMD ] | Move line down|
-| xCTRL xCMD E | Edit all in Scope|
-| xCTRL I | Re-indent line (works really well with the deliminter) |
+| xOPT xCMD [ | Move line up |
+| xOPT xCMD ] | Move line down |
+| xCTRL xCMD E | Edit all in scope |
+| xCTRL I | Re-indent line (works really well with the delimiter) |
 
 ### Fold
 | Command | Description |
@@ -54,11 +54,11 @@
 | xCMD R | Run |
 | xCMD xSHIFT K | Clean |
 | xCMD xOPT xSHIFT K | Clean build folder |
-| xCMD \ | Add or Remove a breakpoint|
-| xCMD ' | Jump to the next issue|
-| xCMD xSHIFT ' | Jump to previous next issue|
-| xCMD xCTRL ' | Fix the next issue|
-| xCMD xCTRL xSHIFT ' | Fix the previous issue|
+| xCMD \ | Add or Remove a breakpoint |
+| xCMD ' | Jump to the next issue |
+| xCMD xSHIFT ' | Jump to previous next issue |
+| xCMD xCTRL ' | Fix the next issue |
+| xCMD xCTRL xSHIFT ' | Fix the previous issue |
 
 ### Schemes
 | Command|Description |
@@ -71,10 +71,3 @@
 | --|-- |
 | xCMD xCTRL J | Jump to the definition |
 | xOPT Click | Show the inferred type  |
-
-<!-- 
-| xCMD xOPT < | Move content from the assistant editor to the main |
-| xOPT S| Behaviors|
-| xOPT xSHIFT ⏎ |  |
-
- -->
