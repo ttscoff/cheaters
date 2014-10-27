@@ -1,7 +1,7 @@
 ### XCode Keyboard Shortcuts
 
 <!-- 
-### Moving around
+### Move
 (← moves in the opposite direction. Use xSHIFT to hightlight)
 
 | Command | Description| 
@@ -12,7 +12,7 @@
 
 -->
 
-### Navigation
+### Navigate
 | Shortcut | Action |
 | --|--|
 | xCMD xSHIFT O | Quick open |
@@ -28,7 +28,7 @@
 | xCMD J | Move focus to a new area |
 | xCMD xOPT xSHIFT + Click | Open target in a new focus area |
 
-### Editing
+### Edit
 |Command|Description|
 |--|--|
 | xOPT xCMD [ | Move line up|
@@ -36,7 +36,7 @@
 | xCTRL xCMD E | Edit all in Scope|
 | xCTRL I | Re-indent line (works really well with the deliminter) |
 
-### Building
+### Build
 | Command | Description |
 |--|--|
 | xCMD xSHIFT K | Clean |
