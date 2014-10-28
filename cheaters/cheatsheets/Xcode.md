@@ -40,12 +40,12 @@
 ### Fold
 | Command | Description |
 |--|--|
-| xCMD xOPT | Fold |
-| xCMD xOPT | Unfold |
-| xCMD xOPT xSHIFT | Fold methods & functions |
-| xCMD xOPT xSHIFT | Unfold methods & functions |
-| xCMD xCTRL xSHIFT | Fold comments |
-| xCMD xCTRL xSHIFT | Unfold comments |
+| xCMD xOPT ← | Fold |
+| xCMD xOPT → | Unfold |
+| xCMD xOPT xSHIFT ← | Fold methods & functions |
+| xCMD xOPT xSHIFT → | Unfold methods & functions |
+| xCMD xCTRL xSHIFT ← | Fold comments |
+| xCMD xCTRL xSHIFT → | Unfold comments |
 
 ### Build
 | Command | Description |
