@@ -21,8 +21,8 @@
 | **xCMDB**          | Bold                       |
 | **xCMDI**          | Italic                     |
 | **xCMDU**          | Underline                  |
-| **xOPTCmd (+) +**  | Increase Font Size         |
-| **xOPTCmd (+) **   | Decrease Font Size         |
+| **xOPTxCMD+**      | Increase Font Size         |
+| **xOPTxCMD-**      | Decrease Font Size         |
 | **xOPTxCTRLL**     | Increase Character Spacing |
 | **xOPTxCTRLT**     | Decrease Character Spacing |
 | **xCMDT**          | Change Font                |
@@ -36,13 +36,13 @@
 
 | Shortcut      | Action                        |
 | :-----:       | :------                       |
-| **Cmd (+) +** | Zoom In                       |
-| **Cmd (+) -** | Zoom Out                      |
+| **xCMD+** | Zoom In                       |
+| **xCMD-** | Zoom Out                      |
 | **xCMD0**     | Actual Size                   |
 | **xCMD1**     | Center Canvas                 |
 | **xCMD2**     | Zoom Selection                |
 | **xCMD3**     | Center Selection              |
-| **xOPT-Tab**  | Focus on First Input Field**  |
+| **xOPTTab**  | Focus on First Input Field**  |
 | **xOPTG**     | Temporary Zoom to Actual Size |
 
 
@@ -72,22 +72,22 @@
 
 | Shortcut             | Action                                       |
 | :-----:              | :------                                      |
-| **xCMDAlt**          | Keep Current Selection                       |
+| **xCMDxOPT**          | Keep Current Selection                       |
 | **xCTRLxCMDM**       | Use as Mask span (Works for Layers & Groups) |
 | **xOPTxCMDU**        | Union                                        |
 | **xOPTxCMDS**        | Substract                                    |
 | **xOPTxCMDI**        | Intersect                                    |
 | **xOPTxCMDX**        | Difference                                   |
-| **xCMDArrows**       | Change Object Size                           |
-| **xSHIFTxCMDArrows** | Change Units by 10                           |
+| **xCMD-Arrows**       | Change Object Size                           |
+| **xSHIFTxCMD-Arrows** | Change Units by 10                           |
 | **1, 2, 3, 4**       | Change Vector Point Style                    |
 
 ### Editing Layers
 
 | Shortcut        | Action                                     |
 | :-----:         | :------                                    |
-| **Alt**         | Show Distance to other Layers              |
-| **xOPTCmd**     | Show Distance to other Layers inside Group |
+| **xOPT**         | Show Distance to other Layers              |
+| **xOPTxCMD**     | Show Distance to other Layers inside Group |
 | **xOPTDrag**    | Duplicate (Repeat with D)                  |
 | **xOPTxCMDC**   | Copy Style                                 |
 | **xOPTxCMDV**   | Paste Style                                |
@@ -125,7 +125,7 @@ To create your own custom shortcuts, go to Keyboard in your System Preferences a
 
 | Shortcut          | Action                                   |
 | :-----:           | :------                                  |
-| **xOPTCmd (+) +** | Maximize Window (Use Zoom as Menu Title) |
+| **xOPTxCMD (+) +** | Maximize Window (Use Zoom as Menu Title) |
 | **xCMD[**         | Align Vertically Center                  |
 | **xCMD]**         | Align Horizontally Center                |
 | **xOPTxCMDC**     | Collapse Groups and Artboards            |
