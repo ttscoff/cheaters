@@ -37,6 +37,10 @@ body {
   margin: 0;
   -webkit-transition: background .3s ease-out; }
 
+body, #wrapper {
+  -webkit-transform-origin-y: 0;
+  -webkit-perspective: 1000; }
+
 html > body {
   font-size: 16px; }
 
@@ -149,7 +153,7 @@ a:hover {
   #message p {
     padding: 0;
     margin: 0;
-    color: #777777 !important;
+    color: #777 !important;
     font-size: 14px; }
     #message p kbd {
       font-family: menlo, monaco, monospace;
@@ -833,3 +837,5 @@ input#goto {
       position: absolute;
       pointer-events: none;
       display: block; } }
+
+/*# sourceMappingURL=cheaters.css.map */
