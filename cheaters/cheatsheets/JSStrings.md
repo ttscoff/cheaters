@@ -7,7 +7,7 @@
 **indexOf**(substr, [start]) 		| Searches and (if found) returns the index number of the searched character or substring within the string. If not found, -1 is returned. "Start" is an optional argument specifying the position within string to begin the search. Default is 0.
 **lastIndexOf**(substr, [start])	| Searches and (if found) returns the index number of the searched character or substring within the string. Searches the string from end to beginning. If not found, -1 is returned. "Start" is an optional argument specifying the position within string to begin the search. Default is string.length-1. 
 **match**(regexp)					| Executes a search for a match within a string based on a regular expression. It returns an array of information or null if no match is found. 
-**replace**( regexp, replacetext)	| Searche and replaces the regular expression portion (match) with the replaced text instead. 
+**replace**( regexp, replacetext)	| Searches and replaces the regular expression portion (match) with the replaced text instead. 
 **search**(regexp)					| Tests for a match in a string. It returns the index of the match, or -1 if not found. 
 **slice**(start, [end])				| Returns a substring of the string based on the "start" and "end" index arguments, NOT including the "end" index itself. "End" is optional, and if none is specified, the slice includes all characters from "start" to end of string. 
 **split**(delimiter, [limit])		| Splits a string into many according to the specified delimiter, and returns an array containing each element. The optional "limit" is an integer that lets you specify the maximum number of elements to return. 

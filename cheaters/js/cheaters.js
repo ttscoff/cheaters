@@ -29,9 +29,35 @@ var Cheaters = (function () {
 		if (active !== null) {
 			$('#nav li').removeClass('active');
 			$($('#nav li').get(active)).addClass('active');
-			$('#container').load( $($('#nav a').get(active)).attr('href'), function() {
+			$link = $($('#nav a').get(active));
+			var href = $link.attr('href');
+			if (/\.(gif|jpg|svg|png)$/.test(href)) {
+				$('#container').empty();
+				if ($link.attr('title') !== undefined) {
+					$('#container').append($('<h3>').text($link.attr('title')));
+				}
+				$('#container').append($('<img>').attr('src',href));
 				$(document).scrollTop(0);
-			} );
+			} else {
+				$('#container').load( href, function() {
+					if (/\.md$/.test(href)) {
+						var mdText = $('#container').text()
+							.replace(/xCMD/g,'⌘')
+							.replace(/xOPT/g,'⌥')
+							.replace(/xSHIFT/g,'⇧')
+							.replace(/xCTRL/g,'^');
+						$('#container').html(
+							marked(mdText, {
+								smartLists: true,
+								breaks: true,
+								tables: true,
+								gfm: true
+							})
+						);
+					}
+					$(document).scrollTop(0);
+				} );
+			}
 			// localStorage.setItem('cheatSheet-active',$('#nav li.active').prevAll().length);
 			Cheaters.activeItem = active;
 			$('#menu select').val(active + 1);
@@ -70,13 +96,20 @@ var Cheaters = (function () {
 			}
 			return false;
 		});
+		// $('body').on('click', function(ev) {
+		// 	$('#goto').remove();
+		// });
 	}
 
 	function initKeybindings() {
 		Mousetrap.bind('f', function(ev) {
 			ev.preventDefault();
 			$('#goto').remove();
-			$('<input id="goto" type="text">').insertAfter('#nav').val('');
+			$('<input id="goto" type="text">').insertAfter('#nav').val('').blur(function(){
+				$(this).fadeOut(100, function(){
+					$(this).remove();
+				});
+			});
 			$('#goto').unbind('keyup').keyup(function(ev){
 				if (ev.keyCode === 27) {
 					ev.preventDefault();
@@ -188,7 +221,7 @@ var Cheaters = (function () {
 			// });
 		});
 
-		Mousetrap.bind('command+shift+]', function() {
+		Mousetrap.bind(['command+shift+]','l'], function() {
 			if (Cheaters.activeItem === $('#nav li').length - 1) {
 				Cheaters.activeItem = 1;
 			} else {
@@ -197,7 +230,7 @@ var Cheaters = (function () {
 			switchActive(Cheaters.activeItem);
 		});
 
-		Mousetrap.bind('command+shift+[', function() {
+		Mousetrap.bind(['command+shift+[','h'], function() {
 			if (Cheaters.activeItem === 0) {
 				Cheaters.activeItem = $('#nav li').length;
 			}

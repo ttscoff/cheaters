@@ -1,6 +1,7 @@
 cheatsheets/moom.html
 .DS_Store
-index.html.orig
-cheaters.sublime-project
-cheaters.sublime-workspace
-index_local.html
+*.sublime-project
+*.sublime-workspace
+*_local.html
+*.taskpaper
+*.map
