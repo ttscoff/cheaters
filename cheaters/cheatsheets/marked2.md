@@ -101,4 +101,6 @@ When the Table of Contents is open, you can navigate via keyboard.
 | **&darr;**/**Tab** | Select first search result |
 | **Escape**         | Clear search/Dismiss TOC   |
 
-> Marked 2 is available at <http://marked2app.com>
+---
+
+**Marked 2** is available at [marked2app.com](http://marked2app.com)
