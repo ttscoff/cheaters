@@ -1,5 +1,3 @@
-A floating panel with a shortcut cheat sheet is available from the Help menu, or by pressing &#x2318;&#x2325;K.
-
 ### Shortcuts
 
 | Shortcut                      | Function                          |
@@ -100,3 +98,5 @@ When the Table of Contents is open, you can navigate via keyboard.
 | **Space**          | Open TOC quick-search      |
 | **&darr;**/**Tab** | Select first search result |
 | **Escape**         | Clear search/Dismiss TOC   |
+
+> Marked 2 is available at <http://marked2app.com>
