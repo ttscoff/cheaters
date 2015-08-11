@@ -17,7 +17,7 @@
 | -n, --no | Assume 'no' as answer to all prompts |
 | -r <path>, --root=<path> | Drupal root directory to use (default: current directory) | |
 | -s, --simulate | Simulate all relevant actions (don't actually change the system) | |
-| -l \<http://examplecom:8888\><br>\-\-uri=\<http://examplecom:8888\> | URI of the drupal site to use (only needed in multisite environments or when running on an alternate port) |
+| -l &lt;[URL]&gt;, --uri=&lt;[URL]&gt; | URI of the drupal site to use (only needed in multisite environments or when running on an alternate port) |
 | -v, --verbose | Display extra information about the command |
 | -y, --yes | Assume 'yes' as answer to all prompts |
 
