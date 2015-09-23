@@ -19,6 +19,8 @@ Cheaters is a collection of HTML-based cheat sheets meant for display in an Auto
 
 You can use the instructions below if you're a cheapskate, but for $5 you can use [Fluid](http://fluidapp.com/) and create a menu bar app that's much more full-featured and usable than the Automator action. Seriously. Do it.
 
+Under images/fluid/CheatersIcon.png you can find a nice Icon to use for Cheaters.
+
 Be sure to check out the [built-in Markdown conversion](http://brettterpstra.com/2014/01/26/cheaters-2-dot-0-5-cheating-gets-easier/) for easy cheatsheet creation, and [check here](http://brettterpstra.com/2014/01/21/cheaters-2-dot-0-more-and-faster/) for info on the fast switcher, deep linking and a JavaScript API.
 
 ### Using Cheaters
