@@ -336,7 +336,7 @@ sub {
 p {
   font-size: 1.1429em;
   line-height: 1.3125em;
-  margin: 1.3125em 0; }
+  margin: 1.3125em 1em; }
 
 dt, th {
   font-weight: 400; }

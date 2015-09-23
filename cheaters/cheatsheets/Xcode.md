@@ -1,4 +1,4 @@
-### XCode Keyboard Shortcuts
+### Xcode Keyboard Shortcuts
 
 <!-- 
 ### Move
