@@ -94,3 +94,6 @@ Spell out the key names Escape and Function (the Fn key on portable computers an
 
  Don’t abbreviate any other key names, except when space is very tight (in table headings, for example).
 
+--- 
+
+From the [Apple Style Guide](https://help.apple.com/asg/mac/2013/#apsg1f2855da)
