@@ -281,6 +281,16 @@ table {
     line-height: 18px;
     text-align: left;
   }
+
+  tr {
+    >td,
+    >th {
+      &:first-of-type {
+        white-space: nowrap;
+      }
+    }
+  }
+
   th {
     padding-top: 9px;
     font-family: ArmataRegular;
@@ -288,6 +298,7 @@ table {
     font-weight: normal !important;
     text-transform: uppercase;
     vertical-align: middle;
+    white-space: nowrap;
   }
 }
 
