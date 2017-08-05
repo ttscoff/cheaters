@@ -1,5 +1,5 @@
 | Method | Summary |
-| ------ | ------- |
+|--------|---------|
 **charAt**(x)						| Returns the character at the "x" position within the string.
 **charCodeAt**(x)					| Returns the Unicode value of the character at position "x" within the string. 
 **concat**(v1, v2,...)				| Combines one or more strings (arguments v1, v2 etc) into the existing one and returns the combined string. Original string is not modified. 
