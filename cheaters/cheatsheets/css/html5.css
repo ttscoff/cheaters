@@ -1,0 +1,32 @@
+#html5 #container div {
+  float: left;
+  clear: both; }
+#html5 #container article {
+  width: 48%;
+  float: left;
+  margin: 4px; }
+  @media only screen and (max-width: 600px) {
+    #html5 #container article {
+      width: 100%; } }
+#html5 #container h5 {
+  font-size: 18px;
+  border-bottom: 1px dashed #ccc;
+  font-weight: normal;
+  margin-top: 8px; }
+
+#html5.inverted h5 {
+  border-bottom: 1px dashed #444444; }
+
+#html5 #container .inner {
+  border: 1px solid #ccc;
+  padding: 5px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  margin-top: 0; }
+#html5 #container #page8 {
+  width: 100%; }
+#html5 #container p {
+  font-size: .97em; }
+
+/*# sourceMappingURL=html5.css.map */

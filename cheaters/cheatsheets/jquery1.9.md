@@ -1,6 +1,6 @@
 {
-    "id": "bt_jq19",
-    "style": "JavaScript.css",
+    "id": "jquery",
+    "style": "css/jquery.css",
     "layout": "multicolumn"
 }
 %%%END

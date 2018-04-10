@@ -1,6 +1,6 @@
 {
     "id": "bt_js",
-    "style": "JavaScript.css",
+    "style": "css/JavaScript.css",
     "layout": "multicolumn"
 }
 %%%END

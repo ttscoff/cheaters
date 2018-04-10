@@ -73,7 +73,15 @@ var Cheaters = (function () {
 								gfm: true
 							})
 						);
+					} else if (/\.html?$/.test(href)) {
+						var headers = $('#container').html().match(/<!--(.*?)%%%END/si);
+						if (headers) {
+							data = JSON.parse(headers[1]);
+							if (data)
+								pageData = data;
+						}
 					}
+
 					if (pageData.hasOwnProperty('id')) {
 						$('body').attr('id', pageData.id);
 					} else {
@@ -86,8 +94,10 @@ var Cheaters = (function () {
 						$('#tmpstyles').remove();
 					}
 					if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+						$('body').addClass('multicolumn');
 						$("#container").scrollLeft(0);
 					} else {
+						$('body').removeClass('multicolumn');
 						$(document).scrollTop(0);
 					}
 				} );
@@ -103,7 +113,7 @@ var Cheaters = (function () {
 		return false;
 	}
 
-	function processHeaders(txt) {
+	function processHeaders(txt,html=false) {
 		var json,
 			parts = txt.split(/%%%END/);
 
@@ -254,6 +264,7 @@ var Cheaters = (function () {
 
 		Mousetrap.bind(['j','shift+j','d','ctrl+d'], function(ev) {
 			var inc;
+			console.log(pageData);
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				inc = (ev.shiftKey || ev.ctrlKey) ? $(document).width() : $(document).width() / $('#container').css('columnCount');
 				$("#container").stop().animate({ scrollLeft: $('#container').scrollLeft() + inc }, 100);
@@ -364,9 +375,11 @@ var Cheaters = (function () {
 		publicActiveItem = active;
 		initKeybindings();
 		initClickHandlers();
+		return this;
 	}
 
 	return {
+		data: pageData,
 		menuText: publicMenuText,
 		activeItem: publicActiveItem,
 
@@ -389,6 +402,6 @@ var Cheaters = (function () {
 		menuTitle: 'Cheatsheets:'
 	});
 
-	Cheaters.init();
+	document.Cheat = Cheaters.init();
 
 })(jQuery);
