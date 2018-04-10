@@ -1,0 +1,24 @@
+@media only screen and (max-width: 600px) {
+  #jquery div {
+    width: 100%;
+  }
+}
+
+#jquery {
+  h2 {
+    &:before, &:after {
+      content: '';
+    }
+  }
+
+  section {
+    border: 1px solid #ccc;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 10px;
+    width: 90%;
+  }
+
+}

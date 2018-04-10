@@ -1,8 +1,18 @@
-### jQuery 1.9
+{
+    "id": "jquery",
+    "style": "css/jquery.css",
+    "layout": "multicolumn"
+}
+%%%END
 
-## Selectors ##
+# jQuery 1.9
 
-### Basics ###
+
+### Selectors
+
+
+#### Basics
+
 
 * *
 * .class
@@ -10,13 +20,15 @@
 * \#id
 * selector1, selectorN, ...
 
-### Hierarchy ###
+#### Hierarchy
+
 * parent &gt; child
 * ancestor descendant
 * prev + next
 * prev ~ siblings
 
-### Basic Filters ###
+#### Basic Filters
+
 * :animated
 * :eq()
 * :even
@@ -31,16 +43,20 @@
 * :root
 * :target
 
-### Content Filters ###
+#### Content Filters
+
 * :contains()
 * :empty
 * :has()
 * :parent
 
-### Visibility Filters ###
+#### Visibility Filters
+
 * :hidden
 * :visible
-### Attribute ###
+
+#### Attribute
+
 * [name|="value"]
 * [name*="value"]
 * [name~="value"]
@@ -51,7 +67,8 @@
 * [name]
 * [name="value"][name2="value2"]
 
-### Child Filters ###
+#### Child Filters
+
 * :first-child
 * :first-of-type
 * :last-child
@@ -62,7 +79,9 @@
 * :nth-of-type()
 * :only-child
 * :only-of-type()
-### Forms ###
+
+#### Forms
+
 * :button
 * :checkbox
 * :checked
@@ -78,22 +97,30 @@
 * :selected
 * :submit
 * :text
-## Attributes / CSS ##
-### Attributes ###
+
+### Attributes / CSS
+
+
+#### Attributes
+
+
 * .attr()
 * .prop()
 * .removeAttr()
 * .removeProp()
 * .val()
 
-### CSS ###
+#### CSS
+
 * .addClass()
 * .css()
 * jQuery.cssHooks
 * .hasClass()
 * .removeClass()
 * .toggleClass()
-### Dimensions ###
+
+#### Dimensions
+
 * .height()
 * .innerHeight()
 * .innerWidth()
@@ -101,52 +128,68 @@
 * .outerWidth()
 * .width()
 
-### Offset ###
+#### Offset
+
 * .offset()
 * .offsetParent()
 * .position()
 * .scrollLeft()
 * .scrollTop()
 
-### Data ###
+#### Data
+
 * jQuery.data()
 * .data()
 * jQuery.hasData()
 * jQuery.removeData()
 * .removeData()
-## Manipulation ##
-### Copying ###
+
+### Manipulation
+
+
+#### Copying
+
+
 * .clone()
 
-### DOM Insertion, Around ###
+#### DOM Insertion, Around
+
 * .wrap()
 * .wrapAll()
 * .wrapInner()
 
-### DOM Insertion, Inside ###
+#### DOM Insertion, Inside
+
 * .append()
 * .appendTo()
 * .html()
 * .prepend()
 * .prependTo()
 * .text()
-### DOM Insertion, Outside ###
+
+#### DOM Insertion, Outside
+
 * .after()
 * .before()
 * .insertAfter()
 * .insertBefore()
 
-### DOM Removal ###
+#### DOM Removal
+
 * .detach()
 * .empty()
 * .remove()
 * .unwrap()
 
-### DOM Replacement ###
+#### DOM Replacement
+
 * .replaceAll()
 * .replaceWith()
-## Traversing ##
-### Filtering ###
+
+### Traversing
+
+#### Filtering
+
 * .eq()
 * .filter()
 * .first()
@@ -157,13 +200,16 @@
 * .not()
 * .slice()
 
-### Miscellaneous Traversing ###
+#### Miscellaneous Traversing
+
 * .add()
 * .andSelf()
 * .contents()
 * .each()
 * .end()
-### Tree Traversal ###
+
+#### Tree Traversal
+
 * .addBack()
 * .children()
 * .closest()
@@ -178,19 +224,24 @@
 * .prevAll()
 * .prevUntil()
 * .siblings()
-## Events ##
-### Browser Events ###
+
+### Events
+
+#### Browser Events
+
 * .error()
 * .resize()
 * .scroll()
 
-### Document Loading ###
+#### Document Loading
+
 * .holdReady()
 * .load()
 * .ready()
 * .unload()
 
-### Event Handler Attachment ###
+#### Event Handler Attachment
+
 * .bind()
 * .delegate()
 * .die()
@@ -203,18 +254,22 @@
 * .unbind()
 * .undelegate()
 
-### Form Events ###
+#### Form Events
+
 * .blur()
 * .change()
 * .focus()
 * .select()
 * .submit()
 
-### Keyboard Events ###
+#### Keyboard Events
+
 * .keydown()
 * .keypress()
 * .keyup()
-### Mouse Events ###
+
+#### Mouse Events
+
 * .click()
 * .dblclick()
 * .focusin()
@@ -229,7 +284,8 @@
 * .mouseup()
 * .toggle()
 
-### Event Object ###
+#### Event Object
+
 * event.currentTarget
 * event.data
 * event.isDefaultPrevented()
@@ -247,13 +303,17 @@
 * event.timeStamp
 * event.type
 * event.which
-## Effects ##
-### Basics ###
+
+### Effects
+
+#### Basics
+
 * .hide()
 * .show()
 * .toggle()
 
-### Custom ###
+#### Custom
+
 * .animate()
 * .clearQueue()
 * .delay()
@@ -265,18 +325,24 @@
 * .queue()
 * jQuery.queue()
 * .stop()
-### Fading ###
+
+#### Fading
+
 * .fadeIn()
 * .fadeOut()
 * .fadeTo()
 * .fadeToggle()
 
-### Sliding ###
+#### Sliding
+
 * .slideDown()
 * .slideToggle()
 * .slideUp()
-## Ajax ##
-### Global Ajax Event Handlers ###
+
+### Ajax
+
+#### Global Ajax Event Handlers
+
 * .ajaxComplete()
 * .ajaxError()
 * .ajaxSend()
@@ -284,28 +350,36 @@
 * .ajaxStop()
 * .ajaxSuccess()
 
-### Helper Functions ###
+#### Helper Functions
+
 * jQuery.param()
 * .serialize()
 * .serializeArray()
-### Low-Level Interface ###
+
+#### Low-Level Interface
+
 * jQuery.ajax()
 * jQuery.ajaxSetup()
 
-### Shorthand Methods ###
+#### Shorthand Methods
+
 * jQuery.get()
 * jQuery.getJSON()
 * jQuery.getScript()
 * .load()
 * jQuery.post()
-## Core ##
-### jQuery Object ###
+
+### Core
+
+#### jQuery Object
+
 * jQuery()
 * jQuery.noConflict()
 * jQuery.sub()
 * jQuery.when()
 
-### Utilities ###
+#### Utilities
+
 * jQuery.boxModel
 * jQuery.browser
 * jQuery.contains()
@@ -334,13 +408,16 @@
 * jQuery.trim()
 * jQuery.type()
 * jQuery.unique()
-### DOM Element Methods ###
+
+#### DOM Element Methods
+
 * .get()
 * .index()
 * .size()
 * .toArray()
 
-### Internals ###
+#### Internals
+
 * .jquery
 * .context
 * jQuery.error()
@@ -348,7 +425,8 @@
 * .pushStack()
 * .selector
 
-### Deferred Object ###
+#### Deferred Object
+
 * deferred.always()
 * deferred.done()
 * deferred.fail()
@@ -366,7 +444,9 @@
 * deferred.state()
 * deferred.then()
 * .promise()
-### Callbacks Object ###
+
+#### Callbacks Object
+
 * jQuery.Callbacks()
 * callbacks.add()
 * callbacks.disable()

@@ -1,12 +1,30 @@
+// jQuery.fn.scrollTo = function(elem) {
+//     $(this).get(0).scrollLeft = $(this).scrollLeft() - $(this).offset().left + $(elem).offset().left - 10;
+//     return this;
+// };
+
+jQuery.fn.scrollTo = function(elem, speed) {
+    $(this).animate({
+        scrollLeft:  $(this).scrollLeft() - $(this).offset().left + $(elem).offset().left - 10
+    }, speed == undefined ? 200 : speed);
+    return this;
+};
+
 var Cheaters = (function () {
-	var publicMenuText, publicActiveItem, currentHeader = 0;
+	var pageData,
+		publicMenuText,
+		publicActiveItem,
+		currentHeader = 0;
 
 	function switchActive(t,first) {
+		pageData = {};
+		$('#tmpstyles').remove();
 		if (/^\?/.test(t)) {
 			return false;
 		} else if (/^\s*$/.test(t)) {
 			return true;
 		}
+
 		var active = null;
 
 		if (t && !/^\d+$/.test(t)) {
@@ -46,6 +64,7 @@ var Cheaters = (function () {
 							.replace(/xOPT/g,'⌥')
 							.replace(/xSHIFT/g,'⇧')
 							.replace(/xCTRL/g,'^');
+						mdText = processHeaders(mdText);
 						$('#container').html(
 							marked(mdText, {
 								smartLists: true,
@@ -54,8 +73,33 @@ var Cheaters = (function () {
 								gfm: true
 							})
 						);
+					} else if (/\.html?$/.test(href)) {
+						var headers = $('#container').html().match(/<!--(.*?)%%%END/si);
+						if (headers) {
+							data = JSON.parse(headers[1]);
+							if (data)
+								pageData = data;
+						}
 					}
-					$(document).scrollTop(0);
+
+					if (pageData.hasOwnProperty('id')) {
+						$('body').attr('id', pageData.id);
+					} else {
+						$('body').attr('id', indexToID(active));
+					}
+					if (pageData.hasOwnProperty('style')) {
+						var style = pageData.style;//.replace(/(\.style)?$/,'.style');
+						$('<link id="tmpstyles" rel="stylesheet">').attr('href','cheatsheets/' + style + '?' + Math.floor(Math.random(1000)*1000)).appendTo('head');
+					} else {
+						$('#tmpstyles').remove();
+					}
+					if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+						$('body').addClass('multicolumn');
+						$("#container").scrollLeft(0);
+					} else {
+						$('body').removeClass('multicolumn');
+						$(document).scrollTop(0);
+					}
 				} );
 			}
 			// localStorage.setItem('cheatSheet-active',$('#nav li.active').prevAll().length);
@@ -69,9 +113,33 @@ var Cheaters = (function () {
 		return false;
 	}
 
+	function processHeaders(txt,html=false) {
+		var json,
+			parts = txt.split(/%%%END/);
+
+		pageData = {};
+		if (parts.length > 1) {
+			content = parts.shift();
+			data = JSON.parse(content);
+			if (data)
+				pageData = data;
+			return parts.join('\n');
+		} else {
+			return txt;
+		}
+	}
+
+	function indexToID(i) {
+		return $($('#nav li').get(i)).find('a').attr('href')
+		.replace(/.*?\/(.*?)\.(\w+)$/,"$1_$2")
+		.replace(/[^a-z0-9_]/ig,'')
+		.toLowerCase();
+	}
+
 	function initClickHandlers() {
 		$('#nav').on('click', 'a',function(e){
 			e.preventDefault();
+			pageData = {};
 			var active = $(this).closest('li').prevAll().length + 1;
 			switchActive(active);
 			// document.location.hash = $(this).text().toLowerCase();
@@ -155,33 +223,57 @@ var Cheaters = (function () {
 		}, 'keyup');
 
 		Mousetrap.bind('g g', function(ev) {
-			$(document).scrollTop(0);
+			console.log(ev);
+			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+				$("#container").animate({ scrollLeft: 0 }, 200);
+			} else {
+				$(document).scrollTop(0);
+			}
 		});
 
 		Mousetrap.bind('G', function(ev) {
-			$(document).scrollTop($(document).height());
+			console.log(ev);
+			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+				$("#container").animate({ scrollLeft: $('#container').get(0).scrollWidth }, 200);
+			} else {
+				$(document).scrollTop($(document).height());
+			}
+
 		});
 
-		Mousetrap.bind('g g', function(ev) {
-			$(document).scrollTop(0);
-		});
+		// Mousetrap.bind('g g', function(ev) {
+		// 	$(document).scrollTop(0);
+		// });
 
-		Mousetrap.bind('G', function(ev) {
-			$(document).scrollTop($(document).height());
-		});
+		// Mousetrap.bind('G', function(ev) {
+		// 	$(document).scrollTop($(document).height());
+		// });
 
 		Mousetrap.bind(['k','shift+k','u','ctrl+u'], function(ev) {
-			var inc = (ev.shiftKey || ev.ctrlKey) ? 400 : 100;
-			$('body,html').stop().animate({
-				scrollTop: $(document).scrollTop() - inc
-			}, 100);
+			var inc;
+			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+				inc = (ev.shiftKey || ev.ctrlKey) ? $(document).width() : $(document).width() / $('#container').css('columnCount');
+				$("#container").stop().animate({ scrollLeft: $('#container').scrollLeft() - inc }, 100);
+			} else {
+				inc = (ev.shiftKey || ev.ctrlKey) ? 400 : 100;
+				$('body,html').stop().animate({
+					scrollTop: $(document).scrollTop() - inc
+				}, 100);
+			}
 		});
 
 		Mousetrap.bind(['j','shift+j','d','ctrl+d'], function(ev) {
-			var inc = (ev.shiftKey || ev.ctrlKey) ? 400 : 100;
-			$('body,html').stop().animate({
-				scrollTop: $(document).scrollTop() + inc
-			}, 100);
+			var inc;
+			console.log(pageData);
+			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+				inc = (ev.shiftKey || ev.ctrlKey) ? $(document).width() : $(document).width() / $('#container').css('columnCount');
+				$("#container").stop().animate({ scrollLeft: $('#container').scrollLeft() + inc }, 100);
+			} else {
+				inc = (ev.shiftKey || ev.ctrlKey) ? 400 : 100;
+				$('body,html').stop().animate({
+					scrollTop: $(document).scrollTop() + inc
+				}, 100);
+			}
 		});
 
 		Mousetrap.bind(['.',','], function(ev) {
@@ -200,11 +292,17 @@ var Cheaters = (function () {
 			currentHeader = target;
 
 			$('.active', '#container').removeClass('active');
-			$('html,body').stop().animate({
-				scrollTop: $(headers[target]).offset().top - menuHeight
-			}, 'fast', function() {
+			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+				$('#container').scrollTo($(headers[target]));
 				$(headers[target]).addClass('active');
-			});
+			} else {
+				$('html,body').stop().animate({
+					scrollTop: $(headers[target]).offset().top - menuHeight
+				}, 'fast', function() {
+					$(headers[target]).addClass('active');
+				});
+			}
+
 
 			// $.each(headers, function(i, a) {
 
@@ -239,7 +337,7 @@ var Cheaters = (function () {
 
 		Mousetrap.bind('command+i', function() {
 			$('#contrast').click();
-		})
+		});
 	}
 
 	function findStartPage() {
@@ -277,9 +375,11 @@ var Cheaters = (function () {
 		publicActiveItem = active;
 		initKeybindings();
 		initClickHandlers();
+		return this;
 	}
 
 	return {
+		data: pageData,
 		menuText: publicMenuText,
 		activeItem: publicActiveItem,
 
@@ -302,6 +402,6 @@ var Cheaters = (function () {
 		menuTitle: 'Cheatsheets:'
 	});
 
-	Cheaters.init();
+	document.Cheat = Cheaters.init();
 
 })(jQuery);

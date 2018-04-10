@@ -1,4 +1,11 @@
-## JavaScript
+{
+    "id": "bt_js",
+    "style": "css/JavaScript.css",
+    "layout": "multicolumn"
+}
+%%%END
+
+# JavaScript
 
 ### Arrays
 
