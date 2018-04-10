@@ -94,6 +94,7 @@ __In Markdown files__, this is just a block at the very top ending with `%%%END`
         "style": "css/JavaScript.css",
         "layout": "multicolumn"
     }
+    %%%END
 
 __In HTML files__ this gets wrapped in an HTML comment:
 
