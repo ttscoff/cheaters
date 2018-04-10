@@ -21,6 +21,8 @@ You can use the instructions below if you're a cheapskate, but for $5 you can us
 
 Under images/fluid/CheatersIcon.png you can find a nice Icon to use for Cheaters.
 
+***Don't forget to "Allow browsing to any URL" in the Whitelist section of Fluid preferences.***
+
 Be sure to check out the [built-in Markdown conversion](http://brettterpstra.com/2014/01/26/cheaters-2-dot-0-5-cheating-gets-easier/) for easy cheatsheet creation, and [check here](http://brettterpstra.com/2014/01/21/cheaters-2-dot-0-more-and-faster/) for info on the fast switcher, deep linking and a JavaScript API.
 
 ### Using Cheaters
