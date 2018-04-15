@@ -1,6 +1,12 @@
-## PDF Expert for OS X Keyboard Shortcuts
+{
+    "id": "auto",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
+### PDF Expert for OS X Keyboard Shortcuts
 
-### Open and Save
+#### Open and Save
 
 Command | Action
 --: | :--
@@ -13,7 +19,7 @@ xSHIFT D | Add bookmark to current page
 xCMD S | Save
 xSHIFT xCMD S | Save as...
 
-### Views
+#### Views
 
 Command | Action
 --: | :--
@@ -28,7 +34,7 @@ xOPT xCMD 2 | Outline
 xOPT xCMD 3 | Annotation summary
 xOPT xCMD 4 | No left panel
 
-### Text and Tools
+#### Text and Tools
 
 Command | Action
 --: | :--

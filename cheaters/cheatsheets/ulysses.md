@@ -1,81 +1,87 @@
-###Ulysses Keyboard Shortcuts
+{
+    "id": "auto",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
+### Ulysses Keyboard Shortcuts
 
-###Views
+#### Views
 Action | Shortcut
 -- | --
-⌘1 | Toggle Sidebars
-⌘2 | Toggle Sheet List
-⌘3 | Toggle Editor-only view
-⌘4 | Toggle Attachment Bar
-⌘5 | Go to Favourites group (5orites)
-⌘6 | Show Quick Export (6port)
-⌘7 | Show Statistics
-⌘8 | Show Navigator (Navig8or)
-⌘9 | Show Markup Bar
+xCMD1 | Toggle Sidebars
+xCMD2 | Toggle Sheet List
+xCMD3 | Toggle Editor-only view
+xCMD4 | Toggle Attachment Bar
+xCMD5 | Go to Favourites group (5orites)
+xCMD6 | Show Quick Export (6port)
+xCMD7 | Show Statistics
+xCMD8 | Show Navigator (Navig8or)
+xCMD9 | Show Markup Bar
 
-###Focus
+#### Focus
 Action | Shortcut
 -- | --
 → | Expand selected group(s) in Sidebar
 → | In Sidebar to switch focus to Sheet List
 ← | In Sheet List to switch focus to Sidebar
 → | In Sheet List to switch focus to Editor
-⌘←(twice) | In Editor to switch focus to Sheet List 
-⇧⌘F | Switch focus to Sheet List filter (Global)
+xCMD←(twice) | In Editor to switch focus to Sheet List 
+⇧xCMDF | Switch focus to Sheet List filter (Global)
 
-### Sheets
+#### Sheets
 Action | Shortcut
 -- | --
-⌘N | to create a new sheet
-⌘S | Create new version of current sheet
-⇧⌘N | Create a new group in Sidebar
-^⌘N | Create a new Sheet List filter
-⌘O | Look for a sheet in the whole library (Quickpanel)
-⇧⌘O | Look for a sheet in current section (iCloud, On My Mac, etc.)
-⌥⌘O | Look for a sheet in currently selected group
+xCMDN | to create a new sheet
+xCMDS | Create new version of current sheet
+⇧xCMDN | Create a new group in Sidebar
+xCTRLxCMDN | Create a new Sheet List filter
+xCMDO | Look for a sheet in the whole library (Quickpanel)
+⇧xCMDO | Look for a sheet in current section (iCloud, On My Mac, etc.)
+xOPTxCMDO | Look for a sheet in currently selected group
 ESC | Close Sheet List filter/Quicklook Window
-⇧⌘P | Preview the current Sheet List/Group selection
+⇧xCMDP | Preview the current Sheet List/Group selection
 
-### Editor
+#### Editor
 Action | Shortcut
 -- | --
 ↩ | Paragraph
 ⇧↩︎ | Insert line break
-⌘↩ | New line after paragraph
-⌘Z | Undo edit
-⇧⌘Z | Redo edit
-⌘+ | Increase font size
-⌘- | Decrease font size
-⌘0 | Reset font size to default value
-⌘F | Show Find panel
-⌥⌘F | Show Find & Replace panel
+xCMD↩ | New line after paragraph
+xCMDZ | Undo edit
+⇧xCMDZ | Redo edit
+xCMD+ | Increase font size
+xCMD- | Decrease font size
+xCMD0 | Reset font size to default value
+xCMDF | Show Find panel
+xOPTxCMDF | Show Find & Replace panel
 ESC | Close Find/Replace panel
-⌘V | Hold to invoke Smart Paste or
-⇧⌘V | Invoke Smart Paste
-⌘; | Spellcheck current sheet
-⌘⇧; | Open Spellcheck panel
-⌥⌘↑ | Switch focus to previous sheet
-⌥⌘↓ | Switch focus to next sheet
-⌥⌘T | Toggle Typewriter Scrolling
+xCMDV | Hold to invoke Smart Paste or
+⇧xCMDV | Invoke Smart Paste
+xCMD; | Spellcheck current sheet
+xCMD⇧; | Open Spellcheck panel
+xOPTxCMD↑ | Switch focus to previous sheet
+xOPTxCMD↓ | Switch focus to next sheet
+xOPTxCMDT | Toggle Typewriter Scrolling
 
-###Text Objects
+#### Text Objects
 Action | Shortcut
 -- | --
-⌘-Click | Select
+xCMD-Click | Select
 Double-click | Open popover
 ⇥ | Switch between input fields in Popover
-⌘↩ | Close Text Object Popover and move insertion point forward
+xCMD↩ | Close Text Object Popover and move insertion point forward
 esc | Close Text Object Popover and keep object selected
 
-###Markup
+#### Markup
 Action | Shortcut
 -- | --
-⌘\ | Headlines
-⌘I | _emphasize_
-⌘B | **strong**
-⌘K | [links]
-⌘L | Remove Markup
-⌘9 | Show Markup Bar
+xCMD\ | Headlines
+xCMDI | _emphasize_
+xCMDB | **strong**
+xCMDK | [links]
+xCMDL | Remove Markup
+xCMD9 | Show Markup Bar
 ⇥ | Increase list indentation
 ⇧⇥ | Decrease list indentation
 ↩ | Add another list item (if enabled)
@@ -92,15 +98,15 @@ ESC | Add end tag placeholder
 Type in the end tag | Accept end tag
 ESC | Dismiss end tag
 
-### General
+#### General
 Action | Shortcut
 -- | --
-⌥⌘L | Toggle Dark Theme
-⌥⌘X | Toggle Dark Mode
-^⌘F | Toggle Fullscreen Mode
-⌥⌘N | Open new Window
-⌘W | Close Window
-^⌘Z | Zoom Wndow
-^⌘P | Preview
-⌘R | Refresh Previews
-⌘P | Print
+xOPTxCMDL | Toggle Dark Theme
+xOPTxCMDX | Toggle Dark Mode
+xCTRLxCMDF | Toggle Fullscreen Mode
+xOPTxCMDN | Open new Window
+xCMDW | Close Window
+xCTRLxCMDZ | Zoom Wndow
+xCTRLxCMDP | Preview
+xCMDR | Refresh Previews
+xCMDP | Print

@@ -586,39 +586,6 @@ tr.divider {
   text-align: center;
   width: 50px; }
 
-#markdown h3 {
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: ArmataRegular;
-  word-spacing: .2em;
-  background: rgba(0, 0, 0, 0.75);
-  color: #EEE;
-  padding: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-  border: none; }
-
-#multimarkdown h3 {
-  font-weight: 400;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: ArmataRegular;
-  word-spacing: .2em;
-  background: rgba(0, 0, 0, 0.75);
-  color: #EEE;
-  padding: 4px;
-  -webkit-border-radius: 4px;
-  margin: 0;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-  border: none; }
-#multimarkdown h4 {
-  font-size: 24px;
-  text-align: center; }
-
 iframe {
   position: fixed;
   z-index: 2;
@@ -865,7 +832,9 @@ div#toc {
     list-style-type: none;
     padding: 0 1em; }
     div#toc ul a {
-      color: #333; }
+      color: #333;
+      display: inline-block;
+      }
   div#toc input {
     float: left;
     width: 100%;

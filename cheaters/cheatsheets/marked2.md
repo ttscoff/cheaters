@@ -1,6 +1,12 @@
-## Marked 2 Keyboard Shortcuts
+{
+    "id": "bt_marked",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
+### Marked 2 Keyboard Shortcuts
 
-### Shortcuts
+#### Shortcuts
 
 | Shortcut                      | Function                          |
 | -----------------------:      | :----------------------------     |
@@ -43,7 +49,7 @@
 
 
 
-### Quick Toggles
+#### Quick Toggles
 
 Extra keyboard shortcuts for toggling common global preferences.
 
@@ -58,7 +64,7 @@ Extra keyboard shortcuts for toggling common global preferences.
 | **^&#x2325;&#x21E7;T**   | Smart Typography              |
 | **^&#x2325;&#x21E7;H**   | Process Inside HTML           |
 
-### Preview Navigation
+#### Preview Navigation
 
 Press "?" at any time to view the following shortcuts in the Preview window.
 
@@ -87,7 +93,7 @@ Press "?" at any time to view the following shortcuts in the Preview window.
 | **Escape**                    | Close Overlay/Deselect Text       |
 | **h**/**?**                   | Show/Hide Help HUD                |
 
-### Table of Contents Navigation
+#### Table of Contents Navigation
 
 When the Table of Contents is open, you can navigate via keyboard.
 

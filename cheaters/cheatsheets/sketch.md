@@ -1,6 +1,12 @@
-## Sketch
+{
+    "id": "auto",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
+### Sketch
 
-### Insert
+#### Insert
 
 | Shortcut | Action            |
 | :-----:  | :------           |
@@ -14,7 +20,7 @@
 | **P**    | Pencil            |
 | **T**    | Text              |
 
-### Type
+#### Type
 
 | Shortcut           | Action                     |
 | :-----:            | :------                    |
@@ -32,7 +38,7 @@
 | **xCMDxSHIFT}**    | Align Right                |
 | **xCTRLxCMDSpace** | Special Characters         |
 
-### Canvas View
+#### Canvas View
 
 | Shortcut    | Action                        |
 | :-----:     | :------                       |
@@ -56,7 +62,7 @@
 | **xCTRLX** | Toggle Pixel Grid        |
 |            |                          |
 
-### Window
+#### Window
 
 | Shortcut       | Action                   |
 | :-----:        | :------                  |
@@ -68,7 +74,7 @@
 | **xCMD.**      | Presentation Mode        |
 | **xCTRLxCMDF** | Enter Fullscreen         |
 
-### Editing Shapes
+#### Editing Shapes
 
 | Shortcut              | Action                                       |
 | :-----:               | :------                                      |
@@ -82,7 +88,7 @@
 | **xSHIFTxCMD-Arrows** | Change Units by 10                           |
 | **1, 2, 3, 4**        | Change Vector Point Style                    |
 
-### Editing Layers
+#### Editing Layers
 
 | Shortcut        | Action                                     |
 | :-----:         | :------                                    |
@@ -97,7 +103,7 @@
 | **F**           | Toggle Fill                                |
 | **B**           | Toggle Border                              |
 
-### Arranging Layers, Groups and Artboards
+#### Arranging Layers, Groups and Artboards
 
 | Shortcut          | Action                 |
 | :-----:           | :------                |

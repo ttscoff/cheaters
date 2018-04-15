@@ -1,7 +1,13 @@
+{
+    "id": "auto",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
 ### Xcode Keyboard Shortcuts
 
 <!-- 
-### Move
+#### Move
 (← moves in the opposite direction. Use xSHIFT to hightlight)
 
 | Command | Description| 
@@ -12,7 +18,7 @@
 
 -->
 
-### Navigate
+#### Navigate
 | Shortcut | Action |
 | --|--|
 | xCMD xSHIFT O | Quick open |
@@ -28,7 +34,7 @@
 | xCMD J | Move focus to a new area |
 | xCMD xOPT xSHIFT + Click | Open target in a new focus area |
 
-### Edit
+#### Edit
 |Command|Description|
 |--|--|
 | xCTRL SPACE | Show completion list |
@@ -37,7 +43,7 @@
 | xCTRL xCMD E | Edit all in scope |
 | xCTRL I | Re-indent line | <!-- works really well with the delimiter -->
 
-### Fold
+#### Fold
 | Command | Description |
 |--|--|
 | xCMD xOPT | Fold |
@@ -47,7 +53,7 @@
 | xCMD xCTRL xSHIFT | Fold comments |
 | xCMD xCTRL xSHIFT | Unfold comments |
 
-### Build
+#### Build
 | Command | Description |
 |--|--|
 | xCMD B | Build |
@@ -60,13 +66,13 @@
 | xCMD xCTRL ' | Fix the next issue |
 | xCMD xCTRL xSHIFT ' | Fix the previous issue |
 
-### Schemes
+#### Schemes
 | Command|Description |
 | --|-- |
 | xCTRL xCMD ] | Select next scheme |
 | xCTRL xCMD [ | Select previous scheme |
 
-### Other
+#### Other
 | Command|Description |
 | --|-- |
 | xCMD xCTRL J | Jump to the definition |
