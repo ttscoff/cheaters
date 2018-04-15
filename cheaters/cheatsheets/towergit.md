@@ -1,4 +1,6 @@
 {
+    "id": "auto",
+    "style": "default",
     "layout": "multicolumn"
 }
 %%%END
