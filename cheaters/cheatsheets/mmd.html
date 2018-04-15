@@ -1,27 +1,34 @@
+<!--
+{
+    "id": "mmd",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
+ -->
 <h3>MultiMarkdown</h3>
-<div id="multimarkdown">
 
-<h3 id="section-mmd-xrefs">Cross-references</h3>
+<h4 id="section-mmd-xrefs">Cross-references</h4>
 
 <p>Cross-references will become your new best friend when writing long documents. They will highly improve the navigability of the generated documents by giving the reader links to jump across sections with a single click.</p>
 
-<h4 id="section-mmd-xrefs-example">Example</h4>
+<h5 id="section-mmd-xrefs-example">Example</h5>
 
 <pre>
 <code>Clicking [here][section-preview] will lead you to the **Preview** section.
 </code></pre>
 
-<h4 id="section-mmd-xrefs-result">Result</h4>
+<h5 id="section-mmd-xrefs-result">Result</h5>
 
 <p>Clicking <a href="#section-preview">here</a> will lead you to the <strong>Preview</strong> section.</p>
 
-<h3 id="section-mmd-footnotes">Footnotes</h3>
+<h4 id="section-mmd-footnotes">Footnotes</h4>
 
 <p>Footnotes are a simple, yet effective way of conveying non-crucial information to the reader.</p>
 
 <p>Rather than parenthesizing a side note or place it between em-dashes &#8211; as unimportant as it is, the reader will go through it, just like you did now &#8211; you can defer its reading and expand on your thoughts there.</p>
 
-<h4 id="example">Example</h4>
+<h5 id="example">Example</h5>
 
 <pre>
 <code>Clicking this number[^fn-sample_footnote] will lead you to a footnote.
@@ -29,17 +36,17 @@
 [^fn-sample_footnote]: Handy! Now click the return link to go back.
 </code></pre>
 
-<h4 id="section-mmd-footnotes-result">Result</h4>
+<h5 id="section-mmd-footnotes-result">Result</h5>
 
 <p>Clicking this number<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a> will lead you to a footnote.</p>
 
-<h3 id="section-mmd-definition">Definitions</h3>
+<h4 id="section-mmd-definition">Definitions</h4>
 
 <p>Definitions allow you specify different terms or can be set up to show you a chat log.</p>
 
 <p>Please note the white space being used.</p>
 
-<h4 id="section-mmd-definition-example">Example</h4>
+<h5 id="section-mmd-definition-example">Example</h5>
 
 <pre>
 Apple
@@ -58,7 +65,7 @@ Orange
 :   The fruit of an evergreen tree of the genus Citrus.
 </pre>
 
-<h4 id="section-mmd-definition-result">Result</h4>
+<h5 id="section-mmd-definition-result">Result</h5>
 
 <dl>
 <dt>Apple</dt>
@@ -78,7 +85,7 @@ Orange
 <dd>The fruit of an evergreen tree of the genus Citrus.</dd>
 </dl>
 
-<h3 id="section-mmd-attributes">Custom attributes</h3>
+<h4 id="section-mmd-attributes">Custom attributes</h4>
 
 <p>MultiMarkdown introduces an unobtrusive way of adding custom attributes to images and links, allowing you to change they way they are displayed.</p>
 
@@ -87,7 +94,7 @@ Orange
 This is not available for inline links or images.</p>
 </blockquote>
 
-<h4 id="section-mmd-attributes-example">Example</h4>
+<h5 id="section-mmd-attributes-example">Example</h5>
 
 <pre>
 <code>The original image is 128x128 and contains no shadow.
@@ -101,7 +108,7 @@ It will be displayed as 96x96 with a subtle shadow.
 class=&quot;shadow&quot;
 </code></pre>
 
-<h3 id="section-mmd-meta">Meta information</h3>
+<h4 id="section-mmd-meta">Meta information</h4>
 
 <p>With MultiMarkdown, you can also embed metadata on your documents.</p>
 
@@ -121,7 +128,7 @@ Email</code>. Be sure to check <a href="https://github.com/fletcher/MultiMarkdow
 When adding metadata information to your documents, make sure you always leave two spaces at the end of each metadata line. This will ensure that exporting to plain Markdown will result in a properly formatted piece of text &#8211; as opposed to a single run-on paragraph.</p>
 </blockquote>
 
-<h4 id="section-mmd-meta">Example</h4>
+<h5 id="section-mmd-meta">Example</h5>
 
 <pre>
 <code>Title:  Document title
@@ -130,12 +137,12 @@ Author: John Doe
 Date:   January 1st, 2012
 </code></pre>
 
-<h3 id="section-mmd-tables">Tables</h3>
+<h4 id="section-mmd-tables">Tables</h4>
 
 <p>Tables are perfect to display structured data in rows and columns. MultiMarkdown supports the generation of tables by using a couple of simple rules alongside the use of the pipe character &#8211; <code>
 |</code>.</p>
 
-<h4 id="section-mmd-tables-example">Example</h4>
+<h5 id="section-mmd-tables-example">Example</h5>
 
 <pre>
 <code>| First Header  | Second Header | Third Header         |
@@ -146,7 +153,7 @@ Date:   January 1st, 2012
 [Table caption, works as a reference][section-mmd-tables-table1]
 </code></pre>
 
-<h4 id="section-mmd-tables-result">Result</h4>
+<h5 id="section-mmd-tables-result">Result</h5>
 
 <table>
 <caption id="section-mmd-tables-table1">Table caption, works as a reference</caption>
@@ -181,7 +188,7 @@ Date:   January 1st, 2012
 </tr>
 </tbody>
 </table>
-<h4 id="section-mmd-tables-structure">Structure</h4>
+<h5 id="section-mmd-tables-structure">Structure</h5>
 
 <p>If you are familiar with HTML tables, you&#8217;ll instantly recognize the structure of the table syntax. All tables must begin with one or more <strong>rows</strong> of <strong>headers</strong>, and each <strong>row</strong> may have one or more <strong>columns</strong>.</p>
 
@@ -200,7 +207,7 @@ Date:   January 1st, 2012
 |</code>.</li>
 </ul>
 
-<h4 id="section-mmd-tables-alignment">Alignment</h4>
+<h5 id="section-mmd-tables-alignment">Alignment</h5>
 
 <p>To align the data cells on the table, you need to introduce a special row right after the headers, that will determine how the following rows &#8211; the data rows &#8211; will be aligned.</p>
 
@@ -243,7 +250,7 @@ Date:   January 1st, 2012
 |</code> at the beginning or end of the rows is optional &#8211; as long as at least one <code>
 |</code> is present in each row.</p>
 
-<h4 id="section-mmd-tables-colspanning">Column spanning</h4>
+<h5 id="section-mmd-tables-colspanning">Column spanning</h5>
 
 <p>To make a cell span across multiple columns, instead of using a single pipe (<code>
 |</code>) character to delimit that cell, use the number of pipes corresponding to the columns you wish to span.</p>

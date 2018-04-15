@@ -1,4 +1,10 @@
-## Dropbox Paper Shortcuts
+{
+    "id": "paper",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
+### Dropbox Paper Shortcuts
 
 The following keyboard shortcuts work in the Papers Web browser interface.
 

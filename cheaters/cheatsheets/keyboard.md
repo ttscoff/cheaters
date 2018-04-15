@@ -1,7 +1,13 @@
+{
+    "id": "mmd",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
 ### Keyboard Shortcuts
 
 
-### Text shortcuts
+#### Text shortcuts
 
 Command|Description
 --|--

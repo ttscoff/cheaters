@@ -1,6 +1,12 @@
-###Hype 3 Pro Keyboard Shortcuts
+{
+    "id": "hype3",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
+### Hype 3 Pro Keyboard Shortcuts
 
-###General
+#### General
 
 Action | Shortcut
 -- | --
@@ -17,7 +23,7 @@ Show and hide the Colors window | Click Colors in the Toolbar or xCMD-xSHIFT-C
 Show and hide the Toolbar | xCMD-xOPT-T
 Widescreen Layout | xCMD-xSHIFT-Backslash ( \ )
 
-###Working with Elements
+#### Working with Elements
 
 Action | Shortcut
 -- | --
@@ -45,7 +51,7 @@ Ungroup | xCMD-xSHIFT-G
 Indent | xCMD-Right Bracket ( ] )
 Outdent | xCMD-Left Bracket ( [ )
 
-###Working With Scenes
+#### Working With Scenes
 
 Action | Shortcut
 -- | --
@@ -54,7 +60,7 @@ Select next scene | xCMD-xOPT-Right Arrow
 Select previous scene | xCMD-xOPT-Left Arrow
 Delete selected scene | Show Scenes, click on desired scene, then press xCMD-xSHIFT-Delete
 
-###Editing Animations
+#### Editing Animations
 
 Action | Shortcut
 -- | --
@@ -81,7 +87,7 @@ Restart animation | Home, or Fn-Left Arrow
 Loop playback | xCMD-L
 Turn off keyframe and second marker snapping | xCMD-Drag
 
-###Editing Keyframes
+#### Editing Keyframes
 
 Action | Shortcut
 -- | --
@@ -95,7 +101,7 @@ Move selected keyframe to next keyframe in timeline | xSHIFT-Up Arrow
 Move selected keyframe to previous keyframe in timeline | xSHIFT-Down Arrow
 Turn off keyframe and second marker snapping | xCMD-Drag
 
-###Editing Motion Paths
+#### Editing Motion Paths
 
 Action | Shortcut
 -- | --
@@ -106,7 +112,7 @@ Constrain movement of control handles to 45&deg; angles | xSHIFT-drag control ha
 Keep control handles equidistant from control point | xOPT-drag control handle
 Move one control handle independent from its counterpart | xCMD-drag control handle
 
-###Using the Inspector
+#### Using the Inspector
 
 Action | Shortcut
 -- | --

@@ -21,6 +21,8 @@ Be sure to check out the [built-in Markdown conversion](http://brettterpstra.com
 
 For Cheaters to work, you need to be serving the files on a local server. This can be done with something like MAMP, or using the built in Apache server in macOS. If you don't know how to work with either of these, the best bet might be to run the `cheat.sh` script found in the `cheatsheets` folder. That will launch Python's simpleHTTPServer in that directory with an address of `http://localhost:4000` (which you can then plug into Fluid or Automator).
 
+If you want to set this up to run with launchd, it would probably be wise to add a `cd /path/to/cheaters` line in before the python command.
+
 #### with Fluid
 
 You can use the instructions below if you're a cheapskate, but for $5 you can use [Fluid](http://fluidapp.com/) and create a menu bar app that's much more full-featured and usable than the Automator action. Seriously. Do it.

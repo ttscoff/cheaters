@@ -1,11 +1,17 @@
+{
+    "id": "auto",
+    "style": "css/h4dark.css",
+    "layout": "default"
+}
+%%%END
 ### Trickster Keyboard Shortcuts
 
-**Global Hotkey**: ⌃Z
+**Global Hotkey**: xCTRLZ
 
-### Global
+#### Global
 
 | Shortcut	| Action	|  
-|  :-----:	| :------	|  
+|  -----:	| :------	|  
 | xCMD1	| Filters	|  
 | xCMD2	| Items	|  
 | xCMD3	| Favorites	|  
@@ -20,32 +26,32 @@
 | xCTRLN	| Next item (same as↓ )	|  
 
 
-### In Recent File List
+#### In Recent File List
 
 | Shortcut	| Action	|  
-|  :------:	| ------	|  
-| ⌘M	| Show Context Menu for selected	|  
-| ⌘C	| Copy to clipboard	|  
-| ⌘F	| Flag selected	|  
-| ⌘⌥F	| Unflag selected	|  
-| ⌘S	| Add to favorites	|  
-| ⌘⌥S	| Remove from favorites	|  
+|  ------:	| ------	|  
+| xCMDM	| Show Context Menu for selected	|  
+| xCMDC	| Copy to clipboard	|  
+| xCMDF	| Flag selected	|  
+| xCMDxOPTF	| Unflag selected	|  
+| xCMDS	| Add to favorites	|  
+| xCMDxOPTS	| Remove from favorites	|  
 | ⌦ or ⌫	| Remove selected from list	|  
-| ⌘⌦ or ⌫	| Move selected to trash	|  
-| ⌥⌦ or ⌥⌫	| Remove all files that are in the folder as the selected. They'll show up again.	| 
+| xCMD⌦ or ⌫	| Move selected to trash	|  
+| xOPT⌦ or xOPT⌫	| Remove all files that are in the folder as the selected. They'll show up again.	| 
 
-### In File Tracker and Filter Editors
+#### In File Tracker and Filter Editors
 
 | Shortcut	| Action	|  
-|  :------:	| ------	|  
+|  ------:	| ------	|  
 | 1-5	| Select the relevant section	|  
-| ⌘=	| Add new item	|  
-| ⌘-	| Remove selected items	|  
+| xCMD=	| Add new item	|  
+| xCMD-	| Remove selected items	|  
 
-### In Search
+#### In Search
 
 | Shortcut	| Action	|  
-|  :------:	| ------	|  
+|  ------:	| ------	|  
 | ⎋	| Clear Search	|  
-| ↑ ↓ or ⌘2	| Switch to recent items list	|  
+| ↑ ↓ or xCMD2	| Switch to recent items list	|  
 

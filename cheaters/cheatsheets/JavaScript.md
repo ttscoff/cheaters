@@ -11,14 +11,14 @@
 
     var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7];
 
-#### .length()
+##### .length()
 
 Get length/size of array
 
     console.log("Array Length: " + numbersArray.length);
 
 
-#### .pop()
+##### .pop()
 
 Remove the LAST item AND store it as a variable
 
@@ -27,7 +27,7 @@ Remove the LAST item AND store it as a variable
     console.log("Array After Pop: " + numbersArray);
 
 
-#### .push()
+##### .push()
 
 ADD an item to the END of the array
 
@@ -36,7 +36,7 @@ ADD an item to the END of the array
     console.log("Array After Push: " + numbersArray);
 
 
-#### .reverse()
+##### .reverse()
 
 Reverse the original array
 
@@ -44,7 +44,7 @@ Reverse the original array
     console.log("Same array after reverse: " + numbersArray);
 
 
-#### .shift()
+##### .shift()
 
 Get FIRST item AND remove it from array
 
@@ -52,7 +52,7 @@ Get FIRST item AND remove it from array
     console.log("Array After Shift: " + numbersArray);
 
 
-#### .sort()
+##### .sort()
 
 Sort the items of the array (no rules give least to greatest)
 
@@ -64,7 +64,7 @@ Sort the items of the array (no rules give least to greatest)
     console.log("Sorted greatest to least: " + numbersArray.sort(greatestToLeast));
 
 
-#### .splice()
+##### .splice()
 
 REMOVE item(s) from array, optionally add. 
 
@@ -74,7 +74,7 @@ splice accepts index,amount,newItem and returns an array of removed items.
     console.log("Array After Splice: " + numbersArray);
 
 
-#### .unshift()
+##### .unshift()
 
 ADD item to the BEGINNING of array
 
@@ -82,7 +82,7 @@ ADD item to the BEGINNING of array
     console.log("Array after unshift: " + numbersArray);
 
 
-#### .concat()
+##### .concat()
 
 Joins two arrays to create another
 
@@ -91,7 +91,7 @@ Joins two arrays to create another
     console.log("Combined Arrays: " + newArray);
 
 
-#### .join()
+##### .join()
 
 Creates a string from an array separated by a given string
 
@@ -99,7 +99,7 @@ Creates a string from an array separated by a given string
     console.log("String from join: " + string);
 
 
-#### .slice()
+##### .slice()
 
 Returns NEW array by REMOVING edges from array.
 
@@ -109,7 +109,7 @@ slice accepts index,index (excluded, included). Starts cursor 0 at very beginnin
     console.log("New Array From Slice: " + sliceArray);
 
 
-#### .indexOf() and .lastIndexOf()
+##### .indexOf() and .lastIndexOf()
 
 FIND an element in an array
 
@@ -120,7 +120,7 @@ FIND an element in an array
     var firstMangoIndex = fruits.indexOf("mangos"); // Not found returns -1
 
 
-#### .forEach()
+##### .forEach()
 
 ITERATE over the array
 
@@ -130,7 +130,7 @@ ITERATE over the array
     });
 
 
-#### .every()
+##### .every()
 
 TEST EVERY element for truthy
 
@@ -143,7 +143,7 @@ TEST EVERY element for truthy
     var everyNameIsAString = names.every(isString);
 
 
-#### .some()
+##### .some()
 
 TEST ANY element for truthy
 
@@ -156,7 +156,7 @@ TEST ANY element for truthy
     var anyPlaceIsANumber = places.some(isNumber);
 
 
-#### .filter()
+##### .filter()
 
 CREATE NEW array from elements that are truthy
 
@@ -169,7 +169,7 @@ CREATE NEW array from elements that are truthy
     var companiesThatStartWithG = companies.filter(startsWithG);
 
 
-#### .map()
+##### .map()
 
 CREATE NEW array from elements with function rules
 
@@ -182,7 +182,7 @@ CREATE NEW array from elements with function rules
     var twoFourSixEightTen = oneThroughFive.map(multiplyByTwo);
 
 
-#### .reduce()
+##### .reduce()
 
 CREATE NEW VALUE from elements with function rules
 
@@ -199,7 +199,7 @@ CREATE NEW VALUE from elements with function rules
 
 ### Objects
 
-#### CREATE an object
+##### CREATE an object
 
     var jane = {
         firstName: "Jane",
@@ -210,7 +210,7 @@ CREATE NEW VALUE from elements with function rules
         }
     };
 
-#### CREATE a class 
+##### CREATE a class 
 
 Use a constructor function for objects
 
@@ -237,25 +237,25 @@ Methods should go into prototypes, not the constructor.
 
     var str = "The 10 quick brown foxes jumped over the lazy dog.";
 
-#### .charAt()
+##### .charAt()
     // Returns the character at a certain index
     console.log("Character at index 8: " + str.charAt(8));
 
 
-#### .indexOf() AND .lastIndexOf()
+##### .indexOf() AND .lastIndexOf()
 
     // Returns the index of the first instance of a given character
     console.log("First index of \"r\": " + str.indexOf("r"));
     console.log("Last index of \"r\": " + str.lastIndexOf("r"));
 
 
-#### .search()
+##### .search()
 
     // Same as indexOf(), but accepts a regex
     console.log("First index of \"10\": " + str.search(/10/));
 
 
-#### .match()
+##### .match()
 
     // Returns an array of all of the matches of a regex
     // Useful for trying to figure out how many times something appears
@@ -263,13 +263,13 @@ Methods should go into prototypes, not the constructor.
     console.log("Matches of \"r\": " + str.match(/the/gi));
 
 
-#### .replace()
+##### .replace()
 
     // Returns a string with matched regex replaced with given string
     console.log("\"The\" to \"why\": " + str.replace(/the/gi, 'why'));
 
 
-#### .slice()
+##### .slice()
 
     // Returns substring string by REMOVING edges of full string
     // Replacement for substr and substring bc it accepts backwards indexes
@@ -277,19 +277,19 @@ Methods should go into prototypes, not the constructor.
     console.log("Sliced String: " + str.slice(4, -4));
 
 
-#### .split()
+##### .split()
 
     // Turns string by a given string into an array
     console.log("Split string into array by space: " + str.split(" "));
 
 
-#### .toLowerCase()
+##### .toLowerCase()
 
     // Makes string all lower case
     console.log("Lower Case String: " + str.toLowerCase());
 
 
-#### .toUpperCase()
+##### .toUpperCase()
 
     // Makes string all upper case
     console.log("Upper Case String: " + str.toUpperCase());
@@ -305,7 +305,7 @@ Methods should go into prototypes, not the constructor.
     var dayOfWeekWasBorn = dateWasBorn.getDay(); // 0 to 6
 
 
-#### Date comparison
+##### Date comparison
 
     var newerDate = date > dateWasBorn ? date : dateWasBorn;
     var olderDate = date < dateWasBorn ? date : dateWasBorn;
@@ -333,7 +333,7 @@ Methods should go into prototypes, not the constructor.
 
 ### Functions
 
-#### DECLARE 
+##### DECLARE 
 
 _hoisted to the top on page load_
 
@@ -342,14 +342,14 @@ _hoisted to the top on page load_
     }
 
 
-#### EXPRESS
+##### EXPRESS
 
     var expressedFunction = function() {
       // do something
     };
 
 
-#### CLOSURES
+##### CLOSURES
 
     function addSomething(a) {
         return function(b) {
@@ -360,7 +360,7 @@ _hoisted to the top on page load_
     var fivePlusTen = addFive(10);
 
 
-#### CALLBACKS or HIGHER-ORDER FUNCTIONS
+##### CALLBACKS or HIGHER-ORDER FUNCTIONS
 
     var calculator = {
         calculate: function(num1, num2, callback) {
@@ -378,7 +378,7 @@ _hoisted to the top on page load_
 
 ### Callbacks
 
-#### REWRITING NATIVE FUNCTIONS
+##### REWRITING NATIVE FUNCTIONS
 
     var myArray = [1, 2, 3, 4, 5];
 
