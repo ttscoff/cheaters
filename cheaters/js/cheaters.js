@@ -1,20 +1,61 @@
-// jQuery.fn.scrollTo = function(elem) {
-//     $(this).get(0).scrollLeft = $(this).scrollLeft() - $(this).offset().left + $(elem).offset().left - 10;
-//     return this;
-// };
-
-jQuery.fn.scrollTo = function(elem, speed) {
-    $(this).animate({
-        scrollLeft:  $(this).scrollLeft() - $(this).offset().left + $(elem).offset().left - 10
-    }, speed == undefined ? 200 : speed);
-    return this;
-};
 
 var Cheaters = (function () {
 	var pageData,
 		publicMenuText,
 		publicActiveItem,
 		currentHeader = 0;
+
+	function scrollTo(elem) {
+		var $container = $('#container');
+		if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
+			var l = $container.scrollLeft() - $container.offset().left + $(elem).offset().left - 10
+			console.log(l);
+			$("#container").animate({ scrollLeft: l }, 200);
+		} else {
+			console.log($(elem).offset().top);
+			$("html,body").animate({ scrollTop: $(elem).offset().top }, 200);
+		}
+		$(elem).addClass('active');
+	}
+
+	// filtering for toc list
+	function filterByText(list, textbox) {
+		var select = $(list);
+		select.find('li').each(function(i,n) {
+			var link = $(n).find('a').first(),
+				text = $.trim(link.text().replace(/[^a-z0-9]/gi,'').toLowerCase());
+			$(n).data('content',text);
+		});
+
+		$(textbox).bind('change keyup', function(e) {
+			if (e.keyCode === 27) {
+				e.preventDefault();
+				$('#toc').remove();
+			} else if (e.keyCode === 13) {
+				if (select.find('li:visible').length === 1) {
+					var target = select.find('li:visible a').first().attr('href');
+					$('#toc').remove();
+					scrollTo(target);
+				} else {
+					select.find('li:visible a').first().focus();
+				}
+			} else {
+				var search = $.trim($(this).val().replace(/[^a-z0-9]/gi,'').replace(/(\w)/gi,'.*$1').toLowerCase() + '.*');
+				var regex = new RegExp(search, "gi");
+
+				select.find('li').each(function(i,n) {
+
+					if ($(n).data('content').match(regex) !== null) {
+						$(n).show();
+					} else {
+						$(n).hide();
+					}
+				});
+			}
+
+		});
+	}
+
 
 	function switchActive(t,first) {
 		pageData = {};
@@ -82,6 +123,12 @@ var Cheaters = (function () {
 						}
 					}
 
+					for (p in pageData) {
+						if (pageData[p] === "default" || pageData[p] === "auto") {
+							delete pageData[p];
+						}
+					}
+
 					if (pageData.hasOwnProperty('id')) {
 						$('body').attr('id', pageData.id);
 					} else {
@@ -113,7 +160,7 @@ var Cheaters = (function () {
 		return false;
 	}
 
-	function processHeaders(txt,html=false) {
+	function processHeaders(txt) {
 		var json,
 			parts = txt.split(/%%%END/);
 
@@ -145,11 +192,7 @@ var Cheaters = (function () {
 			// document.location.hash = $(this).text().toLowerCase();
 			return false;
 		});
-		// $('#menu select').on('change',function(e) {
-		// 	e.preventDefault();
-		// 	console.log($(this).val());
-		// 	switchActive($(this).val());
-		// })
+
 		$('#contrast').click(function(e){
 			e.preventDefault();
 			$body = $('body').first();
@@ -218,12 +261,14 @@ var Cheaters = (function () {
 
 		Mousetrap.bind('esc', function(ev) {
 			ev.preventDefault();
-			$('#goto').remove();
+			if ($('#goto').length)
+				$('#goto').remove();
+			else if ($('#toc').length)
+				$('#toc').remove();
 			return false;
 		}, 'keyup');
 
 		Mousetrap.bind('g g', function(ev) {
-			console.log(ev);
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				$("#container").animate({ scrollLeft: 0 }, 200);
 			} else {
@@ -232,7 +277,6 @@ var Cheaters = (function () {
 		});
 
 		Mousetrap.bind('G', function(ev) {
-			console.log(ev);
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				$("#container").animate({ scrollLeft: $('#container').get(0).scrollWidth }, 200);
 			} else {
@@ -240,14 +284,6 @@ var Cheaters = (function () {
 			}
 
 		});
-
-		// Mousetrap.bind('g g', function(ev) {
-		// 	$(document).scrollTop(0);
-		// });
-
-		// Mousetrap.bind('G', function(ev) {
-		// 	$(document).scrollTop($(document).height());
-		// });
 
 		Mousetrap.bind(['k','shift+k','u','ctrl+u'], function(ev) {
 			var inc;
@@ -264,7 +300,6 @@ var Cheaters = (function () {
 
 		Mousetrap.bind(['j','shift+j','d','ctrl+d'], function(ev) {
 			var inc;
-			console.log(pageData);
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				inc = (ev.shiftKey || ev.ctrlKey) ? $(document).width() : $(document).width() / $('#container').css('columnCount');
 				$("#container").stop().animate({ scrollLeft: $('#container').scrollLeft() + inc }, 100);
@@ -293,7 +328,7 @@ var Cheaters = (function () {
 
 			$('.active', '#container').removeClass('active');
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
-				$('#container').scrollTo($(headers[target]));
+				scrollTo(headers[target]);
 				$(headers[target]).addClass('active');
 			} else {
 				$('html,body').stop().animate({
@@ -333,6 +368,16 @@ var Cheaters = (function () {
 				Cheaters.activeItem = $('#nav li').length;
 			}
 			switchActive(Cheaters.activeItem);
+		});
+
+		// Table of Contents
+		Mousetrap.bind('t', function(ev) {
+			ev.preventDefault();
+			if (!$('#toc').length) {
+				genTOC();
+			} else {
+				$('#toc input').select().focus();
+			}
 		});
 
 		Mousetrap.bind('command+i', function() {
@@ -378,6 +423,59 @@ var Cheaters = (function () {
 		return this;
 	}
 
+	// generate a table of contents for the current cheat sheet
+	function genTOC() {
+		var options = [];
+
+		$('h1,h2,h3,h4,table').each(function(i,n) {
+			var text, id;
+			switch (n.tagName.toLowerCase()) {
+				case 'table':
+					$el = $(n).find('caption,th').first();
+					if ($el) {
+						text = $el.text().trim();
+						if ($el.attr('id')) {
+							id = $el.attr('id');
+						} else {
+							id = text.replace(/[^a-z]/gi,'');
+							$el.attr('id',id);
+						}
+					}
+					break;
+				default:
+					text = $(n).text().trim();
+					if ($(n).attr('id')) {
+						id = $(n).attr('id');
+					} else {
+						id = text.replace(/[^a-z]/gi,'');
+						$(n).attr('id',id);
+					}
+					break;
+			}
+			options.push({
+				"title": text,
+				"id": id
+			});
+		});
+		var $select = $('<ul>').attr('id','tocfilter');
+
+		options.forEach(function(n) {
+			var opt = $('<li><a href="#'+n.id+'">'+n.title+'</a></li>');
+			$select.append(opt)
+		})
+		var $toc = $('<div>').attr('id','toc').append('<input id="tocinput" type="text">');
+		$toc.append($select).prependTo('#container');
+		filterByText('#tocfilter','#tocinput');
+
+		$toc.on('click','a', function(e) {
+			e.preventDefault();
+			scrollTo($(this).attr('href'));
+			$toc.remove();
+		});
+		$toc.find('input').focus();
+
+	}
+
 	return {
 		data: pageData,
 		menuText: publicMenuText,
@@ -387,6 +485,11 @@ var Cheaters = (function () {
 		init: publicInit
 	};
 }());
+
+
+
+
+
 
 (function($){
 	if ($.cookie('cheatSheet-inverted') === "1") {

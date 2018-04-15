@@ -147,6 +147,15 @@ There are a couple of shortcuts built in: "?so {query}" will search Stack Overfl
 
 If you're using Fluid, you can easily jump back to your cheat sheets by hitting "Command-Shift-H" for "home." This brings me to another big improvement: your active page and "contrast" settings are preserved, even between launches. Cheaters will remember where you were at and what colors it was using.
 
+### Table of contents
+
+Typing "t" will bring up a table of contents for the current cheat sheet. It will be based off of tags `h1`-`h4`, plus tables with `caption`s or `th` (whichever has an `id` attribute). For most sheets, this should automatically generate a good navigation structure. A filter field is automatically focused when it pops up. Typing performs a fuzzy search on the available titles, and if it narrows down to one, hitting enter will jump to that section, closing the TOC in the process.
+
+In Fluid's menu bar mode, the Tab key behaves differently, so tabbing from the filter input to the menu items doesn't work. If you hit enter the first one is selected, in which case you can hit enter again (but not tab to the next). For now, this circumstance requires a mouse click if there is more than one result.
+
+Escape will close the TOC popup at any time.
+
+
 ### Keyboard shortcuts
 
 Command-I will now toggle the "contrast" mode, inverting your colors for a dark-on-light or light-on-dark setup.

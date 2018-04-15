@@ -1,7 +1,4 @@
 /*
- This document has been created with Marked.app <http://markedapp.com>, Copyright 2011 Brett Terpstra
- Please leave this notice in place, along with any additional credits below.
- ---------------------------------------------------------------
  Upstanding Citizen by Brett Terpstra
  Modified for Cheaters by Brett Terpstra, 2012 <http://brettterpstra.com>
  Non-standard fonts used:
@@ -222,9 +219,6 @@ table {
     padding: 10px 10px 9px;
     line-height: 18px;
     text-align: left; }
-  table tr > td:first-of-type,
-  table tr > th:first-of-type {
-    white-space: nowrap; }
   table th {
     padding-top: 9px;
     font-family: ArmataRegular;
@@ -352,10 +346,6 @@ table tr:nth-child(odd), table th:nth-child(odd), table td:nth-child(odd) {
 table tr:nth-child(even), table td:nth-child(even) {
   background: rgba(0, 0, 0, 0.06); }
 
-#container .active {
-  transition: background .1s linear;
-  background: #666; }
-
 @media print {
   body {
     overflow: auto; }
@@ -440,9 +430,6 @@ pre code {
 
   .inverted {
     background: #252a2a; }
-    .inverted #container .active {
-      transition: background .1s linear;
-      background: #222; }
     .inverted #wrapper {
       background: #252a2a; }
 
@@ -821,7 +808,7 @@ input#goto {
     z-index: 100;
     left: 0;
     right: 0; }
-  .multicolumn .inverted h1 {
+  .multicolumn.inverted h1 {
     border-color: rgba(200, 200, 200, 0.3); }
   .multicolumn h2:first-of-type, .multicolumn h3:first-of-type {
     -webkit-column-break-before: avoid; }
@@ -841,23 +828,6 @@ input#goto {
     margin: 4px 0;
     -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
     -webkit-column-break-before: always; }
-  .multicolumn pre {
-    padding: 4px;
-    border-radius: 4px;
-    border: solid 1px #ddd; }
-  .multicolumn pre code {
-    border: 0;
-    padding: 0; }
-  .multicolumn pre, .multicolumn code {
-    color: #333;
-    font-family: Inconsolata, Menlo, Monaco, monospace;
-    font-size: 16px;
-    font-weight: 300 !important;
-    text-align: left;
-    margin: 1em 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-    background: #efefef; }
   .multicolumn h4 {
     color: #333;
     font-size: 1.25em;
@@ -870,5 +840,46 @@ input#goto {
     font-size: 1em;
     line-height: 1.3125em;
     margin: 1.3125em 1em; } }
+
+@-webkit-keyframes beat {
+  100% {
+    background-color: rgba(208, 203, 153, 0.5); } }
+caption.active, th.active, h1.active, h2.active, h3.active, h4.active, h5.active, h6.active, strong.active, em.active {
+  -webkit-animation-name: beat;
+  -webkit-animation-duration: .2s;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards; }
+
+div#toc {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  right: 10px;
+  top: 65px;
+  border: 2px solid #ccc;
+  z-index: 2000;
+  min-width: 250px;
+  border-radius: 4px; }
+  div#toc ul {
+    list-style-type: none;
+    padding: 0 1em; }
+    div#toc ul a {
+      color: #333; }
+  div#toc input {
+    float: left;
+    width: 100%;
+    margin: 0 0 .5em 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 15px;
+    padding: 5px;
+    line-height: 1.2;
+    color: #333;
+    font-family: ArmataRegular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    outline: 0;
+    border-bottom: solid 1px #ddd; }
+    div#toc input:focus {
+      background: rgba(250, 250, 161, 0.25); }
 
 /*# sourceMappingURL=cheaters.css.map */

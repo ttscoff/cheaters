@@ -1,3 +1,10 @@
+{
+    "id": "auto",
+    "style": "default",
+    "layout": "default"
+}
+%%%END
+
 ### Apple Style Guide
 
 
