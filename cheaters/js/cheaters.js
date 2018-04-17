@@ -9,11 +9,9 @@ var Cheaters = (function () {
 		var $container = $('#container');
 		if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 			var l = $container.scrollLeft() - $container.offset().left + $(elem).offset().left - 10
-			console.log(l);
 			$("#container").animate({ scrollLeft: l }, 200);
 		} else {
-			console.log($(elem).offset().top);
-			$("html,body").animate({ scrollTop: $(elem).offset().top }, 200);
+			$("html,body").animate({ scrollTop: $(elem).offset().top - 30 }, 200);
 		}
 		$(elem).addClass('active');
 	}
@@ -374,6 +372,9 @@ var Cheaters = (function () {
 		Mousetrap.bind('t', function(ev) {
 			ev.preventDefault();
 			if (!$('#toc').length) {
+				$('body').on('click',function() {
+					$('#toc').remove();
+				});
 				genTOC();
 			} else {
 				$('#toc input').select().focus();
