@@ -219,7 +219,7 @@ var Cheaters = (function () {
 					$(this).remove();
 				});
 			});
-			$('#goto').unbind('keyup').keyup(function(ev){
+			$('#goto').unbind('keyup').keyup(function(ev) {
 				if (ev.keyCode === 27) {
 					ev.preventDefault();
 					$('#goto').remove();
@@ -266,24 +266,28 @@ var Cheaters = (function () {
 			return false;
 		}, 'keyup');
 
-		Mousetrap.bind('g g', function(ev) {
+		Mousetrap.bind('g', function(ev) {
+			ev.preventDefault();
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				$("#container").animate({ scrollLeft: 0 }, 200);
 			} else {
 				$(document).scrollTop(0);
 			}
+			return false;
 		});
 
 		Mousetrap.bind('G', function(ev) {
+			ev.preventDefault();
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				$("#container").animate({ scrollLeft: $('#container').get(0).scrollWidth }, 200);
 			} else {
 				$(document).scrollTop($(document).height());
 			}
-
+			return false;
 		});
 
 		Mousetrap.bind(['k','shift+k','u','ctrl+u'], function(ev) {
+			ev.preventDefault();
 			var inc;
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				inc = (ev.shiftKey || ev.ctrlKey) ? $(document).width() : $(document).width() / $('#container').css('columnCount');
@@ -294,9 +298,11 @@ var Cheaters = (function () {
 					scrollTop: $(document).scrollTop() - inc
 				}, 100);
 			}
+			return false;
 		});
 
 		Mousetrap.bind(['j','shift+j','d','ctrl+d'], function(ev) {
+			ev.preventDefault();
 			var inc;
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				inc = (ev.shiftKey || ev.ctrlKey) ? $(document).width() : $(document).width() / $('#container').css('columnCount');
@@ -307,9 +313,11 @@ var Cheaters = (function () {
 					scrollTop: $(document).scrollTop() + inc
 				}, 100);
 			}
+			return false;
 		});
 
 		Mousetrap.bind(['.',','], function(ev) {
+			ev.preventDefault();
 			var loc = window.pageYOffset,
 				headers = $('h1,h2,h3,h4,h5,h6,caption'),
 				menuHeight = $('#menu').height(),
@@ -336,7 +344,7 @@ var Cheaters = (function () {
 				});
 			}
 
-
+			return false;
 			// $.each(headers, function(i, a) {
 
 			// 	if ((ev.which === 46 && $(a).offset().top - menuHeight > loc) ||
@@ -352,37 +360,44 @@ var Cheaters = (function () {
 			// });
 		});
 
-		Mousetrap.bind(['command+shift+]','l'], function() {
+		Mousetrap.bind(['command+shift+]','l'], function(ev) {
+			ev.preventDefault();
 			if (Cheaters.activeItem === $('#nav li').length - 1) {
 				Cheaters.activeItem = 1;
 			} else {
 				Cheaters.activeItem += 2;
 			}
 			switchActive(Cheaters.activeItem);
+			return false;
 		});
 
-		Mousetrap.bind(['command+shift+[','h'], function() {
+		Mousetrap.bind(['command+shift+[','h'], function(ev) {
+			ev.preventDefault();
 			if (Cheaters.activeItem === 0) {
 				Cheaters.activeItem = $('#nav li').length;
 			}
 			switchActive(Cheaters.activeItem);
+			return false;
 		});
 
 		// Table of Contents
 		Mousetrap.bind('t', function(ev) {
 			ev.preventDefault();
 			if (!$('#toc').length) {
-				$('body').on('click',function() {
+				$('body').on('click', function(ev) {
 					$('#toc').remove();
 				});
 				genTOC();
 			} else {
 				$('#toc input').select().focus();
 			}
+			return false;
 		});
 
-		Mousetrap.bind('command+i', function() {
+		Mousetrap.bind('command+i', function(ev) {
+			ev.preventDefault();
 			$('#contrast').click();
+			return false;
 		});
 	}
 
