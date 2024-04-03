@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-python -m SimpleHTTPServer 4000 &> /dev/null &
+python3 -m http.server 4000 &> /dev/null &

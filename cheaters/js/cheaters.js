@@ -268,6 +268,7 @@ var Cheaters = (function () {
 
 		Mousetrap.bind('g', function(ev) {
 			ev.preventDefault();
+
 			if (pageData.hasOwnProperty('layout') && pageData.layout == 'multicolumn') {
 				$("#container").animate({ scrollLeft: 0 }, 200);
 			} else {
